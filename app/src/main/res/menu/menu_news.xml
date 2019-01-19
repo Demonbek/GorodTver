@@ -1,0 +1,80 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="ru.gorod_dubna.gorod_dubna.News">
+
+    <item
+        android:id="@+id/action_share"
+        android:icon="@android:drawable/ic_menu_share"
+        android:title="@string/share"
+        app:showAsAction="ifRoom"
+        tools:ignore="HardcodedText" />
+    <item
+        android:id="@+id/action_news"
+        android:orderInCategory="100"
+        android:title="@string/action_news"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_news1"
+        android:checkable="false"
+        android:enabled="true"
+        android:orderInCategory="100"
+        android:title="@string/action_news1"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_news2"
+        android:checkable="false"
+        android:enabled="true"
+        android:orderInCategory="100"
+        android:title="@string/action_news2"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_news3"
+        android:checkable="false"
+        android:enabled="true"
+        android:orderInCategory="100"
+        android:title="@string/action_news3"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_news4"
+        android:checkable="false"
+        android:enabled="true"
+        android:orderInCategory="100"
+        android:title="@string/action_news4"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_news5"
+        android:checkable="false"
+        android:enabled="true"
+        android:orderInCategory="100"
+        android:title="@string/action_news5"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_news6"
+        android:checkable="false"
+        android:enabled="true"
+        android:orderInCategory="100"
+        android:title="@string/action_news6"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_news7"
+        android:checkable="false"
+        android:enabled="true"
+        android:orderInCategory="100"
+        android:title="@string/action_news7"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_news8"
+        android:checkable="false"
+        android:enabled="true"
+        android:orderInCategory="100"
+        android:title="@string/action_news8"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_news9"
+        android:checkable="false"
+        android:enabled="true"
+        android:orderInCategory="100"
+        android:title="@string/action_news9"
+        app:showAsAction="never" />
+</menu>

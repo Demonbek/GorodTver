@@ -1,0 +1,46 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="ru.gorod_dubna.gorod_dubna.Telefony">
+    <item
+        android:id="@+id/action_tel"
+        android:orderInCategory="100"
+        android:title="@string/action_tel"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_tel2"
+        android:orderInCategory="100"
+        android:title="@string/action_tel2"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_tel3"
+        android:orderInCategory="100"
+        android:title="@string/action_tel3"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_tel4"
+        android:orderInCategory="100"
+        android:title="@string/action_tel4"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_tel5"
+        android:orderInCategory="100"
+        android:title="@string/action_tel5"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_tel6"
+        android:orderInCategory="100"
+        android:title="@string/action_tel6"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_tel7"
+        android:orderInCategory="100"
+        android:title="@string/action_tel7"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_tel8"
+        android:orderInCategory="100"
+        android:title="@string/action_tel8"
+        app:showAsAction="never" />
+
+</menu>

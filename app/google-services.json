@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "59134696861",
+    "firebase_url": "https://goroddubna-ab596.firebaseio.com",
+    "project_id": "goroddubna-ab596",
+    "storage_bucket": "goroddubna-ab596.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:59134696861:android:5ad6b06233d5fc9f",
+        "android_client_info": {
+          "package_name": "ru.gorod_dubna.gorod_dubna"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "59134696861-hdl0btch24aujjt82mpv5gose6qr5tm4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDr7fx7o_n_pDbNiWo20BXTStyxpusRgL0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

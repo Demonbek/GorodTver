@@ -1,0 +1,39 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="ru.gorod_dubna.gorod_dubna.ru.gorod_kimry.kimry.Afisha">
+
+    <item
+        android:id="@+id/action_afisha1"
+        android:orderInCategory="100"
+        android:title="@string/action_afisha1"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_afisha2"
+        android:checkable="false"
+        android:enabled="true"
+        android:orderInCategory="100"
+        android:title="@string/action_afisha2"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_afisha3"
+        android:checkable="false"
+        android:enabled="true"
+        android:orderInCategory="100"
+        android:title="@string/action_afisha3"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_afisha4"
+        android:checkable="false"
+        android:enabled="true"
+        android:orderInCategory="100"
+        android:title="@string/action_afisha4"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_afisha5"
+        android:checkable="false"
+        android:enabled="true"
+        android:orderInCategory="100"
+        android:title="@string/action_afisha5"
+        app:showAsAction="never" />
+</menu>
