@@ -5,6 +5,7 @@
     <string name="history">ИСТОРИЯ</string>
     <string name="todo">todo</string>
     <string name="telefon">ТЕЛЕФОНЫ</string>
+    <string name="transports">ТРАНСПОРТ</string>
     <string name="nasait">АФИША</string>
     <string name="title_activity_history">History</string>
     <string name="dubna">
@@ -860,4 +861,14 @@ Subway, ресторан\n
     <string name="buildconfig_version_name">Версия+BuildConfig.VERSION_NAME</string>
     <string name="send_to">dasda</string>
     <string name="msg_token_fmt">msg_token_fmt</string>
+    <string name="action_transport1">Весь транспорт</string>
+    <string name="action_transport2">Электрички Дубна</string>
+    <string name="action_transport3">Электрички Б.Волга</string>
+    <string name="action_transport4">Автобусы Б.Волга</string>
+    <string name="action_transport5">Автобусы Вокзал Дубна</string>
+    <string name="action_transport6">Автобусы Паром</string>
+    <string name="action_transport7">Автобусы ул.Мичурина</string>
+    <string name="action_transport8">Автобусы Университет</string>
+    <string name="action_transport9">Автобусы ул.Березняка</string>
+
 </resources>

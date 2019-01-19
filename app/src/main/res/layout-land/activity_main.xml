@@ -20,24 +20,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo" />
 
-    <Button
-        android:id="@+id/button5"
-        style="@style/Widget.AppCompat.Button.Small"
-
-        android:layout_width="wrap_content"
-        android:layout_height="@android:dimen/notification_large_icon_height"
-        android:layout_marginBottom="16dp"
-        android:layout_weight="1"
-        android:background="@android:drawable/alert_dark_frame"
-        android:paddingLeft="50dp"
-        android:paddingRight="50dp"
-        android:text="@string/oapp"
-        android:textColor="@android:color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
@@ -46,7 +28,6 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="70dp"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/button5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -101,6 +82,25 @@
 
             </TableRow>
 
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/button6"
+                    style="@style/Widget.AppCompat.Button.Small"
+                    android:layout_width="match_parent"
+                    android:layout_height="@android:dimen/notification_large_icon_height"
+                    android:background="@android:drawable/alert_dark_frame"
+                    android:paddingLeft="50dp"
+                    android:paddingRight="50dp"
+                    android:text="@string/transports"
+                    android:textColor="@android:color/white"
+                    app:layout_constraintEnd_toEndOf="@+id/button2"
+                    app:layout_constraintStart_toStartOf="@+id/button2"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView" />
+            </TableRow>
+
 
         </TableLayout>
 
@@ -145,6 +145,29 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/button3" />
 
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/button5"
+                    style="@style/Widget.AppCompat.Button.Small"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="@android:dimen/notification_large_icon_height"
+                    android:layout_marginBottom="16dp"
+                    android:layout_weight="1"
+                    android:background="@android:drawable/alert_dark_frame"
+                    android:paddingLeft="50dp"
+                    android:paddingRight="50dp"
+                    android:text="@string/oapp"
+                    android:textColor="@android:color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent" />
             </TableRow>
 
         </TableLayout>

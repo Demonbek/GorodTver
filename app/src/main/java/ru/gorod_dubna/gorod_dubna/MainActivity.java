@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
     Button button;
     Button button4;
     Button button5;
+    Button button6;
 
     /** Called when the activity is first created. */
     @Override
@@ -36,6 +37,9 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
 
         button5 = findViewById(R.id.button5);
         button5.setOnClickListener(this);
+
+        button6 = findViewById(R.id.button6);
+        button6.setOnClickListener(this);
     }
 
     @Override
@@ -63,6 +67,10 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
             case R.id.button5:
                 Intent intent5 = new Intent(this, Onas.class);
                 startActivity(intent5);
+                break;
+            case R.id.button6:
+                Intent intent6 = new Intent(this, Transport.class);
+                startActivity(intent6);
                 break;
             default:
                 break;
