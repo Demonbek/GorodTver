@@ -2,11 +2,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="ru.gorod_dubna.gorod_dubna.Transport">
-
     <item
-        android:id="@+id/action_transport1"
+        android:id="@+id/action_transport"
         android:orderInCategory="100"
-        android:title="@string/action_transport1"
+        android:title="@string/action_transport"
         app:showAsAction="never" />
     <item
         android:id="@+id/action_transport2"
@@ -63,5 +62,10 @@
         android:enabled="true"
         android:orderInCategory="100"
         android:title="@string/action_transport9"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_transport1"
+        android:orderInCategory="100"
+        android:title="@string/action_transport1"
         app:showAsAction="never" />
 </menu>

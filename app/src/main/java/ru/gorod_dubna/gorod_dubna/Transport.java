@@ -15,7 +15,7 @@ public class Transport extends AppCompatActivity {
 
 
     private WebView mWebView2;
-    String url="https://t.rasp.yandex.ru/city/215";
+    String url="http://город-дубна.рф//timetable/citybus";
     @TargetApi(Build.VERSION_CODES.ECLAIR_MR1)
     @RequiresApi(api = Build.VERSION_CODES.ECLAIR_MR1)
     @SuppressLint("SetJavaScriptEnabled")
@@ -68,6 +68,11 @@ public class Transport extends AppCompatActivity {
         int id = item.getItemId();
         // Операции для выбранного пункта меню
         switch (id) {
+            case R.id.action_transport:
+                mWebView2.loadUrl("http://город-дубна.рф//timetable/citybus");
+                setTitle(R.string.action_transport);
+                return true;
+
             case R.id.action_transport1:
                 mWebView2.loadUrl("https://t.rasp.yandex.ru/city/215");
                 setTitle(R.string.action_transport1);

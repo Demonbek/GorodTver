@@ -861,7 +861,8 @@ Subway, ресторан\n
     <string name="buildconfig_version_name">Версия+BuildConfig.VERSION_NAME</string>
     <string name="send_to">dasda</string>
     <string name="msg_token_fmt">msg_token_fmt</string>
-    <string name="action_transport1">Весь транспорт</string>
+    <string name="action_transport">Городские автобусы</string>
+    <string name="action_transport1">Выбор маршрута</string>
     <string name="action_transport2">Электрички Дубна</string>
     <string name="action_transport3">Электрички Б.Волга</string>
     <string name="action_transport4">Автобусы Б.Волга</string>
