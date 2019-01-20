@@ -48,14 +48,7 @@ public class Transport extends AppCompatActivity {
             return true;
         }
     }
-    @Override
-    public void onBackPressed() {
-        if(mWebView2.canGoBack()) {
-            mWebView2.goBack();
-        } else {
-            super.onBackPressed();
-        }
-    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_transport, menu);
