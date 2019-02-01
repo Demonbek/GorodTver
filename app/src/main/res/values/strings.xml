@@ -871,5 +871,6 @@ Subway, ресторан\n
     <string name="action_transport7">Автобусы ул.Мичурина</string>
     <string name="action_transport8">Автобусы Университет</string>
     <string name="action_transport9">Автобусы ул.Березняка</string>
+    <string name="action_transport10">Автобус Дубна-Москва</string>
 
 </resources>
