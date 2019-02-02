@@ -104,7 +104,7 @@ public class Transport extends AppCompatActivity {
                 setTitle(R.string.action_transport9);
                 return true;
             case R.id.action_transport10:
-                mWebView2.loadUrl("file:///android_res/drawable/avtobus_dubna_mos.jpg");
+                mWebView2.loadUrl("file:///android_asset/avtobus_dubna_mos.jpg");
                 setTitle(R.string.action_transport10);
                 return true;
             default:
