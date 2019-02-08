@@ -6,7 +6,7 @@ android {
         applicationId "ru.gorod_dubna.gorod_dubna"
         minSdkVersion 14
         targetSdkVersion 28
-        versionCode 11
+        versionCode 12
         versionName '1.1.3'
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
@@ -28,7 +28,7 @@ dependencies {
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     //noinspection GradleCompatible
     implementation 'com.android.support:design:28.0.0'
-    implementation 'com.google.firebase:firebase-core:16.0.6'
+    implementation 'com.google.firebase:firebase-core:16.0.7'
     implementation 'com.google.firebase:firebase-appindexing:17.1.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'

@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "59134696861-hfc6m15cm7n26phhnqt5vhta7ainc64r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ru.gorod_dubna.gorod_dubna",
+            "certificate_hash": "eacd2b3b727e6ce9487877e3e83510097c1c9265"
+          }
+        },
+        {
           "client_id": "59134696861-hdl0btch24aujjt82mpv5gose6qr5tm4.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -29,8 +37,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "59134696861-hdl0btch24aujjt82mpv5gose6qr5tm4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2
