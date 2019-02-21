@@ -173,5 +173,19 @@
         </TableLayout>
 
     </LinearLayout>
+    <!-- Реклама My target-->
+    <RelativeLayout
+        android:id="@+id/activityLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="bottom|center_horizontal"
+        tools:ignore="MissingConstraints">
 
+        <com.my.target.ads.MyTargetView
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+    </RelativeLayout>
 </android.support.constraint.ConstraintLayout>

@@ -3,6 +3,7 @@ package ru.gorod_dubna.gorod_dubna;
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.os.Build;
+import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,10 +11,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.RelativeLayout;
+
+import com.my.target.ads.MyTargetView;
 
 public class Afisha extends AppCompatActivity {
 
-
+    private MyTargetView adViewAfisha;
     private WebView mWebView2;
     String url="https://volga-volga.dubna.ru/";
     @TargetApi(Build.VERSION_CODES.ECLAIR_MR1)
@@ -22,6 +26,7 @@ public class Afisha extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_afisha);
+        final RelativeLayout layout = findViewById(R.id.activityLayoutAfisha);
 
         mWebView2 = findViewById(R.id.webView2);
         // устанавливаем Zoom control
@@ -38,6 +43,40 @@ public class Afisha extends AppCompatActivity {
         mWebView2.clearCache(true);
         // указываем страницу загрузки
         mWebView2.loadUrl(url);
+
+
+        // Включение режима отладки
+        MyTargetView.setDebugMode(true);
+
+        // Создаем экземпляр MyTargetView, формат 320х50
+        adViewAfisha = new MyTargetView(this);
+
+        // Создаем экземпляр MyTargetView, формат 300х250
+        // adView = new MyTargetView(this, AdSize.BANNER_300x250);
+
+        // Инициализируем экземпляр
+        adViewAfisha.init(380252);
+
+
+        // Устанавливаем слушатель событий
+        adViewAfisha.setListener(new MyTargetView.MyTargetViewListener() {
+            @Override
+            public void onLoad(@NonNull MyTargetView myTargetView) {
+                // Данные успешно загружены, запускаем показ объявлений
+                layout.addView(adViewAfisha);
+            }
+
+            @Override
+            public void onNoAd(@NonNull String reason, @NonNull MyTargetView myTargetView) {
+            }
+
+            @Override
+            public void onClick(@NonNull MyTargetView myTargetView) {
+            }
+        });
+
+        // Запускаем загрузку данных
+        adViewAfisha.load();
     }
     private class MyWebViewClient extends WebViewClient
     {

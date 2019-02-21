@@ -3,10 +3,14 @@ package ru.gorod_dubna.gorod_dubna;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.RelativeLayout;
+
+import com.my.target.ads.MyTargetView;
 
 public class MainActivity extends AppCompatActivity implements OnClickListener {
 
@@ -16,12 +20,32 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
     Button button4;
     Button button5;
     Button button6;
+    private MyTargetView adView;
 
-    /** Called when the activity is first created. */
+
+    /**
+     * Called when the activity is first created.
+     */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        final RelativeLayout layout = findViewById(R.id.activityLayout);
+
+
+// Включение режима отладки
+        // MyTargetView.setDebugMode(true);
+        MyTargetView.setDebugMode(true);
+
+        // Создаем экземпляр MyTargetView, формат 320х50
+        adView = new MyTargetView(this);
+
+        // Создаем экземпляр MyTargetView, формат 300х250
+        // adView = new MyTargetView(this, AdSize.BANNER_300x250);
+
+        // Инициализируем экземпляр
+        adView.init(378914);
+
 
         button2 = findViewById(R.id.button2);
         button2.setOnClickListener(this);
@@ -40,8 +64,34 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
 
         button6 = findViewById(R.id.button6);
         button6.setOnClickListener(this);
+
+
+        // Устанавливаем слушатель событий
+        adView.setListener(new MyTargetView.MyTargetViewListener() {
+            @Override
+            public void onLoad(@NonNull MyTargetView myTargetView) {
+                // Данные успешно загружены, запускаем показ объявлений
+                layout.addView(adView);
+            }
+
+            @Override
+            public void onNoAd(@NonNull String reason, @NonNull MyTargetView myTargetView) {
+            }
+
+            @Override
+            public void onClick(@NonNull MyTargetView myTargetView) {
+            }
+        });
+
+        // Запускаем загрузку данных
+        adView.load();
     }
 
+    @Override
+    protected void onDestroy() {
+        if (adView != null) adView.destroy();
+        super.onDestroy();
+    }
     @Override
     public void onClick(View v) {
         switch (v.getId()) {

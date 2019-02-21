@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.content.Intent;
 import android.os.Build;
+import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,9 +12,15 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.RelativeLayout;
+
+import com.my.target.ads.MyTargetView;
 
 
 public class News extends AppCompatActivity {
+
+    private MyTargetView adViewNews;
+
     private WebView mWebView;
     String url="http://город-дубна.рф/all_news/all_news";
     String currentUrl=url;
@@ -23,6 +30,7 @@ public class News extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_news);
+        final RelativeLayout layout = findViewById(R.id.activityLayoutNews);
 
         mWebView = findViewById(R.id.webView);
         // устанавливаем Zoom control
@@ -39,6 +47,42 @@ public class News extends AppCompatActivity {
         mWebView.clearCache(true);
         // указываем страницу загрузки
         mWebView.loadUrl(url);
+
+        // Включение режима отладки
+        MyTargetView.setDebugMode(true);
+
+        // Создаем экземпляр MyTargetView, формат 320х50
+        adViewNews = new MyTargetView(this);
+
+        // Создаем экземпляр MyTargetView, формат 300х250
+        // adView = new MyTargetView(this, AdSize.BANNER_300x250);
+
+        // Инициализируем экземпляр
+        adViewNews.init(380216);
+
+
+        // Устанавливаем слушатель событий
+        adViewNews.setListener(new MyTargetView.MyTargetViewListener() {
+            @Override
+            public void onLoad(@NonNull MyTargetView myTargetView) {
+                // Данные успешно загружены, запускаем показ объявлений
+                layout.addView(adViewNews);
+            }
+
+            @Override
+            public void onNoAd(@NonNull String reason, @NonNull MyTargetView myTargetView) {
+            }
+
+            @Override
+            public void onClick(@NonNull MyTargetView myTargetView) {
+            }
+        });
+
+        // Запускаем загрузку данных
+        adViewNews.load();
+
+
+
     }
 
     private class MyWebViewClient extends WebViewClient
