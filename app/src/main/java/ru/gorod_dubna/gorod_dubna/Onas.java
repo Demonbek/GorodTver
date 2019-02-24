@@ -36,8 +36,7 @@ public class Onas extends AppCompatActivity implements View.OnClickListener {
         textView4.setText("Версия: "+BuildConfig.VERSION_NAME);
 
         // Включение режима отладки
-        // MyTargetView.setDebugMode(true);
-        MyTargetView.setDebugMode(true);
+        //MyTargetView.setDebugMode(true);
 
         // Создаем экземпляр MyTargetView, формат 320х50
         adViewOnas = new MyTargetView(this);

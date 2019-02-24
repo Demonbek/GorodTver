@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
 
 // Включение режима отладки
         // MyTargetView.setDebugMode(true);
-        MyTargetView.setDebugMode(true);
+        //MyTargetView.setDebugMode(true);
 
         // Создаем экземпляр MyTargetView, формат 320х50
         adView = new MyTargetView(this);

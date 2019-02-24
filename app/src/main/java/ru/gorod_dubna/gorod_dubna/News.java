@@ -49,7 +49,7 @@ public class News extends AppCompatActivity {
         mWebView.loadUrl(url);
 
         // Включение режима отладки
-        MyTargetView.setDebugMode(true);
+        //MyTargetView.setDebugMode(true);
 
         // Создаем экземпляр MyTargetView, формат 320х50
         adViewNews = new MyTargetView(this);

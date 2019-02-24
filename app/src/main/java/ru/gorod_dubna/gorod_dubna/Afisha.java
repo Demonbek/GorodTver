@@ -46,7 +46,7 @@ public class Afisha extends AppCompatActivity {
 
 
         // Включение режима отладки
-        MyTargetView.setDebugMode(true);
+        //MyTargetView.setDebugMode(true);
 
         // Создаем экземпляр MyTargetView, формат 320х50
         adViewAfisha = new MyTargetView(this);
