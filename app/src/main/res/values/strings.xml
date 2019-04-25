@@ -115,8 +115,8 @@
     <string name="action_afisha1">К/т "Волга-Волга"</string>
     <string name="action_afisha2">Др. мероприятия</string>
     <string name="action_afisha3">Музей ОИЯИ</string>
-    <string name="action_afisha4">Дворец спорта "Радуга"</string>
-    <string name="action_afisha5">Библиотека</string>
+    <string name="action_afisha4">Бассейн "Архимед"</string>
+    <string name="action_afisha5">Бассейн "Карасик"</string>
     <string name="share">Поделиться</string>
     <string name="autor">DemonApps</string>
     <string name="invitation_message">Закачай приложение Город Дубна</string>
@@ -138,5 +138,6 @@
     <string name="action_transport8">Автобусы Университет</string>
     <string name="action_transport9">Автобусы ул.Березняка</string>
     <string name="action_transport10">Автобус Дубна-Москва</string>
+    <string name="action_transport_onlain">Автобусы Oн-лайн</string>
 
 </resources>

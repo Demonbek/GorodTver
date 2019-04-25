@@ -117,10 +117,10 @@ public class Afisha extends AppCompatActivity {
                 mWebView2.loadUrl("http://museum.jinr.ru/index.html");
                 return true;
             case R.id.action_afisha4:
-                mWebView2.loadUrl("http://www.radugasport.ru/novo/");
+                mWebView2.loadUrl("http://arhimed.jinr.ru/asp_shedule.html");
                 return true;
             case R.id.action_afisha5:
-                mWebView2.loadUrl("http://www.biblioteka-dubna.ru/");
+                mWebView2.loadUrl("https://dushdubna.ru/sports-facility/плавательный-бассейн-карасик/");
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

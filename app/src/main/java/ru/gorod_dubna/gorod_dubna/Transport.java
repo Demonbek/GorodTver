@@ -101,6 +101,7 @@ public class Transport extends AppCompatActivity {
         int id = item.getItemId();
         // Операции для выбранного пункта меню
         switch (id) {
+
             case R.id.action_transport:
                 mWebView3.loadUrl("http://город-дубна.рф//timetable/citybus");
                 setTitle(R.string.action_transport);
