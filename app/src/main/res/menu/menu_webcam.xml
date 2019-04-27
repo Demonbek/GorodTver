@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/action_webcan1"
+        android:title="@string/action_webcam1" />
+    <item
+        android:id="@+id/action_webcan2"
+        android:title="@string/action_webcam2" />
+    <item
+        android:id="@+id/action_webcan3"
+        android:title="@string/action_webcam3" />
+    <item
+        android:id="@+id/action_webcan4"
+        android:title="@string/action_webcam4" />
+    <item
+        android:id="@+id/action_webcan5"
+        android:title="@string/action_webcam5" />
+    <item
+        android:id="@+id/action_webcan6"
+        android:title="@string/action_webcam6" />
+    <item
+        android:id="@+id/action_webcan7"
+        android:title="@string/action_webcam7" />
+    <item
+        android:id="@+id/action_webcan8"
+        android:title="@string/action_webcam8" />
+    <item
+    android:id="@+id/action_webcan9"
+    android:title="@string/action_webcam9" />
+    <item
+        android:id="@+id/action_webcan10"
+        android:title="@string/action_webcam10" />
+    <item
+        android:id="@+id/action_webcan11"
+        android:title="@string/action_webcam11" />
+
+
+</menu>

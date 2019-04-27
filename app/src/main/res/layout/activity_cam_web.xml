@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dubna"
+    android:orientation="horizontal"
+    android:theme="@style/Theme.AppCompat"
+    tools:context=".CamWeb">
+
+    <WebView
+        android:id="@+id/camWeb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+    <!-- Реклама My target-->
+    <RelativeLayout
+        android:id="@+id/activityLayoutWebcam"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="top|center_horizontal">
+
+        <com.my.target.ads.MyTargetView
+            android:id="@+id/adViewWebcam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+    </RelativeLayout>
+</RelativeLayout>
