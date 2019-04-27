@@ -102,16 +102,9 @@
     <string name="action_tel6">Транспорт</string>
     <string name="action_tel7">Досуг</string>
     <string name="action_tel8">Финансы</string>
-    <string name="action_news">Все новости</string>
-    <string name="action_news1">Городские новости</string>
-    <string name="action_news2">Политика и экономика</string>
-    <string name="action_news3">Работа и учёба</string>
-    <string name="action_news4">Общество, природа и религия</string>
-    <string name="action_news5">История, культура и религия</string>
-    <string name="action_news6">Техника и технология</string>
-    <string name="action_news7">Криминал и происшествия</string>
-    <string name="action_news8">Семья и дом</string>
-    <string name="action_news9">Спорт, туризм и отдых</string>
+    <string name="action_news">Новости</string>
+    <string name="action_news1">Погода</string>
+    <string name="action_news2">Вакансии</string>
     <string name="action_afisha1">К/т "Волга-Волга"</string>
     <string name="action_afisha2">Др. мероприятия</string>
     <string name="action_afisha3">Музей ОИЯИ</string>
@@ -139,5 +132,8 @@
     <string name="action_transport9">Автобусы ул.Березняка</string>
     <string name="action_transport10">Автобус Дубна-Москва</string>
     <string name="action_transport_onlain">Автобусы Oн-лайн</string>
+    <string name="action_webcam1">Rfvtha1</string>
+    <string name="action_webcam2">Rfvthf2</string>
+    <string name="webcam">КАМЕРЫ ОН-ЛАЙН</string>
 
 </resources>

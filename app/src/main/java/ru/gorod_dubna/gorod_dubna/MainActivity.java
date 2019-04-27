@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
     Button button4;
     Button button5;
     Button button6;
+    Button button7;
     private MyTargetView adView;
 
 
@@ -64,6 +65,9 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
 
         button6 = findViewById(R.id.button6);
         button6.setOnClickListener(this);
+
+        button7 = findViewById(R.id.button7);
+        button7.setOnClickListener(this);
 
 
         // Устанавливаем слушатель событий
@@ -121,6 +125,10 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
             case R.id.button6:
                 Intent intent6 = new Intent(this, Transport.class);
                 startActivity(intent6);
+                break;
+            case R.id.button7:
+                Intent intent7 = new Intent(this, CamWeb.class);
+                startActivity(intent7);
                 break;
             default:
                 break;

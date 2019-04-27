@@ -32,13 +32,21 @@
             android:name="com.google.firebase.messaging.default_notification_icon"
             android:resource="@drawable/ic_stat" />
 
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".CamWeb"
+            android:label="@string/action_webcam1"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name=".Zastavka"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MainActivity" />
         <activity
             android:name=".History"
             android:label="О городе"

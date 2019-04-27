@@ -127,32 +127,12 @@ public class News extends AppCompatActivity {
                 mWebView.loadUrl("http://город-дубна.рф/all_news/all_news");
                 return true;
             case R.id.action_news1:
-                mWebView.loadUrl("http://город-дубна.рф/all_news/gornov");
+                mWebView.loadUrl("https://yandex.ru/pogoda/dubna");
                 return true;
             case R.id.action_news2:
-                mWebView.loadUrl("http://город-дубна.рф/all_news/polek");
+                mWebView.loadUrl("http://город-дубна.рф/jobs");
                 return true;
-            case R.id.action_news3:
-                mWebView.loadUrl("http://город-дубна.рф/all_news/ludi");
-                return true;
-            case R.id.action_news4:
-                mWebView.loadUrl("http://город-дубна.рф/all_news/priob");
-                return true;
-            case R.id.action_news5:
-                mWebView.loadUrl("http://город-дубна.рф/all_news/kulrel");
-                return true;
-            case R.id.action_news6:
-                mWebView.loadUrl("http://город-дубна.рф/all_news/tehteh");
-                return true;
-            case R.id.action_news7:
-                mWebView.loadUrl("http://gorod-kimry.ru/all_news/krim");
-                return true;
-            case R.id.action_news8:
-                mWebView.loadUrl("http://город-дубна.рф/all_news/istor");
-                return true;
-            case R.id.action_news9:
-                mWebView.loadUrl("http://город-дубна.рф/all_news/sporot");
-                return true;
+
             default:
                 return super.onOptionsItemSelected(item);
         }
