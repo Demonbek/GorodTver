@@ -31,7 +31,7 @@ public class Zastavka extends AppCompatActivity {
                 finally {
                     //Закрываем activity:
                     finish();
-                    startActivity(new Intent(Zastavka.this,MainActivity.class));
+                    startActivity(new Intent(Zastavka.this,HomeActivity.class));
                 }
             }
         };

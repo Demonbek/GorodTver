@@ -145,6 +145,17 @@
     <string name="action_webcam10">Улица Вернова, проспект Боголюбова, круг</string>
     <string name="action_webcam11">Улица Вернова, проспект Боголюбова, круг 2</string>
 
+    <string name="title_activity_home" tools:ignore="ExtraTranslation">HomeActivity</string>
+    <string name="navigation_drawer_open">Открыть панель навигации</string>
+    <string name="navigation_drawer_close">Закрыть панель навигации</string>
+    <string name="nav_header_subtitle">город-дубна.рф</string>
+    <string name="nav_header_desc">Navigation header</string>
 
+    <string name="menu_home">История города</string>
+    <string name="menu_ads">Доска объявлений</string>
+    <string name="menu_pogoda">Погода</string>
+    <string name="menu_jobs">Вакансии</string>
+    <string name="menu_share">Поделиться</string>
+    <string name="menu_send">О программе</string>
 
 </resources>

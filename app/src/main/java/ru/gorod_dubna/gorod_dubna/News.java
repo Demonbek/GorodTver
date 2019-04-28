@@ -115,26 +115,13 @@ public class News extends AppCompatActivity {
         // получим идентификатор выбранного пункта меню
         int id = item.getItemId();
         // Операции для выбранного пункта меню
-        switch (id) {
-            case R.id.action_share:
-                Intent sendIntent = new Intent();
-                sendIntent.setAction(Intent.ACTION_SEND);
-                sendIntent.putExtra(Intent.EXTRA_TEXT, "Прочитай интересную новость:\n "+currentUrl+"\n\nПередано из приложения 'Город Дубна'" );
-                sendIntent.setType("text/plain");
-                startActivity(Intent.createChooser(sendIntent,"Поделиться"));
-
-            case R.id.action_news:
-                mWebView.loadUrl("http://город-дубна.рф/all_news/all_news");
-                return true;
-            case R.id.action_news1:
-                mWebView.loadUrl("https://yandex.ru/pogoda/dubna");
-                return true;
-            case R.id.action_news2:
-                mWebView.loadUrl("http://город-дубна.рф/jobs");
-                return true;
-
-            default:
-                return super.onOptionsItemSelected(item);
+        if (id == R.id.action_share) {
+            Intent sendIntent = new Intent();
+            sendIntent.setAction(Intent.ACTION_SEND);
+            sendIntent.putExtra(Intent.EXTRA_TEXT, "Прочитай интересную новость:\n " + currentUrl + "\n\nПередано из приложения 'Город Дубна'");
+            sendIntent.setType("text/plain");
+            startActivity(Intent.createChooser(sendIntent, "Поделиться"));
         }
+        return super.onOptionsItemSelected(item);
     }
 }

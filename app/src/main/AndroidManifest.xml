@@ -7,7 +7,7 @@
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_GPS" />
     <uses-permission android:name="android.permission.ACCESS_ASSISTED_GPS" />
     <uses-permission android:name="android.permission.ACCESS_LOCATION" />
@@ -24,18 +24,23 @@
         tools:ignore="GoogleAppIndexingWarning"
         tools:targetApi="m">
         <activity
+            android:name=".HomeActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name=".Transport"
             android:label="Транспорт"
+            android:parentActivityName=".HomeActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".CamWeb"
+            android:label="@string/action_webcam1"
+            android:parentActivityName=".HomeActivity"
             android:theme="@style/AppTheme" />
 
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_icon"
             android:resource="@drawable/ic_stat" />
-
-        <activity
-            android:name=".CamWeb"
-            android:label="@string/action_webcam1"
-            android:theme="@style/AppTheme" />
 
         <activity
             android:name=".Zastavka"
@@ -46,42 +51,53 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
+
         <activity
             android:name=".History"
             android:label="О городе"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".HomeActivity"
             android:theme="@style/AppTheme"
             tools:targetApi="jelly_bean">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="ru.gorod_dubna.gorod_dubna.MainActivity" />
+                android:value="ru.gorod_dubna.gorod_dubna.HomeActivity" />
         </activity>
         <activity
             android:name=".News"
             android:label="Новости"
-            android:theme="@style/AppTheme">
-            <intent-filter>
-                <action android:name="OPEN_ACTIVITY_1" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
+            android:parentActivityName=".HomeActivity"
+            android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".Ads"
+            android:label="Объявления"
+            android:parentActivityName=".HomeActivity"
+            android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".Pogoda"
+            android:label="Погода"
+            android:parentActivityName=".HomeActivity"
+            android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".Jobs"
+            android:label="Вакансии"
+            android:parentActivityName=".HomeActivity"
+            android:theme="@style/AppTheme"/>
         <activity
             android:name=".Telefony"
             android:label="Телефоны"
+            android:parentActivityName=".HomeActivity"
             android:theme="@style/AppTheme"
             tools:targetApi="jelly_bean">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="ru.gorod_dubna.gorod_dubna.MainActivity" />
+                android:value="ru.gorod_dubna.gorod_dubna.HomeActivity" />
         </activity>
         <activity
             android:name=".Afisha"
             android:label="Афиша"
+            android:parentActivityName=".HomeActivity"
             android:theme="@style/AppTheme" />
         <activity android:name=".Onas" />
-
 
         <service
             android:name=".MyFirebaseMessagingService"
@@ -91,7 +107,9 @@
             </intent-filter>
         </service>
 
-        <activity android:name="com.my.target.common.MyTargetActivity" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
+        <activity
+            android:name="com.my.target.common.MyTargetActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
     </application>
 
 </manifest>
