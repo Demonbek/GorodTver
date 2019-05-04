@@ -24,6 +24,7 @@ public class HomeActivity extends AppCompatActivity
     Button button;
     Button button4;
     Button button5;
+    Button button6;
     private MyTargetView adView;
 
     @Override
@@ -71,6 +72,9 @@ public class HomeActivity extends AppCompatActivity
 
         button5 = findViewById(R.id.button5);
         button5.setOnClickListener(this);
+
+        button6 = findViewById(R.id.button6);
+        button6.setOnClickListener(this);
 
 
         // Устанавливаем LayoutParams
@@ -176,6 +180,10 @@ public class HomeActivity extends AppCompatActivity
             case R.id.button5:
                 Intent intent5 = new Intent(this, CamWeb.class);
                 startActivity(intent5);
+                break;
+            case R.id.button6:
+                Intent intent6 = new Intent(this, Video.class);
+                startActivity(intent6);
                 break;
             default:
                 break;

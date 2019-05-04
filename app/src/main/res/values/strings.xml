@@ -157,5 +157,6 @@
     <string name="menu_jobs">Вакансии</string>
     <string name="menu_share">Поделиться</string>
     <string name="menu_send">О программе</string>
+    <string name="video">ВИДЕО</string>
 
 </resources>

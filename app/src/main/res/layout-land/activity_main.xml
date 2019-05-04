@@ -10,19 +10,12 @@
     tools:context="ru.gorod_dubna.gorod_dubna.HomeActivity">
 
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:background="@android:drawable/alert_dark_frame"
-        android:contentDescription="@string/todo"
-        app:srcCompat="@drawable/logo" />
-
     <TableLayout
         android:id="@+id/table1"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_margin="?attr/actionBarSize"
+        android:paddingTop="?attr/actionBarSize">
 
         <TableRow
             android:layout_width="match_parent"
@@ -44,6 +37,23 @@
                 app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
             <Button
+                android:id="@+id/button6"
+                style="@style/Widget.AppCompat.Button.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="@android:dimen/notification_large_icon_height"
+                android:background="@android:drawable/alert_dark_frame"
+                android:text="@string/video"
+                android:textColor="@android:color/white"
+                tools:ignore="InefficientWeight" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <Button
                 android:id="@+id/button2"
                 style="@style/Widget.AppCompat.Button.Small"
                 android:layout_width="match_parent"
@@ -54,28 +64,6 @@
                 android:textColor="@android:color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button3" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-
-            <Button
-                android:id="@+id/button4"
-                style="@style/Widget.AppCompat.Button.Small"
-                android:layout_width="match_parent"
-                android:layout_height="@android:dimen/notification_large_icon_height"
-                android:layout_weight="1"
-                android:background="@android:drawable/alert_dark_frame"
-                android:paddingLeft="50dp"
-                android:paddingRight="50dp"
-                android:text="@string/transports"
-                android:textColor="@android:color/white"
-                app:layout_constraintEnd_toEndOf="@+id/button2"
-                app:layout_constraintStart_toStartOf="@+id/button2"
-                app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
             <Button
                 android:id="@+id/button3"
@@ -94,21 +82,41 @@
 
         </TableRow>
 
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/button4"
+                style="@style/Widget.AppCompat.Button.Small"
+                android:layout_width="match_parent"
+                android:layout_height="@android:dimen/notification_large_icon_height"
+                android:layout_weight="1"
+                android:background="@android:drawable/alert_dark_frame"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                android:text="@string/transports"
+                android:textColor="@android:color/white"
+                app:layout_constraintEnd_toEndOf="@+id/button2"
+                app:layout_constraintStart_toStartOf="@+id/button2"
+                app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+            <Button
+                android:id="@+id/button5"
+                style="@style/Widget.AppCompat.Button.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="@android:dimen/notification_large_icon_height"
+                android:background="@android:drawable/alert_dark_frame"
+                android:text="@string/webcam"
+                android:textColor="@android:color/white"
+                tools:ignore="InefficientWeight" />
+        </TableRow>
+
 
     </TableLayout>
 
-    <Button
-        android:id="@+id/button5"
-        style="@style/Widget.AppCompat.Button.Small"
-        android:layout_width="wrap_content"
-        android:layout_height="@android:dimen/notification_large_icon_height"
-        android:background="@android:drawable/alert_dark_frame"
-        android:text="@string/webcam"
-        android:textColor="@android:color/white"
-        tools:ignore="InefficientWeight" />
 
     <!-- Реклама My target-->
-
     <RelativeLayout
         android:id="@+id/activityLayout"
         android:layout_width="match_parent"
@@ -122,4 +130,3 @@
     </RelativeLayout>
 
 </LinearLayout>
-
