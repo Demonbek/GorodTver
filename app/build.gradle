@@ -6,7 +6,7 @@ android {
         applicationId "ru.gorod_dubna.gorod_dubna"
         minSdkVersion 14
         targetSdkVersion 28
-        versionCode 21
+        versionCode 22
         versionName '2.0.3'
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
