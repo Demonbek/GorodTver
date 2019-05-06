@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ /**
+  ~  * Created by DemonApps on 06.05.19 20:05
+  ~  * Copyright (c) 2019 . All rights reserved.
+  ~  * Last modified 26.10.18 0:46
+  ~  */
+  -->
+
 <resources>
     <color name="ic_launcher_background">#1E1D2B</color>
 </resources>

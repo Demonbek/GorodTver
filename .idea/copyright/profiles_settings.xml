@@ -1,5 +1,5 @@
 <component name="CopyrightManager">
-  <settings>
+  <settings default="DemonApps">
     <module2copyright>
       <element module="All" copyright="DemonApps" />
     </module2copyright>

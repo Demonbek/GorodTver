@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ /**
+  ~  * Created by DemonApps on 06.05.19 20:05
+  ~  * Copyright (c) 2019 . All rights reserved.
+  ~  * Last modified 12.05.18 17:53
+  ~  */
+  -->
+
 <resources>
     <color name="colorPrimary">#353638</color>
     <color name="colorPrimaryDark">#303F9F</color>

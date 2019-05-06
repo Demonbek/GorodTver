@@ -1,3 +1,11 @@
+<!--
+  ~ /**
+  ~  * Created by DemonApps on 06.05.19 20:05
+  ~  * Copyright (c) 2019 . All rights reserved.
+  ~  * Last modified 28.04.19 12:34
+  ~  */
+  -->
+
 <vector android:height="24dp" android:viewportHeight="438.529"
     android:viewportWidth="438.529" android:width="24dp" xmlns:android="http://schemas.android.com/apk/res/android">
     <path android:fillColor="#FF000000" android:pathData="M219.265,219.267c30.271,0 56.108,-10.71 77.518,-32.121c21.412,-21.411 32.12,-47.248 32.12,-77.515c0,-30.262 -10.708,-56.1 -32.12,-77.516C275.366,10.705 249.528,0 219.265,0S163.16,10.705 141.75,32.115c-21.414,21.416 -32.121,47.253 -32.121,77.516c0,30.267 10.707,56.104 32.121,77.515C163.166,208.557 189.001,219.267 219.265,219.267z"/>

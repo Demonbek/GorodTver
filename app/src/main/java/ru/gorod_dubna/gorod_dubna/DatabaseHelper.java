@@ -1,3 +1,11 @@
+/*
+ * *
+ *  * Created by DemonApps on 06.05.19 20:05
+ *  * Copyright (c) 2019 . All rights reserved.
+ *  * Last modified 24.02.19 17:13
+ *
+ */
+
 package ru.gorod_dubna.gorod_dubna;
 import android.annotation.SuppressLint;
 import android.content.Context;

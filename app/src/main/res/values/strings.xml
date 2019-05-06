@@ -1,3 +1,11 @@
+<!--
+  ~ /**
+  ~  * Created by DemonApps on 06.05.19 20:05
+  ~  * Copyright (c) 2019 . All rights reserved.
+  ~  * Last modified 04.05.19 16:27
+  ~  */
+  -->
+
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Город Дубна</string>
     <string name="news">НОВОСТИ</string>
