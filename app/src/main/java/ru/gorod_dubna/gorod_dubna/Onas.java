@@ -1,8 +1,8 @@
 /*
  * *
- *  * Created by DemonApps on 06.05.19 20:05
+ *  * Created by DemonApps on 27.06.19 18:12
  *  * Copyright (c) 2019 . All rights reserved.
- *  * Last modified 21.02.19 20:26
+ *  * Last modified 27.06.19 18:09
  *
  */
 
@@ -11,8 +11,8 @@ package ru.gorod_dubna.gorod_dubna;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.net.Uri;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;

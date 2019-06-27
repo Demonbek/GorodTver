@@ -1,8 +1,8 @@
 /*
  * *
- *  * Created by DemonApps on 06.05.19 20:05
+ *  * Created by DemonApps on 27.06.19 18:12
  *  * Copyright (c) 2019 . All rights reserved.
- *  * Last modified 24.02.19 17:22
+ *  * Last modified 27.06.19 18:09
  *
  */
 
@@ -12,7 +12,7 @@ import android.annotation.SuppressLint;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ListView;

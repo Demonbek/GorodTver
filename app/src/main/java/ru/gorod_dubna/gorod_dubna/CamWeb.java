@@ -1,8 +1,8 @@
 /*
  * *
- *  * Created by DemonApps on 06.05.19 20:05
+ *  * Created by DemonApps on 27.06.19 18:12
  *  * Copyright (c) 2019 . All rights reserved.
- *  * Last modified 27.04.19 19:11
+ *  * Last modified 27.06.19 18:09
  *
  */
 
@@ -10,8 +10,8 @@ package ru.gorod_dubna.gorod_dubna;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.webkit.WebView;
@@ -128,6 +128,10 @@ public class CamWeb extends AppCompatActivity {
             case R.id.action_webcan11:
                 camWeb.loadUrl("file:///android_asset/webCam11.html");
                 setTitle(R.string.action_webcam11);
+                return true;
+            case R.id.action_webcan12:
+                camWeb.loadUrl("file:///android_asset/webCam12.html");
+                setTitle(R.string.action_webcam12);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

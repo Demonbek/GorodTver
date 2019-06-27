@@ -1,8 +1,8 @@
 <!--
   ~ /**
-  ~  * Created by DemonApps on 06.05.19 20:05
+  ~  * Created by DemonApps on 27.06.19 18:12
   ~  * Copyright (c) 2019 . All rights reserved.
-  ~  * Last modified 04.05.19 16:27
+  ~  * Last modified 06.05.19 20:05
   ~  */
   -->
 
@@ -152,6 +152,7 @@
     <string name="action_webcam9">Комсомольская набережная 2</string>
     <string name="action_webcam10">Улица Вернова, проспект Боголюбова, круг</string>
     <string name="action_webcam11">Улица Вернова, проспект Боголюбова, круг 2</string>
+    <string name="action_webcam12">Полигон ТБО, Коммунальный проезд, 21</string>
 
     <string name="title_activity_home" tools:ignore="ExtraTranslation">HomeActivity</string>
     <string name="navigation_drawer_open">Открыть панель навигации</string>
@@ -166,5 +167,6 @@
     <string name="menu_share">Поделиться</string>
     <string name="menu_send">О программе</string>
     <string name="video">ВИДЕО</string>
+
 
 </resources>

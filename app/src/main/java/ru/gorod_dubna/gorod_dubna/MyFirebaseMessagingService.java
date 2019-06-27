@@ -1,14 +1,14 @@
 /*
  * *
- *  * Created by DemonApps on 06.05.19 20:05
+ *  * Created by DemonApps on 27.06.19 18:12
  *  * Copyright (c) 2019 . All rights reserved.
- *  * Last modified 30.11.18 20:36
+ *  * Last modified 27.06.19 18:09
  *
  */
 
 package ru.gorod_dubna.gorod_dubna;
 import android.annotation.SuppressLint;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import android.util.Log;
 import android.widget.Toast;
 

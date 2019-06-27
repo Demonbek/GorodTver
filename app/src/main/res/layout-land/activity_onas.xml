@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
   ~ /**
-  ~  * Created by DemonApps on 06.05.19 20:05
+  ~  * Created by DemonApps on 27.06.19 18:12
   ~  * Copyright (c) 2019 . All rights reserved.
-  ~  * Last modified 21.02.19 19:40
+  ~  * Last modified 27.06.19 18:09
   ~  */
   -->
 
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -89,4 +89,4 @@
             android:layout_height="wrap_content"
             />
     </RelativeLayout>
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

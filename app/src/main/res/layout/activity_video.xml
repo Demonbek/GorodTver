@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
   ~ /**
-  ~  * Created by DemonApps on 06.05.19 20:05
+  ~  * Created by DemonApps on 27.06.19 18:12
   ~  * Copyright (c) 2019 . All rights reserved.
-  ~  * Last modified 04.05.19 16:49
+  ~  * Last modified 27.06.19 18:09
   ~  */
   -->
 
@@ -15,7 +15,7 @@
     android:orientation="vertical"
     tools:context=".Video">
 
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginBottom="80dp">
@@ -25,7 +25,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             tools:layout_editor_absoluteY="731dp" />
-    </android.support.constraint.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <!-- Реклама My target-->
     <RelativeLayout

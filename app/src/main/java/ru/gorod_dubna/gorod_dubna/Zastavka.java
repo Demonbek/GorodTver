@@ -1,8 +1,8 @@
 /*
  * *
- *  * Created by DemonApps on 06.05.19 20:05
+ *  * Created by DemonApps on 27.06.19 18:12
  *  * Copyright (c) 2019 . All rights reserved.
- *  * Last modified 28.04.19 19:20
+ *  * Last modified 27.06.19 18:09
  *
  */
 
@@ -10,7 +10,7 @@ package ru.gorod_dubna.gorod_dubna;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class Zastavka extends AppCompatActivity {
 
