@@ -111,7 +111,7 @@ public class Transport extends AppCompatActivity {
         switch (id) {
 
             case R.id.action_transport:
-                mWebView3.loadUrl("http://город-дубна.рф//timetable/citybus");
+                mWebView3.loadUrl("http://город-дубна.рф/timetable/citybus");
                 setTitle(R.string.action_transport);
                 return true;
 
@@ -155,6 +155,10 @@ public class Transport extends AppCompatActivity {
             case R.id.action_transport10:
                 mWebView3.loadUrl("file:///android_asset/avtobus_dubna_mos.jpg");
                 setTitle(R.string.action_transport10);
+                return true;
+            case R.id.action_transport11:
+                mWebView3.loadUrl("file:///android_asset/avtobus.html");
+                setTitle(R.string.action_transport11);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
