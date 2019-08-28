@@ -15,6 +15,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -23,8 +24,9 @@ import com.my.target.ads.MyTargetView;
 
 
 public class Onas extends AppCompatActivity implements View.OnClickListener {
-    ImageButton imageButton;
-    ImageButton imageButton2;
+    ImageButton imageButton, imageButton2, imageButton3, imageButton4, imageButton5, imageButton6;
+    Button button7;
+
     TextView textView4;
     private MyTargetView adViewOnas;
     @SuppressLint("SetTextI18n")
@@ -39,6 +41,25 @@ public class Onas extends AppCompatActivity implements View.OnClickListener {
 
         imageButton2 = findViewById(R.id.imageButton2);
         imageButton2.setOnClickListener(this);
+
+        imageButton3 = findViewById(R.id.imageButton3);
+        imageButton3.setOnClickListener(this);
+
+
+        imageButton4 = findViewById(R.id.imageButton4);
+        imageButton4.setOnClickListener(this);
+
+
+        imageButton5 = findViewById(R.id.imageButton5);
+        imageButton5.setOnClickListener(this);
+
+
+        imageButton6 = findViewById(R.id.imageButton6);
+        imageButton6.setOnClickListener(this);
+
+
+        button7 = findViewById(R.id.button7);
+        button7.setOnClickListener(this);
 
         textView4 = findViewById(R.id.textView4);
         textView4.setText("Версия: "+BuildConfig.VERSION_NAME);
@@ -91,17 +112,34 @@ public class Onas extends AppCompatActivity implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.imageButton:
-                Intent intent2 = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/dev?id=6727613984034321120"));
-                startActivity(intent2);
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://demonapps.ml"));
+                startActivity(intent);
                 break;
 
             case R.id.imageButton2:
-                Intent sendIntent = new Intent();
-                sendIntent.setAction(Intent.ACTION_SEND);
-                sendIntent.putExtra(Intent.EXTRA_TEXT, "Советую приложение 'Город Дубна'\n https://play.google.com/store/apps/details?id=ru.gorod_dubna.gorod_dubna" );
-                sendIntent.setType("text/plain");
-                startActivity(Intent.createChooser(sendIntent,"Поделиться приложением..."));
-            break;
+                Intent intent2 = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/dev?id=6727613984034321120"));
+                startActivity(intent2);
+                break;
+            case R.id.imageButton3:
+                Intent intent3 = new Intent(Intent.ACTION_VIEW, Uri.parse("https://vk.com/public169514835"));
+                startActivity(intent3);
+                break;
+            case R.id.imageButton4:
+                Intent intent4 = new Intent(Intent.ACTION_VIEW, Uri.parse("https://twitter.com/Dimasiek"));
+                startActivity(intent4);
+                break;
+            case R.id.imageButton5:
+                Intent intent5 = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/demonapps"));
+                startActivity(intent5);
+                break;
+            case R.id.imageButton6:
+                Intent intent6 = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/demonapps2018"));
+                startActivity(intent6);
+                break;
+            case R.id.button7:
+                Intent intent7 = new Intent(Intent.ACTION_VIEW, Uri.parse("https://demonapps.ml/privacypolicy/privacypolicykim.html"));
+                startActivity(intent7);
+                break;
             default:
                 break;
         }

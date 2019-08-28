@@ -168,6 +168,12 @@
     <string name="menu_send">О программе</string>
     <string name="video">ВИДЕО</string>
     <string name="action_transport11">Автобусы (остановки)</string>
-
+    <string name="privacy_policy">Политика конфиденциальности</string>
+    <string name="site">На сайт</string>
+    <string name="gp">В Google play</string>
+    <string name="vk">В ВК</string>
+    <string name="twiter">В Twitter</string>
+    <string name="insta"> В Instagram</string>
+    <string name="facebook">В Facebook</string>
 
 </resources>
