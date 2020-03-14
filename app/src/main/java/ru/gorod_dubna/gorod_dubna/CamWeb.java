@@ -1,8 +1,8 @@
 /*
  * *
- *  * Created by DemonApps on 27.06.19 18:12
- *  * Copyright (c) 2019 . All rights reserved.
- *  * Last modified 27.06.19 18:09
+ *  * Created by DemonApps on 14.03.20 20:01
+ *  * Copyright (c) 2020 . All rights reserved.
+ *  * Last modified 14.03.20 19:53
  *
  */
 
@@ -100,38 +100,6 @@ public class CamWeb extends AppCompatActivity {
             case R.id.action_webcan4:
                 camWeb.loadUrl("file:///android_asset/webCam4.html");
                 setTitle(R.string.action_webcam4);
-                return true;
-            case R.id.action_webcan5:
-                camWeb.loadUrl("file:///android_asset/webCam5.html");
-                setTitle(R.string.action_webcam5);
-                return true;
-            case R.id.action_webcan6:
-                camWeb.loadUrl("file:///android_asset/webCam6.html");
-                setTitle(R.string.action_webcam6);
-                return true;
-            case R.id.action_webcan7:
-                camWeb.loadUrl("file:///android_asset/webCam7.html");
-                setTitle(R.string.action_webcam7);
-                return true;
-            case R.id.action_webcan8:
-                camWeb.loadUrl("file:///android_asset/webCam8.html");
-                setTitle(R.string.action_webcam8);
-                return true;
-            case R.id.action_webcan9:
-                camWeb.loadUrl("file:///android_asset/webCam9.html");
-                setTitle(R.string.action_webcam9);
-                return true;
-            case R.id.action_webcan10:
-                camWeb.loadUrl("file:///android_asset/webCam10.html");
-                setTitle(R.string.action_webcam10);
-                return true;
-            case R.id.action_webcan11:
-                camWeb.loadUrl("file:///android_asset/webCam11.html");
-                setTitle(R.string.action_webcam11);
-                return true;
-            case R.id.action_webcan12:
-                camWeb.loadUrl("file:///android_asset/webCam12.html");
-                setTitle(R.string.action_webcam12);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

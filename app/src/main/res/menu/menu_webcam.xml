@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
   ~ /**
-  ~  * Created by DemonApps on 27.06.19 18:12
-  ~  * Copyright (c) 2019 . All rights reserved.
-  ~  * Last modified 06.05.19 20:05
+  ~  * Created by DemonApps on 14.03.20 20:01
+  ~  * Copyright (c) 2020 . All rights reserved.
+  ~  * Last modified 14.03.20 19:53
   ~  */
   -->
 
@@ -21,31 +21,6 @@
     <item
         android:id="@+id/action_webcan4"
         android:title="@string/action_webcam4" />
-    <item
-        android:id="@+id/action_webcan5"
-        android:title="@string/action_webcam5" />
-    <item
-        android:id="@+id/action_webcan6"
-        android:title="@string/action_webcam6" />
-    <item
-        android:id="@+id/action_webcan7"
-        android:title="@string/action_webcam7" />
-    <item
-        android:id="@+id/action_webcan8"
-        android:title="@string/action_webcam8" />
-    <item
-    android:id="@+id/action_webcan9"
-    android:title="@string/action_webcam9" />
-    <item
-        android:id="@+id/action_webcan10"
-        android:title="@string/action_webcam10" />
-    <item
-        android:id="@+id/action_webcan11"
-        android:title="@string/action_webcam11" />
-    <item
-        android:id="@+id/action_webcan12"
-        android:title="@string/action_webcam12" />
-
 
 
 </menu>
