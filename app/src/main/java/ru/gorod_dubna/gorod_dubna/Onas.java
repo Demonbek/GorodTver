@@ -112,7 +112,7 @@ public class Onas extends AppCompatActivity implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.imageButton:
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://demonapps.ml"));
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://demonapps.ru"));
                 startActivity(intent);
                 break;
 
