@@ -30,8 +30,7 @@ public class News extends AppCompatActivity {
     private MyTargetView adViewNews;
 
     private WebView mWebView;
-    String url="http://город-дубна.рф/all_news/all_news";
-    String currentUrl=url;
+    String currentUrl;
     @TargetApi(Build.VERSION_CODES.ECLAIR_MR1)
     @RequiresApi(api = Build.VERSION_CODES.ECLAIR_MR1)
     @SuppressLint("SetJavaScriptEnabled")
@@ -39,7 +38,9 @@ public class News extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_news);
         final RelativeLayout layout = findViewById(R.id.activityLayoutNews);
-
+        Intent intent = getIntent();
+        String url = intent.getStringExtra("url");
+        currentUrl=url;
         mWebView = findViewById(R.id.webView);
         // устанавливаем Zoom control
         mWebView.getSettings().setBuiltInZoomControls(true);

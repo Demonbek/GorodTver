@@ -114,10 +114,11 @@
     <string name="action_news1">Погода</string>
     <string name="action_news2">Вакансии</string>
     <string name="action_afisha1">К/т "Волга-Волга"</string>
-    <string name="action_afisha2">Др. мероприятия</string>
-    <string name="action_afisha3">Музей ОИЯИ</string>
-    <string name="action_afisha4">Бассейн "Архимед"</string>
-    <string name="action_afisha5">Бассейн "Карасик"</string>
+    <string name="action_afisha2">ДК Октябрь</string>
+    <string name="action_afisha3">ДК Мир</string>
+    <string name="action_afisha4">ДС Радуга</string>
+    <string name="action_afisha5">Басейн Архимед</string>
+    <string name="action_afisha6">Басейн Карасик</string>
     <string name="share">Поделиться</string>
     <string name="autor">DemonApps</string>
     <string name="invitation_message">Закачай приложение Город Дубна</string>
@@ -168,5 +169,6 @@
     <string name="twiter">В Twitter</string>
     <string name="insta"> В Instagram</string>
     <string name="facebook">В Facebook</string>
+    <string name="photo">Фото</string>
 
 </resources>

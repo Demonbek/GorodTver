@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ /**
+  ~  * Created by DemonApps on 11.04.20 14:00
+  ~  * Copyright (c) 2020 . All rights reserved.
+  ~  * Last modified 11.04.20 14:00
+  ~  */
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+
+    android:orientation="vertical"
+    app:layout_behavior="android.support.design.widget.AppBarLayout$ScrollingViewBehavior">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/pic0"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/photo"
+                android:scaleType="centerCrop"
+                android:theme="@style/AppTheme"
+                app:srcCompat="?attr/colorControlNormal" />
+
+            <Button
+                android:id="@+id/text0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/alert_dark_frame"
+                android:textColor="@color/cardview_light_background"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:ignore="PrivateResource" />
+
+            <ImageView
+                android:id="@+id/pic1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/photo"
+                android:scaleType="centerCrop"
+                android:theme="@style/AppTheme"
+                app:srcCompat="?attr/colorControlNormal" />
+
+            <Button
+                android:id="@+id/text1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/alert_dark_frame"
+                android:textColor="@color/cardview_light_background"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:ignore="PrivateResource" />
+
+            <ImageView
+                android:id="@+id/pic2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/photo"
+                android:scaleType="centerCrop"
+                android:theme="@style/AppTheme"
+                app:srcCompat="?attr/colorControlNormal" />
+
+            <Button
+                android:id="@+id/text2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/alert_dark_frame"
+                android:textColor="@color/cardview_light_background"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:ignore="PrivateResource" />
+
+            <ImageView
+                android:id="@+id/pic3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/photo"
+                android:scaleType="centerCrop"
+                android:theme="@style/AppTheme"
+                app:srcCompat="?attr/colorControlNormal" />
+
+            <Button
+                android:id="@+id/text3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/alert_dark_frame"
+                android:textColor="@color/cardview_light_background"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:ignore="PrivateResource" />
+
+            <ImageView
+                android:id="@+id/pic4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/photo"
+                android:scaleType="centerCrop"
+                android:theme="@style/AppTheme"
+                app:srcCompat="?attr/colorControlNormal" />
+
+            <Button
+                android:id="@+id/text4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/alert_dark_frame"
+                android:textColor="@color/cardview_light_background"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:ignore="PrivateResource" />
+
+            <ImageView
+                android:id="@+id/pic5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/photo"
+                android:scaleType="centerCrop"
+                android:theme="@style/AppTheme"
+                app:srcCompat="?attr/colorControlNormal" />
+
+            <Button
+                android:id="@+id/text5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/alert_dark_frame"
+                android:textColor="@color/cardview_light_background"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:ignore="PrivateResource" />
+
+            <ImageView
+                android:id="@+id/pic6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/photo"
+                android:scaleType="centerCrop"
+                android:theme="@style/AppTheme"
+                app:srcCompat="?attr/colorControlNormal" />
+
+            <Button
+                android:id="@+id/text6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/alert_dark_frame"
+                android:textColor="@color/cardview_light_background"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:ignore="PrivateResource" />
+
+            <ImageView
+                android:id="@+id/pic7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/photo"
+                android:scaleType="centerCrop"
+                android:theme="@style/AppTheme"
+                app:srcCompat="?attr/colorControlNormal" />
+
+            <Button
+                android:id="@+id/text7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/alert_dark_frame"
+                android:textColor="@color/cardview_light_background"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:ignore="PrivateResource" />
+
+            <ImageView
+                android:id="@+id/pic8"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/photo"
+                android:scaleType="centerCrop"
+                android:theme="@style/AppTheme"
+                app:srcCompat="?attr/colorControlNormal" />
+
+            <Button
+                android:id="@+id/text8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/alert_dark_frame"
+                android:textColor="@color/cardview_light_background"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:ignore="PrivateResource" />
+
+            <ImageView
+                android:id="@+id/pic9"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/photo"
+                android:scaleType="centerCrop"
+                android:theme="@style/AppTheme"
+                app:srcCompat="?attr/colorControlNormal" />
+
+            <Button
+                android:id="@+id/text9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/alert_dark_frame"
+                android:textColor="@color/cardview_light_background"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:ignore="PrivateResource" />
+
+            <ImageView
+                android:id="@+id/pic10"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/photo"
+                android:scaleType="centerCrop"
+                android:theme="@style/AppTheme"
+                app:srcCompat="?attr/colorControlNormal" />
+
+            <Button
+                android:id="@+id/text10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/alert_dark_frame"
+                android:textColor="@color/cardview_light_background"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:ignore="PrivateResource" />
+
+            <ImageView
+                android:id="@+id/pic11"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/photo"
+                android:scaleType="centerCrop"
+                android:theme="@style/AppTheme"
+                app:srcCompat="?attr/colorControlNormal" />
+
+            <Button
+                android:id="@+id/text11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/alert_dark_frame"
+                android:textColor="@color/cardview_light_background"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:ignore="PrivateResource" />
+
+            <ImageView
+                android:id="@+id/pic12"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/photo"
+                android:scaleType="centerCrop"
+                android:theme="@style/AppTheme"
+                app:srcCompat="?attr/colorControlNormal" />
+
+            <Button
+                android:id="@+id/text12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/alert_dark_frame"
+                android:textColor="@color/cardview_light_background"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:ignore="PrivateResource" />
+
+            <ImageView
+                android:id="@+id/pic13"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/photo"
+                android:scaleType="centerCrop"
+                android:theme="@style/AppTheme"
+                app:srcCompat="?attr/colorControlNormal" />
+
+            <Button
+                android:id="@+id/text13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/alert_dark_frame"
+                android:textColor="@color/cardview_light_background"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:ignore="PrivateResource" />
+
+            <ImageView
+                android:id="@+id/pic14"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/photo"
+                android:scaleType="centerCrop"
+                android:theme="@style/AppTheme"
+                app:srcCompat="?attr/colorControlNormal" />
+
+            <Button
+                android:id="@+id/text14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/alert_dark_frame"
+                android:textColor="@color/cardview_light_background"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:ignore="PrivateResource" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

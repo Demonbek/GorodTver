@@ -27,7 +27,7 @@ public class Afisha extends AppCompatActivity {
 
     private MyTargetView adViewAfisha;
     private WebView mWebView2;
-    String url="https://volga-volga.dubna.ru/";
+    String url="http://volga-volga.dubna.ru/";
     @TargetApi(Build.VERSION_CODES.ECLAIR_MR1)
     @RequiresApi(api = Build.VERSION_CODES.ECLAIR_MR1)
     @SuppressLint("SetJavaScriptEnabled")
@@ -116,18 +116,21 @@ public class Afisha extends AppCompatActivity {
         // Операции для выбранного пункта меню
         switch (id) {
             case R.id.action_afisha1:
-                mWebView2.loadUrl("https://volga-volga.dubna.ru/");
+                mWebView2.loadUrl("http://volga-volga.dubna.ru/");
                 return true;
             case R.id.action_afisha2:
-                mWebView2.loadUrl("http://dubna.ru/afisha");
+                mWebView2.loadUrl("http://dkoctober.ru/?page_id=43");
                 return true;
             case R.id.action_afisha3:
-                mWebView2.loadUrl("http://museum.jinr.ru/index.html");
+                mWebView2.loadUrl("https://dkmir-dubna.ru/");
                 return true;
             case R.id.action_afisha4:
-                mWebView2.loadUrl("http://arhimed.jinr.ru/asp_shedule.html");
+                mWebView2.loadUrl("http://radugasport.ru/");
                 return true;
             case R.id.action_afisha5:
+                mWebView2.loadUrl("http://arhimed.jinr.ru/asp_shedule.html");
+                return true;
+            case R.id.action_afisha6:
                 mWebView2.loadUrl("https://dushdubna.ru/sports-facility/плавательный-бассейн-карасик/");
                 return true;
             default:

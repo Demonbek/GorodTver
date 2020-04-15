@@ -170,7 +170,7 @@ public class HomeActivity extends AppCompatActivity
         switch (v.getId()) {
 
             case R.id.button:
-                Intent intent = new Intent(this, News.class);
+                Intent intent = new Intent(this, ZagolovkyNews.class);
                 startActivity(intent);
                 break;
             case R.id.button2:

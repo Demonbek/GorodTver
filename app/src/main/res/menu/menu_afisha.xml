@@ -31,12 +31,12 @@
         android:title="@string/action_afisha3"
         app:showAsAction="never" />
     <item
-        android:id="@+id/action_afisha4"
-        android:checkable="false"
-        android:enabled="true"
-        android:orderInCategory="100"
-        android:title="@string/action_afisha4"
-        app:showAsAction="never" />
+    android:id="@+id/action_afisha4"
+    android:checkable="false"
+    android:enabled="true"
+    android:orderInCategory="100"
+    android:title="@string/action_afisha4"
+    app:showAsAction="never" />
     <item
         android:id="@+id/action_afisha5"
         android:checkable="false"
@@ -44,4 +44,12 @@
         android:orderInCategory="100"
         android:title="@string/action_afisha5"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/action_afisha6"
+        android:checkable="false"
+        android:enabled="true"
+        android:orderInCategory="100"
+        android:title="@string/action_afisha6"
+        app:showAsAction="never" />
+
 </menu>

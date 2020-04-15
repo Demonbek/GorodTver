@@ -31,7 +31,14 @@
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning"
         tools:targetApi="m">
-
+        <activity
+            android:name=".ZagolovkyNews"
+            android:label="Новости"
+            android:parentActivityName=".HomeActivity"
+            android:theme="@style/AppTheme"/>
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".HomeActivity" />
         <activity android:name=".Video"
             android:label="@string/video"
             android:parentActivityName=".HomeActivity"
