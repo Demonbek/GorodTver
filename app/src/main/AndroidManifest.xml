@@ -85,7 +85,7 @@
         <activity
             android:name=".News"
             android:label="Новости"
-            android:parentActivityName=".HomeActivity"
+            android:parentActivityName=".ZagolovkyNews"
             android:theme="@style/AppTheme"/>
         <activity
             android:name=".Ads"
