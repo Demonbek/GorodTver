@@ -25,7 +25,7 @@ import com.my.target.ads.MyTargetView;
 public class Video extends YouTubeBaseActivity implements YouTubePlayer.OnInitializedListener {
 
     public static final String GOOGLE_API_KEY = "AIzaSyDU9sAsjm1bIHpSC0FGEmiUz76hx_7m7r8";
-    public static final String YOUTUBE_PLAYLIST_ID = "PLs1NlaW2wItsWgbUI5GRC38U38TLJioxl";
+    public static final String YOUTUBE_PLAYLIST_ID = "PLw5XBQ4p2VPt5mrnq_naW8H3XgxuT7QT-";
     final String TAG = getClass().getSimpleName();
     private MyTargetView adViewVideo;
     @Override

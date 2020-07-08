@@ -13,8 +13,11 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
+
 import com.squareup.picasso.Picasso;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -32,6 +35,7 @@ public class ZagolovkyNews extends Activity{
     public ArrayList<String> aticleList = new ArrayList<>();
     public ArrayList<String> urlList = new ArrayList<>();
     public ArrayList<String> picList = new ArrayList<>();
+    private ProgressBar progressBar;
     private ImageView pic0, pic1, pic2, pic3, pic4, pic5, pic6, pic7, pic8, pic9, pic10, pic11, pic12, pic13, pic14;
     private Button text0, text1, text2, text3, text4, text5, text6, text7, text8, text9, text10,text11, text12, text13, text14;
     // List view
@@ -40,6 +44,7 @@ public class ZagolovkyNews extends Activity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_zagolovky_news);
+        progressBar = findViewById(R.id.progressBar);
         pic0 = findViewById(R.id.pic0);
         pic1 = findViewById(R.id.pic1);
         pic2 = findViewById(R.id.pic2);
@@ -92,7 +97,7 @@ public class ZagolovkyNews extends Activity{
             Document doc;
             try {
                 // определяем откуда будем воровать данные
-                doc = Jsoup.connect("http://город-дубна.рф/all_news/all_news").get();
+                doc = Jsoup.connect("https://город-дубна.рф/all_news/all_news").get();
                 aticleList.clear();
                 urlList.clear();
                 picList.clear();
@@ -100,14 +105,14 @@ public class ZagolovkyNews extends Activity{
                 aticle = doc.getElementsByAttributeValue("class", "all_15_news");
                 aticle.forEach(aticle -> {
                     Element aElement = aticle.child(0);
-                    String url = "http://город-дубна.рф" + aElement.attr("href");
+                    String url = "https://город-дубна.рф" + aElement.attr("href");
                     String title = aElement.child(0).text();
                     Element divElement = aticle.child(1);
                     Element noindexElement = divElement.child(0);
                     Element picElement = noindexElement.child(0);
                     String pic = picElement.attr("src");
                     if (pic.indexOf("/") == 0) {
-                        pic = "http://город-дубна.рф" + pic;
+                        pic = "https://город-дубна.рф" + pic;
                     }
                     aticleList.add(title);
                     urlList.add(url);
@@ -122,6 +127,7 @@ public class ZagolovkyNews extends Activity{
 
         @Override
         protected void onPostExecute(String result) {
+            progressBar.setVisibility(View.GONE);
             // Заполняем страницу
             Picasso.get().load(picList.get(0)).into(pic0);
             text0.setText(aticleList.get(0));
