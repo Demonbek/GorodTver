@@ -111,6 +111,9 @@ public class ZagolovkyNews extends Activity{
                     Element noindexElement = divElement.child(0);
                     Element picElement = noindexElement.child(0);
                     String pic = picElement.attr("src");
+                    if (pic.equals("")) {
+                        pic = "https://lh3.googleusercontent.com/HaBi8221WCpuBqUhfRfxFw2mcL3yo5o128CGZKflxDJd1mEcp204EwOFGBHiYaQuZA4";
+                    }
                     if (pic.indexOf("/") == 0) {
                         pic = "https://город-дубна.рф" + pic;
                     }
@@ -127,8 +130,7 @@ public class ZagolovkyNews extends Activity{
 
         @Override
         protected void onPostExecute(String result) {
-            progressBar.setVisibility(View.GONE);
-            // Заполняем страницу
+
             Picasso.get().load(picList.get(0)).into(pic0);
             text0.setText(aticleList.get(0));
             text0.setOnClickListener(v -> {
@@ -235,6 +237,8 @@ public class ZagolovkyNews extends Activity{
                 intent.putExtra("url", urlList.get(14));
                 startActivity(intent);
             });
+            // Убираем прогрессбар
+            progressBar.setVisibility(View.GONE);
         }
 
     }
