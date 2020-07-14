@@ -1,0 +1,1521 @@
+Index: app/src/main/res/menu/menu_telefony.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/menu/menu_telefony.xml	(revision 6d0156530f6fd56758cf829e48aa93fe2ca9c4cd)
++++ app/src/main/res/menu/menu_telefony.xml	(date 1594742348089)
+@@ -9,7 +9,7 @@
+ <menu xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     xmlns:tools="http://schemas.android.com/tools"
+-    tools:context="ru.gorod_dubna.gorod_dubna.Telefony">
++    tools:context="ru.gorod.tver.ru.gorod_dubna.gorod.Telefony">
+     <item
+         android:id="@+id/action_tel"
+         android:orderInCategory="100"
+Index: app/src/main/res/menu/menu_history.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/menu/menu_history.xml	(revision 6d0156530f6fd56758cf829e48aa93fe2ca9c4cd)
++++ app/src/main/res/menu/menu_history.xml	(date 1594742347167)
+@@ -9,7 +9,7 @@
+ <menu xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     xmlns:tools="http://schemas.android.com/tools"
+-    tools:context="ru.gorod_dubna.gorod_dubna.History">
++    tools:context="ru.gorod.tver.ru.gorod_dubna.gorod.History">
+     <item
+         android:id="@+id/action_settings"
+         android:orderInCategory="100"
+Index: app/src/main/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/AndroidManifest.xml	(revision 6d0156530f6fd56758cf829e48aa93fe2ca9c4cd)
++++ app/src/main/AndroidManifest.xml	(date 1594742348152)
+@@ -9,7 +9,7 @@
+ 
+ <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:tools="http://schemas.android.com/tools"
+-    package="ru.gorod_dubna.gorod_dubna">
++    package="ru.gorod.tver">
+ 
+     <uses-permission android:name="android.permission.INTERNET" />
+     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+@@ -32,30 +32,30 @@
+         tools:ignore="GoogleAppIndexingWarning"
+         tools:targetApi="m">
+         <activity
+-            android:name=".ZagolovkyNews"
++            android:name="ru.gorod.tver.ZagolovkyNews"
+             android:label="Новости"
+-            android:parentActivityName=".HomeActivity"
++            android:parentActivityName="ru.gorod.tver.HomeActivity"
+             android:theme="@style/AppTheme"/>
+         <meta-data
+             android:name="android.support.PARENT_ACTIVITY"
+-            android:value=".HomeActivity" />
+-        <activity android:name=".Video"
++            android:value="ru.gorod.tver.HomeActivity" />
++        <activity android:name="ru.gorod.tver.Video"
+             android:label="@string/video"
+-            android:parentActivityName=".HomeActivity"
++            android:parentActivityName="ru.gorod.tver.HomeActivity"
+             android:theme="@style/AppTheme" />
+         <activity
+-            android:name=".HomeActivity"
++            android:name="ru.gorod.tver.HomeActivity"
+             android:label=""
+             android:theme="@style/AppTheme.NoActionBar" />
+         <activity
+-            android:name=".Transport"
++            android:name="ru.gorod.tver.Transport"
+             android:label="Транспорт"
+-            android:parentActivityName=".HomeActivity"
++            android:parentActivityName="ru.gorod.tver.HomeActivity"
+             android:theme="@style/AppTheme" />
+         <activity
+-            android:name=".CamWeb"
++            android:name="ru.gorod.tver.CamWeb"
+             android:label="@string/action_webcam1"
+-            android:parentActivityName=".HomeActivity"
++            android:parentActivityName="ru.gorod.tver.HomeActivity"
+             android:theme="@style/AppTheme" />
+ 
+         <meta-data
+@@ -63,7 +63,7 @@
+             android:resource="@drawable/ic_stat" />
+ 
+         <activity
+-            android:name=".Zastavka"
++            android:name="ru.gorod.tver.Zastavka"
+             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+             <intent-filter>
+                 <action android:name="android.intent.action.MAIN" />
+@@ -73,54 +73,54 @@
+         </activity>
+ 
+         <activity
+-            android:name=".History"
++            android:name="ru.gorod.tver.History"
+             android:label="О городе"
+-            android:parentActivityName=".HomeActivity"
++            android:parentActivityName="ru.gorod.tver.HomeActivity"
+             android:theme="@style/AppTheme"
+             tools:targetApi="jelly_bean">
+             <meta-data
+                 android:name="android.support.PARENT_ACTIVITY"
+-                android:value="ru.gorod_dubna.gorod_dubna.HomeActivity" />
++                android:value="ru.gorod.tver.HomeActivity" />
+         </activity>
+         <activity
+-            android:name=".News"
++            android:name="ru.gorod.tver.News"
+             android:label="Новости"
+-            android:parentActivityName=".ZagolovkyNews"
++            android:parentActivityName="ru.gorod.tver.ZagolovkyNews"
+             android:theme="@style/AppTheme"/>
+         <activity
+-            android:name=".Ads"
++            android:name="ru.gorod.tver.Ads"
+             android:label="Объявления"
+-            android:parentActivityName=".HomeActivity"
++            android:parentActivityName="ru.gorod.tver.HomeActivity"
+             android:theme="@style/AppTheme"/>
+         <activity
+-            android:name=".Pogoda"
++            android:name="ru.gorod.tver.Pogoda"
+             android:label="Погода"
+-            android:parentActivityName=".HomeActivity"
++            android:parentActivityName="ru.gorod.tver.HomeActivity"
+             android:theme="@style/AppTheme"/>
+         <activity
+-            android:name=".Jobs"
++            android:name="ru.gorod.tver.Jobs"
+             android:label="Вакансии"
+-            android:parentActivityName=".HomeActivity"
++            android:parentActivityName="ru.gorod.tver.HomeActivity"
+             android:theme="@style/AppTheme"/>
+         <activity
+-            android:name=".Telefony"
++            android:name="ru.gorod.tver.Telefony"
+             android:label="Телефоны"
+-            android:parentActivityName=".HomeActivity"
++            android:parentActivityName="ru.gorod.tver.HomeActivity"
+             android:theme="@style/AppTheme"
+             tools:targetApi="jelly_bean">
+             <meta-data
+                 android:name="android.support.PARENT_ACTIVITY"
+-                android:value="ru.gorod_dubna.gorod_dubna.HomeActivity" />
++                android:value="ru.gorod.tver.HomeActivity" />
+         </activity>
+         <activity
+-            android:name=".Afisha"
++            android:name="ru.gorod.tver.Afisha"
+             android:label="Афиша"
+-            android:parentActivityName=".HomeActivity"
++            android:parentActivityName="ru.gorod.tver.HomeActivity"
+             android:theme="@style/AppTheme" />
+-        <activity android:name=".Onas" />
++        <activity android:name="ru.gorod.tver.Onas" />
+ 
+         <service
+-            android:name=".MyFirebaseMessagingService"
++            android:name="ru.gorod.tver.MyFirebaseMessagingService"
+             tools:ignore="ExportedService">
+             <intent-filter>
+                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
+Index: app/src/main/res/layout/activity_history.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/activity_history.xml	(revision 6d0156530f6fd56758cf829e48aa93fe2ca9c4cd)
++++ app/src/main/res/layout/activity_history.xml	(date 1594742347488)
+@@ -13,7 +13,7 @@
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:fitsSystemWindows="true"
+-    tools:context="ru.gorod_dubna.gorod_dubna.History">
++    tools:context="ru.gorod.tver.ru.gorod_dubna.gorod.History">
+ 
+     <ScrollView
+         android:id="@+id/sv"
+Index: app/src/main/java/ru/gorod_dubna/gorod_dubna/Telefony.java
+===================================================================
+--- app/src/main/java/ru/gorod_dubna/gorod_dubna/Telefony.java	(revision 6d0156530f6fd56758cf829e48aa93fe2ca9c4cd)
++++ app/src/main/java/ru/gorod/tver/Telefony.java	(date 1594742347281)
+@@ -1,12 +1,12 @@
+ /*
+  * *
+- *  * Created by DemonApps on 14.03.20 20:01
++ *  * Created by DemonApps on 14.07.20 18:46
+  *  * Copyright (c) 2020 . All rights reserved.
+- *  * Last modified 14.03.20 19:53
++ *  * Last modified 14.03.20 20:01
+  *
+  */
+ 
+-package ru.gorod_dubna.gorod_dubna;
++package ru.gorod.tver;
+ 
+ import android.annotation.SuppressLint;
+ import android.database.Cursor;
+@@ -23,6 +23,7 @@
+ import java.util.HashMap;
+ 
+ 
++
+ public class Telefony extends AppCompatActivity {
+     static String tablename = "SELECT * FROM extrtel";
+ 
+Index: app/src/main/java/ru/gorod_dubna/gorod_dubna/Ads.java
+===================================================================
+--- app/src/main/java/ru/gorod_dubna/gorod_dubna/Ads.java	(revision 6d0156530f6fd56758cf829e48aa93fe2ca9c4cd)
++++ app/src/main/java/ru/gorod/tver/Ads.java	(date 1594742346918)
+@@ -1,12 +1,12 @@
+ /*
+  * *
+- *  * Created by DemonApps on 14.03.20 20:01
++ *  * Created by DemonApps on 14.07.20 18:46
+  *  * Copyright (c) 2020 . All rights reserved.
+- *  * Last modified 14.03.20 19:53
++ *  * Last modified 14.03.20 20:01
+  *
+  */
+ 
+-package ru.gorod_dubna.gorod_dubna;
++package ru.gorod.tver;
+ 
+ import android.annotation.SuppressLint;
+ import android.annotation.TargetApi;
+@@ -22,6 +22,7 @@
+ import com.my.target.ads.MyTargetView;
+ 
+ 
++
+ public class Ads extends AppCompatActivity {
+ 
+     private MyTargetView adViewNews;
+Index: app/src/main/java/ru/gorod_dubna/gorod_dubna/DatabaseHelper.java
+===================================================================
+--- app/src/main/java/ru/gorod_dubna/gorod_dubna/DatabaseHelper.java	(revision 6d0156530f6fd56758cf829e48aa93fe2ca9c4cd)
++++ app/src/main/java/ru/gorod/tver/DatabaseHelper.java	(date 1594742347388)
+@@ -1,12 +1,12 @@
+ /*
+  * *
+- *  * Created by DemonApps on 14.03.20 20:01
++ *  * Created by DemonApps on 14.07.20 18:46
+  *  * Copyright (c) 2020 . All rights reserved.
+- *  * Last modified 14.03.20 19:53
++ *  * Last modified 14.03.20 20:01
+  *
+  */
+ 
+-package ru.gorod_dubna.gorod_dubna;
++package ru.gorod.tver;
+ import android.annotation.SuppressLint;
+ import android.content.Context;
+ import android.database.SQLException;
+Index: app/src/main/res/layout/activity_cam_web.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/activity_cam_web.xml	(revision 6d0156530f6fd56758cf829e48aa93fe2ca9c4cd)
++++ app/src/main/res/layout/activity_cam_web.xml	(date 1594742347334)
+@@ -14,7 +14,7 @@
+     android:background="@drawable/dubna"
+     android:orientation="horizontal"
+     android:theme="@style/Theme.AppCompat"
+-    tools:context=".CamWeb">
++    tools:context="ru.gorod.tver.CamWeb">
+ 
+     <WebView
+         android:id="@+id/camWeb"
+Index: app/src/main/res/layout/app_bar_home.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/app_bar_home.xml	(revision 6d0156530f6fd56758cf829e48aa93fe2ca9c4cd)
++++ app/src/main/res/layout/app_bar_home.xml	(date 1594742346987)
+@@ -12,7 +12,7 @@
+     xmlns:tools="http://schemas.android.com/tools"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+-    tools:context=".HomeActivity">
++    tools:context="ru.gorod.tver.HomeActivity">
+ 
+     <com.google.android.material.appbar.AppBarLayout
+         android:layout_width="match_parent"
+Index: app/src/main/java/ru/gorod_dubna/gorod_dubna/MyFirebaseMessagingService.java
+===================================================================
+--- app/src/main/java/ru/gorod_dubna/gorod_dubna/MyFirebaseMessagingService.java	(revision 6d0156530f6fd56758cf829e48aa93fe2ca9c4cd)
++++ app/src/main/java/ru/gorod/tver/MyFirebaseMessagingService.java	(date 1594742348290)
+@@ -1,12 +1,12 @@
+ /*
+  * *
+- *  * Created by DemonApps on 14.03.20 20:01
++ *  * Created by DemonApps on 14.07.20 18:46
+  *  * Copyright (c) 2020 . All rights reserved.
+- *  * Last modified 14.03.20 19:53
++ *  * Last modified 14.03.20 20:01
+  *
+  */
+ 
+-package ru.gorod_dubna.gorod_dubna;
++package ru.gorod.tver;
+ import android.annotation.SuppressLint;
+ import androidx.annotation.NonNull;
+ import android.util.Log;
+@@ -20,6 +20,7 @@
+ 
+ import java.util.Objects;
+ 
++
+ public class MyFirebaseMessagingService extends FirebaseMessagingService {
+ 
+     private static final String TAG = "TestFbseInstIdSvc";
+Index: app/src/main/res/menu/menu_news.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/menu/menu_news.xml	(revision 6d0156530f6fd56758cf829e48aa93fe2ca9c4cd)
++++ app/src/main/res/menu/menu_news.xml	(date 1594742347820)
+@@ -9,7 +9,7 @@
+ <menu xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     xmlns:tools="http://schemas.android.com/tools"
+-    tools:context="ru.gorod_dubna.gorod_dubna.News">
++    tools:context="ru.gorod.tver.ru.gorod_dubna.gorod.News">
+ 
+     <item
+         android:id="@+id/action_share"
+Index: app/src/main/java/ru/gorod_dubna/gorod_dubna/Zastavka.java
+===================================================================
+--- app/src/main/java/ru/gorod_dubna/gorod_dubna/Zastavka.java	(revision 6d0156530f6fd56758cf829e48aa93fe2ca9c4cd)
++++ app/src/main/java/ru/gorod/tver/Zastavka.java	(date 1594742348183)
+@@ -1,17 +1,18 @@
+ /*
+  * *
+- *  * Created by DemonApps on 14.03.20 20:01
++ *  * Created by DemonApps on 14.07.20 18:46
+  *  * Copyright (c) 2020 . All rights reserved.
+- *  * Last modified 14.03.20 19:53
++ *  * Last modified 14.03.20 20:01
+  *
+  */
+ 
+-package ru.gorod_dubna.gorod_dubna;
++package ru.gorod.tver;
+ 
+ import android.content.Intent;
+ import android.os.Bundle;
+ import androidx.appcompat.app.AppCompatActivity;
+ 
++
+ public class Zastavka extends AppCompatActivity {
+ 
+     @Override
+Index: app/src/main/res/layout/activity_video.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/activity_video.xml	(revision 6d0156530f6fd56758cf829e48aa93fe2ca9c4cd)
++++ app/src/main/res/layout/activity_video.xml	(date 1594742347867)
+@@ -13,7 +13,7 @@
+     android:layout_height="match_parent"
+     android:background="@android:color/black"
+     android:orientation="vertical"
+-    tools:context=".Video">
++    tools:context="ru.gorod.tver.Video">
+ 
+     <androidx.constraintlayout.widget.ConstraintLayout
+         android:layout_width="match_parent"
+Index: app/src/main/java/ru/gorod_dubna/gorod_dubna/Jobs.java
+===================================================================
+--- app/src/main/java/ru/gorod_dubna/gorod_dubna/Jobs.java	(revision 6d0156530f6fd56758cf829e48aa93fe2ca9c4cd)
++++ app/src/main/java/ru/gorod/tver/Jobs.java	(date 1594742346987)
+@@ -1,12 +1,12 @@
+ /*
+  * *
+- *  * Created by DemonApps on 14.03.20 20:01
++ *  * Created by DemonApps on 14.07.20 18:46
+  *  * Copyright (c) 2020 . All rights reserved.
+- *  * Last modified 14.03.20 19:53
++ *  * Last modified 14.03.20 20:01
+  *
+  */
+ 
+-package ru.gorod_dubna.gorod_dubna;
++package ru.gorod.tver;
+ 
+ import android.annotation.SuppressLint;
+ import android.annotation.TargetApi;
+@@ -22,6 +22,7 @@
+ import com.my.target.ads.MyTargetView;
+ 
+ 
++
+ public class Jobs extends AppCompatActivity {
+ 
+     private MyTargetView adViewNews;
+Index: app/src/main/java/ru/gorod_dubna/gorod_dubna/Pogoda.java
+===================================================================
+--- app/src/main/java/ru/gorod_dubna/gorod_dubna/Pogoda.java	(revision 6d0156530f6fd56758cf829e48aa93fe2ca9c4cd)
++++ app/src/main/java/ru/gorod/tver/Pogoda.java	(date 1594742346981)
+@@ -1,12 +1,12 @@
+ /*
+  * *
+- *  * Created by DemonApps on 14.03.20 20:01
++ *  * Created by DemonApps on 14.07.20 18:46
+  *  * Copyright (c) 2020 . All rights reserved.
+- *  * Last modified 14.03.20 19:53
++ *  * Last modified 14.03.20 20:01
+  *
+  */
+ 
+-package ru.gorod_dubna.gorod_dubna;
++package ru.gorod.tver;
+ 
+ import android.annotation.SuppressLint;
+ import android.annotation.TargetApi;
+Index: app/src/main/res/layout-land/activity_main.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout-land/activity_main.xml	(revision 6d0156530f6fd56758cf829e48aa93fe2ca9c4cd)
++++ app/src/main/res/layout-land/activity_main.xml	(date 1594742347519)
+@@ -15,7 +15,7 @@
+     android:background="@drawable/dubnaland"
+     android:gravity="center"
+     android:orientation="vertical"
+-    tools:context="ru.gorod_dubna.gorod_dubna.HomeActivity">
++    tools:context="ru.gorod.tver.ru.gorod_dubna.gorod.HomeActivity">
+ 
+ 
+     <ScrollView
+Index: app/src/main/res/layout/zastavka.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/zastavka.xml	(revision 6d0156530f6fd56758cf829e48aa93fe2ca9c4cd)
++++ app/src/main/res/layout/zastavka.xml	(date 1594742346949)
+@@ -13,7 +13,7 @@
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:background="@color/colorPrimary"
+-    tools:context=".Zastavka">
++    tools:context="ru.gorod.tver.Zastavka">
+ 
+     <ImageView
+         android:id="@+id/imageView"
+Index: app/src/test/java/ru/gorod_dubna/gorod_dubna/ExampleUnitTest.java
+===================================================================
+--- app/src/test/java/ru/gorod_dubna/gorod_dubna/ExampleUnitTest.java	(revision 6d0156530f6fd56758cf829e48aa93fe2ca9c4cd)
++++ app/src/test/java/ru/gorod/tver/ExampleUnitTest.java	(date 1594742347745)
+@@ -6,7 +6,7 @@
+  *
+  */
+ 
+-package ru.gorod_dubna.gorod_dubna;
++package ru.gorod.tver;
+ 
+ import org.junit.Test;
+ 
+Index: app/src/main/res/layout/activity_main.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/activity_main.xml	(revision 6d0156530f6fd56758cf829e48aa93fe2ca9c4cd)
++++ app/src/main/res/layout/activity_main.xml	(date 1594742347789)
+@@ -15,7 +15,7 @@
+     android:layout_gravity="center"
+     android:background="@drawable/dubna"
+     android:orientation="vertical"
+-    tools:context="ru.gorod_dubna.gorod_dubna.HomeActivity"
++    tools:context="ru.gorod.tver.ru.gorod_dubna.gorod.HomeActivity"
+     tools:ignore="MissingDefaultResource"
+     tools:layout_editor_absoluteY="81dp">
+ 
+Index: app/src/main/res/menu/menu_transport.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/menu/menu_transport.xml	(revision 6d0156530f6fd56758cf829e48aa93fe2ca9c4cd)
++++ app/src/main/res/menu/menu_transport.xml	(date 1594742347535)
+@@ -9,7 +9,7 @@
+ <menu xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     xmlns:tools="http://schemas.android.com/tools"
+-    tools:context="ru.gorod_dubna.gorod_dubna.Transport">
++    tools:context="ru.gorod.tver.ru.gorod_dubna.gorod.Transport">
+     <item
+         android:id="@+id/action_transport"
+         android:orderInCategory="100"
+Index: app/src/main/java/ru/gorod_dubna/gorod_dubna/History.java
+===================================================================
+--- app/src/main/java/ru/gorod_dubna/gorod_dubna/History.java	(revision 6d0156530f6fd56758cf829e48aa93fe2ca9c4cd)
++++ app/src/main/java/ru/gorod/tver/History.java	(date 1594742348021)
+@@ -1,12 +1,12 @@
+ /*
+  * *
+- *  * Created by DemonApps on 14.03.20 20:01
++ *  * Created by DemonApps on 14.07.20 18:46
+  *  * Copyright (c) 2020 . All rights reserved.
+- *  * Last modified 14.03.20 19:53
++ *  * Last modified 14.03.20 20:01
+  *
+  */
+ 
+-package ru.gorod_dubna.gorod_dubna;
++package ru.gorod.tver;
+ 
+ import android.os.Bundle;
+ import androidx.appcompat.app.AppCompatActivity;
+@@ -15,6 +15,7 @@
+ import android.widget.ScrollView;
+ import android.widget.TextView;
+ 
++
+ public class History extends AppCompatActivity {
+ 
+ 
+Index: app/src/androidTest/java/ru/gorod_dubna/gorod_dubna/ExampleInstrumentedTest.java
+===================================================================
+--- app/src/androidTest/java/ru/gorod_dubna/gorod_dubna/ExampleInstrumentedTest.java	(revision 6d0156530f6fd56758cf829e48aa93fe2ca9c4cd)
++++ app/src/androidTest/java/ru/gorod/tver/ExampleInstrumentedTest.java	(date 1594742347002)
+@@ -6,7 +6,7 @@
+  *
+  */
+ 
+-package ru.gorod_dubna.gorod_dubna;
++package ru.gorod.tver;
+ 
+ import android.content.Context;
+ import androidx.test.InstrumentationRegistry;
+Index: app/src/main/java/ru/gorod_dubna/gorod_dubna/Transport.java
+===================================================================
+--- app/src/main/java/ru/gorod_dubna/gorod_dubna/Transport.java	(revision 6d0156530f6fd56758cf829e48aa93fe2ca9c4cd)
++++ app/src/main/java/ru/gorod/tver/Transport.java	(date 1594742347203)
+@@ -1,12 +1,12 @@
+ /*
+  * *
+- *  * Created by DemonApps on 14.03.20 20:01
++ *  * Created by DemonApps on 14.07.20 18:46
+  *  * Copyright (c) 2020 . All rights reserved.
+- *  * Last modified 14.03.20 19:53
++ *  * Last modified 14.03.20 20:01
+  *
+  */
+ 
+-package ru.gorod_dubna.gorod_dubna;
++package ru.gorod.tver;
+ 
+ import android.annotation.SuppressLint;
+ import android.annotation.TargetApi;
+@@ -23,6 +23,7 @@
+ 
+ import com.my.target.ads.MyTargetView;
+ 
++
+ public class Transport extends AppCompatActivity {
+ 
+     private MyTargetView adViewTrans;
+Index: app/src/main/res/layout-v23/activity_history.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout-v23/activity_history.xml	(revision 6d0156530f6fd56758cf829e48aa93fe2ca9c4cd)
++++ app/src/main/res/layout-v23/activity_history.xml	(date 1594742347789)
+@@ -13,7 +13,7 @@
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:fitsSystemWindows="true"
+-    tools:context="ru.gorod_dubna.gorod_dubna.History">
++    tools:context="ru.gorod.tver.ru.gorod_dubna.gorod.History">
+ 
+     <ScrollView
+         android:id="@+id/sv"
+Index: app/src/main/java/ru/gorod_dubna/gorod_dubna/Afisha.java
+===================================================================
+--- app/src/main/java/ru/gorod_dubna/gorod_dubna/Afisha.java	(revision 6d0156530f6fd56758cf829e48aa93fe2ca9c4cd)
++++ app/src/main/java/ru/gorod/tver/Afisha.java	(date 1594742347103)
+@@ -1,12 +1,12 @@
+ /*
+  * *
+- *  * Created by DemonApps on 14.03.20 20:01
++ *  * Created by DemonApps on 14.07.20 18:46
+  *  * Copyright (c) 2020 . All rights reserved.
+- *  * Last modified 14.03.20 19:53
++ *  * Last modified 15.04.20 20:07
+  *
+  */
+ 
+-package ru.gorod_dubna.gorod_dubna;
++package ru.gorod.tver;
+ 
+ import android.annotation.SuppressLint;
+ import android.annotation.TargetApi;
+@@ -23,6 +23,7 @@
+ 
+ import com.my.target.ads.MyTargetView;
+ 
++
+ public class Afisha extends AppCompatActivity {
+ 
+     private MyTargetView adViewAfisha;
+Index: app/src/main/res/layout-v26/activity_history.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout-v26/activity_history.xml	(revision 6d0156530f6fd56758cf829e48aa93fe2ca9c4cd)
++++ app/src/main/res/layout-v26/activity_history.xml	(date 1594742348036)
+@@ -13,7 +13,7 @@
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:fitsSystemWindows="true"
+-    tools:context="ru.gorod_dubna.gorod_dubna.History">
++    tools:context="ru.gorod.tver.ru.gorod_dubna.gorod.History">
+ 
+     <ScrollView
+         android:id="@+id/sv"
+Index: app/src/main/java/ru/gorod_dubna/gorod_dubna/HomeActivity.java
+===================================================================
+--- app/src/main/java/ru/gorod_dubna/gorod_dubna/HomeActivity.java	(revision 6d0156530f6fd56758cf829e48aa93fe2ca9c4cd)
++++ app/src/main/java/ru/gorod/tver/HomeActivity.java	(date 1594742347450)
+@@ -1,12 +1,12 @@
+ /*
+  * *
+- *  * Created by DemonApps on 14.03.20 20:01
++ *  * Created by DemonApps on 14.07.20 18:46
+  *  * Copyright (c) 2020 . All rights reserved.
+- *  * Last modified 14.03.20 19:53
++ *  * Last modified 14.04.20 19:08
+  *
+  */
+ 
+-package ru.gorod_dubna.gorod_dubna;
++package ru.gorod.tver;
+ 
+ import android.content.Intent;
+ import androidx.annotation.NonNull;
+@@ -25,6 +25,7 @@
+ 
+ import com.my.target.ads.MyTargetView;
+ 
++
+ public class HomeActivity extends AppCompatActivity
+         implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
+     Button button2;
+Index: app/src/main/res/menu/menu_afisha.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/menu/menu_afisha.xml	(revision 6d0156530f6fd56758cf829e48aa93fe2ca9c4cd)
++++ app/src/main/res/menu/menu_afisha.xml	(date 1594742347065)
+@@ -9,7 +9,7 @@
+ <menu xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     xmlns:tools="http://schemas.android.com/tools"
+-    tools:context="ru.gorod_dubna.gorod_dubna.ru.gorod_kimry.kimry.Afisha">
++    tools:context="ru.gorod.tver.ru.gorod_kimry.kimry.Afisha">
+ 
+     <item
+         android:id="@+id/action_afisha1"
+Index: app/src/main/res/layout-land/activity_cam_web.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout-land/activity_cam_web.xml	(revision 6d0156530f6fd56758cf829e48aa93fe2ca9c4cd)
++++ app/src/main/res/layout-land/activity_cam_web.xml	(date 1594742348068)
+@@ -14,7 +14,7 @@
+     android:background="@drawable/dubnaland"
+     android:orientation="horizontal"
+     android:theme="@style/Theme.AppCompat"
+-    tools:context=".CamWeb">
++    tools:context="ru.gorod.tver.CamWeb">
+ 
+     <WebView
+         android:id="@+id/camWeb"
+Index: app/src/main/java/ru/gorod_dubna/gorod_dubna/Video.java
+===================================================================
+--- app/src/main/java/ru/gorod_dubna/gorod_dubna/Video.java	(revision 6d0156530f6fd56758cf829e48aa93fe2ca9c4cd)
++++ app/src/main/java/ru/gorod/tver/Video.java	(date 1594745593280)
+@@ -1,12 +1,12 @@
+ /*
+  * *
+- *  * Created by DemonApps on 14.03.20 20:01
++ *  * Created by DemonApps on 14.07.20 18:46
+  *  * Copyright (c) 2020 . All rights reserved.
+- *  * Last modified 14.03.20 19:53
++ *  * Last modified 08.07.20 21:01
+  *
+  */
+ 
+-package ru.gorod_dubna.gorod_dubna;
++package ru.gorod.tver;
+ 
+ import android.annotation.SuppressLint;
+ import android.os.Bundle;
+@@ -21,11 +21,12 @@
+ import com.google.android.youtube.player.YouTubePlayerView;
+ import com.my.target.ads.MyTargetView;
+ 
++
+ @SuppressLint("Registered")
+ public class Video extends YouTubeBaseActivity implements YouTubePlayer.OnInitializedListener {
+ 
+     public static final String GOOGLE_API_KEY = "AIzaSyDU9sAsjm1bIHpSC0FGEmiUz76hx_7m7r8";
+-    public static final String YOUTUBE_PLAYLIST_ID = "PLw5XBQ4p2VPt5mrnq_naW8H3XgxuT7QT-";
++    public static final String YOUTUBE_PLAYLIST_ID = "UU4lIAxoybU7uTAsG0MQSX3A";
+     final String TAG = getClass().getSimpleName();
+     private MyTargetView adViewVideo;
+     @Override
+Index: app/src/main/java/ru/gorod_dubna/gorod_dubna/News.java
+===================================================================
+--- app/src/main/java/ru/gorod_dubna/gorod_dubna/News.java	(revision 6d0156530f6fd56758cf829e48aa93fe2ca9c4cd)
++++ app/src/main/java/ru/gorod/tver/News.java	(date 1594742347776)
+@@ -1,12 +1,12 @@
+ /*
+  * *
+- *  * Created by DemonApps on 14.03.20 20:01
++ *  * Created by DemonApps on 14.07.20 18:46
+  *  * Copyright (c) 2020 . All rights reserved.
+- *  * Last modified 14.03.20 19:53
++ *  * Last modified 14.04.20 19:09
+  *
+  */
+ 
+-package ru.gorod_dubna.gorod_dubna;
++package ru.gorod.tver;
+ 
+ import android.annotation.SuppressLint;
+ import android.annotation.TargetApi;
+@@ -25,6 +25,7 @@
+ import com.my.target.ads.MyTargetView;
+ 
+ 
++
+ public class News extends AppCompatActivity {
+ 
+     private MyTargetView adViewNews;
+Index: app/src/main/java/ru/gorod_dubna/gorod_dubna/CamWeb.java
+===================================================================
+--- app/src/main/java/ru/gorod_dubna/gorod_dubna/CamWeb.java	(revision 6d0156530f6fd56758cf829e48aa93fe2ca9c4cd)
++++ app/src/main/java/ru/gorod/tver/CamWeb.java	(date 1594742347136)
+@@ -1,12 +1,12 @@
+ /*
+  * *
+- *  * Created by DemonApps on 14.03.20 20:01
++ *  * Created by DemonApps on 14.07.20 18:46
+  *  * Copyright (c) 2020 . All rights reserved.
+- *  * Last modified 14.03.20 19:53
++ *  * Last modified 14.03.20 20:01
+  *
+  */
+ 
+-package ru.gorod_dubna.gorod_dubna;
++package ru.gorod.tver;
+ 
+ import android.annotation.SuppressLint;
+ import android.os.Bundle;
+Index: app/src/main/java/ru/gorod_dubna/gorod_dubna/Onas.java
+===================================================================
+--- app/src/main/java/ru/gorod_dubna/gorod_dubna/Onas.java	(revision 6d0156530f6fd56758cf829e48aa93fe2ca9c4cd)
++++ app/src/main/java/ru/gorod/tver/Onas.java	(date 1594742347218)
+@@ -1,12 +1,12 @@
+ /*
+  * *
+- *  * Created by DemonApps on 14.03.20 20:01
++ *  * Created by DemonApps on 14.07.20 18:46
+  *  * Copyright (c) 2020 . All rights reserved.
+- *  * Last modified 14.03.20 19:53
++ *  * Last modified 16.04.20 18:15
+  *
+  */
+ 
+-package ru.gorod_dubna.gorod_dubna;
++package ru.gorod.tver;
+ 
+ import android.annotation.SuppressLint;
+ import android.content.Intent;
+@@ -62,7 +62,7 @@
+         button7.setOnClickListener(this);
+ 
+         textView4 = findViewById(R.id.textView4);
+-        textView4.setText("Версия: "+BuildConfig.VERSION_NAME);
++        textView4.setText("Версия: "+ BuildConfig.VERSION_NAME);
+ 
+         // Включение режима отладки
+         //MyTargetView.setDebugMode(true);
+Index: app/src/main/res/layout-land/activity_zagolovky_news.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout-land/activity_zagolovky_news.xml	(revision 6d0156530f6fd56758cf829e48aa93fe2ca9c4cd)
++++ app/src/main/res/layout-land/activity_zagolovky_news.xml	(date 1594744929035)
+@@ -19,8 +19,9 @@
+         style="@android:style/Widget.ProgressBar.Large.Inverse"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+-        android:background="@drawable/dubnaland"
++        android:background="@drawable/demonapp"
+         android:theme="@style/AppTheme" />
++
+     <ScrollView
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+@@ -35,6 +36,7 @@
+                 android:id="@+id/pic0"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
++                android:adjustViewBounds="true"
+                 android:contentDescription="@string/photo"
+                 android:scaleType="centerCrop"
+                 android:theme="@style/AppTheme"
+@@ -54,6 +56,7 @@
+                 android:id="@+id/pic1"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
++                android:adjustViewBounds="true"
+                 android:contentDescription="@string/photo"
+                 android:scaleType="centerCrop"
+                 android:theme="@style/AppTheme"
+@@ -73,6 +76,7 @@
+                 android:id="@+id/pic2"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
++                android:adjustViewBounds="true"
+                 android:contentDescription="@string/photo"
+                 android:scaleType="centerCrop"
+                 android:theme="@style/AppTheme"
+@@ -92,6 +96,7 @@
+                 android:id="@+id/pic3"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
++                android:adjustViewBounds="true"
+                 android:contentDescription="@string/photo"
+                 android:scaleType="centerCrop"
+                 android:theme="@style/AppTheme"
+@@ -111,6 +116,7 @@
+                 android:id="@+id/pic4"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
++                android:adjustViewBounds="true"
+                 android:contentDescription="@string/photo"
+                 android:scaleType="centerCrop"
+                 android:theme="@style/AppTheme"
+@@ -130,6 +136,7 @@
+                 android:id="@+id/pic5"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
++                android:adjustViewBounds="true"
+                 android:contentDescription="@string/photo"
+                 android:scaleType="centerCrop"
+                 android:theme="@style/AppTheme"
+@@ -149,6 +156,7 @@
+                 android:id="@+id/pic6"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
++                android:adjustViewBounds="true"
+                 android:contentDescription="@string/photo"
+                 android:scaleType="centerCrop"
+                 android:theme="@style/AppTheme"
+@@ -168,6 +176,7 @@
+                 android:id="@+id/pic7"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
++                android:adjustViewBounds="true"
+                 android:contentDescription="@string/photo"
+                 android:scaleType="centerCrop"
+                 android:theme="@style/AppTheme"
+@@ -187,6 +196,7 @@
+                 android:id="@+id/pic8"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
++                android:adjustViewBounds="true"
+                 android:contentDescription="@string/photo"
+                 android:scaleType="centerCrop"
+                 android:theme="@style/AppTheme"
+@@ -206,6 +216,7 @@
+                 android:id="@+id/pic9"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
++                android:adjustViewBounds="true"
+                 android:contentDescription="@string/photo"
+                 android:scaleType="centerCrop"
+                 android:theme="@style/AppTheme"
+@@ -225,6 +236,7 @@
+                 android:id="@+id/pic10"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
++                android:adjustViewBounds="true"
+                 android:contentDescription="@string/photo"
+                 android:scaleType="centerCrop"
+                 android:theme="@style/AppTheme"
+@@ -244,6 +256,7 @@
+                 android:id="@+id/pic11"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
++                android:adjustViewBounds="true"
+                 android:contentDescription="@string/photo"
+                 android:scaleType="centerCrop"
+                 android:theme="@style/AppTheme"
+@@ -259,65 +272,11 @@
+                 android:textStyle="bold"
+                 tools:ignore="PrivateResource" />
+ 
+-            <ImageView
+-                android:id="@+id/pic12"
+-                android:layout_width="match_parent"
+-                android:layout_height="match_parent"
+-                android:contentDescription="@string/photo"
+-                android:scaleType="centerCrop"
+-                android:theme="@style/AppTheme"
+-                app:srcCompat="?attr/colorControlNormal" />
+-
+-            <Button
+-                android:id="@+id/text12"
+-                android:layout_width="match_parent"
+-                android:layout_height="wrap_content"
+-                android:background="@android:drawable/alert_dark_frame"
+-                android:textColor="@color/cardview_light_background"
+-                android:textSize="18sp"
+-                android:textStyle="bold"
+-                tools:ignore="PrivateResource" />
+-
+-            <ImageView
+-                android:id="@+id/pic13"
+-                android:layout_width="match_parent"
+-                android:layout_height="match_parent"
+-                android:contentDescription="@string/photo"
+-                android:scaleType="centerCrop"
+-                android:theme="@style/AppTheme"
+-                app:srcCompat="?attr/colorControlNormal" />
+-
+-            <Button
+-                android:id="@+id/text13"
+-                android:layout_width="match_parent"
+-                android:layout_height="wrap_content"
+-                android:background="@android:drawable/alert_dark_frame"
+-                android:textColor="@color/cardview_light_background"
+-                android:textSize="18sp"
+-                android:textStyle="bold"
+-                tools:ignore="PrivateResource" />
+-
+-            <ImageView
+-                android:id="@+id/pic14"
+-                android:layout_width="match_parent"
+-                android:layout_height="match_parent"
+-                android:contentDescription="@string/photo"
+-                android:scaleType="centerCrop"
+-                android:theme="@style/AppTheme"
+-                app:srcCompat="?attr/colorControlNormal" />
+-
+-            <Button
+-                android:id="@+id/text14"
+-                android:layout_width="match_parent"
+-                android:layout_height="wrap_content"
+-                android:background="@android:drawable/alert_dark_frame"
+-                android:textColor="@color/cardview_light_background"
+-                android:textSize="18sp"
+-                android:textStyle="bold"
+-                tools:ignore="PrivateResource" />
++
+ 
+         </LinearLayout>
+     </ScrollView>
+ 
+ 
+ </LinearLayout>
++
+Index: app/build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/build.gradle	(revision 6d0156530f6fd56758cf829e48aa93fe2ca9c4cd)
++++ app/build.gradle	(date 1594743856327)
+@@ -9,13 +9,13 @@
+ apply plugin: 'com.android.application'
+ 
+ android {
+-    compileSdkVersion 29
++    compileSdkVersion 30
+     defaultConfig {
+-        applicationId "ru.gorod_dubna.gorod_dubna"
++        applicationId "ru.gorod.tver"
+         minSdkVersion 16
+-        targetSdkVersion 29
+-        versionCode 32
+-        versionName '2.2.3'
++        targetSdkVersion 30
++        versionCode 1
++        versionName '1.0.0'
+         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+     }
+     buildTypes {
+@@ -26,7 +26,7 @@
+     }
+     productFlavors {
+     }
+-    buildToolsVersion '28.0.3'
++    buildToolsVersion '29.0.2'
+     compileOptions {
+         sourceCompatibility = 1.8
+         targetCompatibility = 1.8
+@@ -40,14 +40,14 @@
+     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+     //noinspection GradleCompatible
+     implementation 'com.google.android.material:material:1.1.0'
+-    implementation 'com.google.firebase:firebase-core:17.4.3'
++    implementation 'com.google.firebase:firebase-core:17.4.4'
+     implementation 'com.google.firebase:firebase-appindexing:19.1.0'
+     implementation files('libs/YouTubeAndroidPlayerApi.jar')
+-    testImplementation 'junit:junit:4.12'
++    testImplementation 'junit:junit:4.13'
+     androidTestImplementation 'androidx.test:runner:1.2.0'
+     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+     implementation 'androidx.annotation:annotation:1.1.0'
+-    implementation 'com.google.firebase:firebase-messaging:20.2.1'
++    implementation 'com.google.firebase:firebase-messaging:20.2.3'
+     implementation 'com.my.target:mytarget-sdk:5.3.4'
+     implementation 'com.google.android.gms:play-services-ads-identifier'
+     implementation 'org.jsoup:jsoup:1.13.1'
+Index: app/src/main/res/layout/activity_zagolovky_news.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/activity_zagolovky_news.xml	(revision 6d0156530f6fd56758cf829e48aa93fe2ca9c4cd)
++++ app/src/main/res/layout/activity_zagolovky_news.xml	(date 1594744929021)
+@@ -19,8 +19,9 @@
+         style="@android:style/Widget.ProgressBar.Large.Inverse"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+-        android:background="@drawable/dubna"
++        android:background="@drawable/demonapp"
+         android:theme="@style/AppTheme" />
++
+     <ScrollView
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+@@ -35,6 +36,7 @@
+                 android:id="@+id/pic0"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
++                android:adjustViewBounds="true"
+                 android:contentDescription="@string/photo"
+                 android:scaleType="centerCrop"
+                 android:theme="@style/AppTheme"
+@@ -54,6 +56,7 @@
+                 android:id="@+id/pic1"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
++                android:adjustViewBounds="true"
+                 android:contentDescription="@string/photo"
+                 android:scaleType="centerCrop"
+                 android:theme="@style/AppTheme"
+@@ -73,6 +76,7 @@
+                 android:id="@+id/pic2"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
++                android:adjustViewBounds="true"
+                 android:contentDescription="@string/photo"
+                 android:scaleType="centerCrop"
+                 android:theme="@style/AppTheme"
+@@ -92,6 +96,7 @@
+                 android:id="@+id/pic3"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
++                android:adjustViewBounds="true"
+                 android:contentDescription="@string/photo"
+                 android:scaleType="centerCrop"
+                 android:theme="@style/AppTheme"
+@@ -111,6 +116,7 @@
+                 android:id="@+id/pic4"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
++                android:adjustViewBounds="true"
+                 android:contentDescription="@string/photo"
+                 android:scaleType="centerCrop"
+                 android:theme="@style/AppTheme"
+@@ -130,6 +136,7 @@
+                 android:id="@+id/pic5"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
++                android:adjustViewBounds="true"
+                 android:contentDescription="@string/photo"
+                 android:scaleType="centerCrop"
+                 android:theme="@style/AppTheme"
+@@ -149,6 +156,7 @@
+                 android:id="@+id/pic6"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
++                android:adjustViewBounds="true"
+                 android:contentDescription="@string/photo"
+                 android:scaleType="centerCrop"
+                 android:theme="@style/AppTheme"
+@@ -168,6 +176,7 @@
+                 android:id="@+id/pic7"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
++                android:adjustViewBounds="true"
+                 android:contentDescription="@string/photo"
+                 android:scaleType="centerCrop"
+                 android:theme="@style/AppTheme"
+@@ -187,6 +196,7 @@
+                 android:id="@+id/pic8"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
++                android:adjustViewBounds="true"
+                 android:contentDescription="@string/photo"
+                 android:scaleType="centerCrop"
+                 android:theme="@style/AppTheme"
+@@ -206,6 +216,7 @@
+                 android:id="@+id/pic9"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
++                android:adjustViewBounds="true"
+                 android:contentDescription="@string/photo"
+                 android:scaleType="centerCrop"
+                 android:theme="@style/AppTheme"
+@@ -225,6 +236,7 @@
+                 android:id="@+id/pic10"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
++                android:adjustViewBounds="true"
+                 android:contentDescription="@string/photo"
+                 android:scaleType="centerCrop"
+                 android:theme="@style/AppTheme"
+@@ -244,6 +256,7 @@
+                 android:id="@+id/pic11"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
++                android:adjustViewBounds="true"
+                 android:contentDescription="@string/photo"
+                 android:scaleType="centerCrop"
+                 android:theme="@style/AppTheme"
+@@ -259,62 +272,7 @@
+                 android:textStyle="bold"
+                 tools:ignore="PrivateResource" />
+ 
+-            <ImageView
+-                android:id="@+id/pic12"
+-                android:layout_width="match_parent"
+-                android:layout_height="match_parent"
+-                android:contentDescription="@string/photo"
+-                android:scaleType="centerCrop"
+-                android:theme="@style/AppTheme"
+-                app:srcCompat="?attr/colorControlNormal" />
+-
+-            <Button
+-                android:id="@+id/text12"
+-                android:layout_width="match_parent"
+-                android:layout_height="wrap_content"
+-                android:background="@android:drawable/alert_dark_frame"
+-                android:textColor="@color/cardview_light_background"
+-                android:textSize="18sp"
+-                android:textStyle="bold"
+-                tools:ignore="PrivateResource" />
+-
+-            <ImageView
+-                android:id="@+id/pic13"
+-                android:layout_width="match_parent"
+-                android:layout_height="match_parent"
+-                android:contentDescription="@string/photo"
+-                android:scaleType="centerCrop"
+-                android:theme="@style/AppTheme"
+-                app:srcCompat="?attr/colorControlNormal" />
+-
+-            <Button
+-                android:id="@+id/text13"
+-                android:layout_width="match_parent"
+-                android:layout_height="wrap_content"
+-                android:background="@android:drawable/alert_dark_frame"
+-                android:textColor="@color/cardview_light_background"
+-                android:textSize="18sp"
+-                android:textStyle="bold"
+-                tools:ignore="PrivateResource" />
+-
+-            <ImageView
+-                android:id="@+id/pic14"
+-                android:layout_width="match_parent"
+-                android:layout_height="match_parent"
+-                android:contentDescription="@string/photo"
+-                android:scaleType="centerCrop"
+-                android:theme="@style/AppTheme"
+-                app:srcCompat="?attr/colorControlNormal" />
+-
+-            <Button
+-                android:id="@+id/text14"
+-                android:layout_width="match_parent"
+-                android:layout_height="wrap_content"
+-                android:background="@android:drawable/alert_dark_frame"
+-                android:textColor="@color/cardview_light_background"
+-                android:textSize="18sp"
+-                android:textStyle="bold"
+-                tools:ignore="PrivateResource" />
++
+ 
+         </LinearLayout>
+     </ScrollView>
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/vcs.xml	(revision 6d0156530f6fd56758cf829e48aa93fe2ca9c4cd)
++++ .idea/vcs.xml	(date 1594745837772)
+@@ -2,5 +2,6 @@
+ <project version="4">
+   <component name="VcsDirectoryMappings">
+     <mapping directory="" vcs="Git" />
++    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: app/google-services.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/google-services.json	(revision 6d0156530f6fd56758cf829e48aa93fe2ca9c4cd)
++++ app/google-services.json	(date 1594744377183)
+@@ -1,52 +1,74 @@
+ {
+   "project_info": {
+-    "project_number": "59134696861",
+-    "firebase_url": "https://goroddubna-ab596.firebaseio.com",
+-    "project_id": "goroddubna-ab596",
+-    "storage_bucket": "goroddubna-ab596.appspot.com"
++    "project_number": "785478920162",
++    "firebase_url": "https://papakarlo.firebaseio.com",
++    "project_id": "papakarlo",
++    "storage_bucket": "papakarlo.appspot.com"
+   },
+   "client": [
+     {
+       "client_info": {
+-        "mobilesdk_app_id": "1:59134696861:android:5ad6b06233d5fc9f",
++        "mobilesdk_app_id": "1:785478920162:android:f8f8a54794c6e5040efbbb",
+         "android_client_info": {
+-          "package_name": "ru.gorod_dubna.gorod_dubna"
++          "package_name": "demon.apps.papakarlo"
+         }
+       },
+       "oauth_client": [
+         {
+-          "client_id": "59134696861-hfc6m15cm7n26phhnqt5vhta7ainc64r.apps.googleusercontent.com",
++          "client_id": "785478920162-p0bvg48jcn06pfjemrkfhq432h10dmvo.apps.googleusercontent.com",
+           "client_type": 1,
+           "android_info": {
+-            "package_name": "ru.gorod_dubna.gorod_dubna",
+-            "certificate_hash": "eacd2b3b727e6ce9487877e3e83510097c1c9265"
++            "package_name": "demon.apps.papakarlo",
++            "certificate_hash": "4dc8dfc6db271e5f4fb13e44f68412a478705b7c"
+           }
+         },
+         {
+-          "client_id": "59134696861-hdl0btch24aujjt82mpv5gose6qr5tm4.apps.googleusercontent.com",
++          "client_id": "785478920162-vi4q2l34l99j013a6crg66sohgnnk3ut.apps.googleusercontent.com",
+           "client_type": 3
+         }
+       ],
+       "api_key": [
+         {
+-          "current_key": "AIzaSyDr7fx7o_n_pDbNiWo20BXTStyxpusRgL0"
++          "current_key": "AIzaSyA2Ochsy-4Wjv8YxInMZ56wy-p570UJWig"
+         }
+       ],
+       "services": {
+-        "analytics_service": {
+-          "status": 1
+-        },
+         "appinvite_service": {
+-          "status": 2,
+           "other_platform_oauth_client": [
+             {
+-              "client_id": "59134696861-hdl0btch24aujjt82mpv5gose6qr5tm4.apps.googleusercontent.com",
++              "client_id": "785478920162-vi4q2l34l99j013a6crg66sohgnnk3ut.apps.googleusercontent.com",
+               "client_type": 3
+             }
+           ]
+-        },
+-        "ads_service": {
+-          "status": 2
++        }
++      }
++    },
++    {
++      "client_info": {
++        "mobilesdk_app_id": "1:785478920162:android:3383df81418843450efbbb",
++        "android_client_info": {
++          "package_name": "ru.gorod.tver"
++        }
++      },
++      "oauth_client": [
++        {
++          "client_id": "785478920162-vi4q2l34l99j013a6crg66sohgnnk3ut.apps.googleusercontent.com",
++          "client_type": 3
++        }
++      ],
++      "api_key": [
++        {
++          "current_key": "AIzaSyA2Ochsy-4Wjv8YxInMZ56wy-p570UJWig"
++        }
++      ],
++      "services": {
++        "appinvite_service": {
++          "other_platform_oauth_client": [
++            {
++              "client_id": "785478920162-vi4q2l34l99j013a6crg66sohgnnk3ut.apps.googleusercontent.com",
++              "client_type": 3
++            }
++          ]
+         }
+       }
+     }
+Index: .idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/modules.xml	(revision 6d0156530f6fd56758cf829e48aa93fe2ca9c4cd)
++++ .idea/modules.xml	(date 1594742508341)
+@@ -2,8 +2,8 @@
+ <project version="4">
+   <component name="ProjectModuleManager">
+     <modules>
+-      <module fileurl="file://$PROJECT_DIR$/GorodDubna.iml" filepath="$PROJECT_DIR$/GorodDubna.iml" group="GorodDubna" />
+-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="GorodDubna/app" />
++      <module fileurl="file://$PROJECT_DIR$/.idea/modules/GorodTver.iml" filepath="$PROJECT_DIR$/.idea/modules/GorodTver.iml" group="GorodTver" />
++      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="GorodTver/app" />
+     </modules>
+   </component>
+ </project>
+\ No newline at end of file
+Index: app/src/main/java/ru/gorod_dubna/gorod_dubna/ZagolovkyNews.java
+===================================================================
+--- app/src/main/java/ru/gorod_dubna/gorod_dubna/ZagolovkyNews.java	(revision 6d0156530f6fd56758cf829e48aa93fe2ca9c4cd)
++++ app/src/main/java/ru/gorod/tver/ZagolovkyNews.java	(date 1594745206835)
+@@ -1,12 +1,12 @@
+ /*
+  * *
+- *  * Created by DemonApps on 11.04.20 10:17
++ *  * Created by DemonApps on 14.07.20 18:46
+  *  * Copyright (c) 2020 . All rights reserved.
+- *  * Last modified 11.04.20 10:17
++ *  * Last modified 09.07.20 18:45
+  *
+  */
+ 
+-package ru.gorod_dubna.gorod_dubna;
++package ru.gorod.tver;
+ 
+ import android.annotation.SuppressLint;
+ import android.app.Activity;
+@@ -23,21 +23,21 @@
+ import org.jsoup.nodes.Document;
+ import org.jsoup.nodes.Element;
+ import org.jsoup.select.Elements;
+-
+ import java.io.IOException;
+ import java.util.ArrayList;
+-
++@SuppressLint("Registered")
+ public class ZagolovkyNews extends Activity{
+ 
+     // благодоря этому классу мы будет разбирать данные на куски
+     public Elements aticle;
++    public Elements pics;
+     // то в чем будем хранить данные пока не передадим адаптеру
+     public ArrayList<String> aticleList = new ArrayList<>();
+     public ArrayList<String> urlList = new ArrayList<>();
+     public ArrayList<String> picList = new ArrayList<>();
+     private ProgressBar progressBar;
+-    private ImageView pic0, pic1, pic2, pic3, pic4, pic5, pic6, pic7, pic8, pic9, pic10, pic11, pic12, pic13, pic14;
+-    private Button text0, text1, text2, text3, text4, text5, text6, text7, text8, text9, text10,text11, text12, text13, text14;
++    private ImageView pic0, pic1, pic2, pic3, pic4, pic5, pic6, pic7, pic8, pic9, pic10, pic11;
++    private Button text0, text1, text2, text3, text4, text5, text6, text7, text8, text9, text10, text11;
+     // List view
+     @SuppressLint("ResourceType")
+     @Override
+@@ -57,9 +57,6 @@
+         pic9 = findViewById(R.id.pic9);
+         pic10 = findViewById(R.id.pic10);
+         pic11 = findViewById(R.id.pic11);
+-        pic12 = findViewById(R.id.pic12);
+-        pic13 = findViewById(R.id.pic13);
+-        pic14 = findViewById(R.id.pic14);
+         text0 = findViewById(R.id.text0);
+         text1 = findViewById(R.id.text1);
+         text2 = findViewById(R.id.text2);
+@@ -72,9 +69,6 @@
+         text9 = findViewById(R.id.text9);
+         text10 = findViewById(R.id.text10);
+         text11 = findViewById(R.id.text11);
+-        text12 = findViewById(R.id.text12);
+-        text13 = findViewById(R.id.text13);
+-        text14 = findViewById(R.id.text14);
+         // запрос к нашему отдельному поток на выборку данных
+         new NewThread().execute();
+     }
+@@ -89,6 +83,7 @@
+ 
+         // Метод выполняющий запрос в фоне, в версиях выше 4 андроида, запросы в главном потоке выполнять
+         // нельзя, поэтому все что вам нужно выполнять - выносите в отдельный тред
++
+         @SuppressLint("NewApi")
+         @Override
+         protected String doInBackground(String... arg) {
+@@ -97,29 +92,23 @@
+             Document doc;
+             try {
+                 // определяем откуда будем воровать данные
+-                doc = Jsoup.connect("https://город-дубна.рф/all_news/all_news").get();
++                doc = Jsoup.connect("https://newssearch.yandex.ru/yandsearch?text=тверь&rpt=nnews2&rel=tm&picture=1&within=9").get();
+                 aticleList.clear();
+                 urlList.clear();
+                 picList.clear();
+                 // задаем с какого места, я выбрал заголовке статей
+-                aticle = doc.getElementsByAttributeValue("class", "all_15_news");
++                aticle = doc.getElementsByAttributeValue("class", "media-document__title");
+                 aticle.forEach(aticle -> {
+                     Element aElement = aticle.child(0);
+-                    String url = "https://город-дубна.рф" + aElement.attr("href");
+-                    String title = aElement.child(0).text();
+-                    Element divElement = aticle.child(1);
+-                    Element noindexElement = divElement.child(0);
+-                    Element picElement = noindexElement.child(0);
+-                    String pic = picElement.attr("src");
+-                    if (pic.equals("")) {
+-                        pic = "https://lh3.googleusercontent.com/HaBi8221WCpuBqUhfRfxFw2mcL3yo5o128CGZKflxDJd1mEcp204EwOFGBHiYaQuZA4";
+-                    }
+-                    if (pic.indexOf("/") == 0) {
+-                        pic = "https://город-дубна.рф" + pic;
+-                    }
++                    String url = aElement.attr("href");
++                    String title = aElement.text();
+                     aticleList.add(title);
+                     urlList.add(url);
+-                    picList.add(pic);
++                });
++                pics = doc.getElementsByAttributeValue("class", "image media-document__image-i");
++                pics.forEach(pics -> {
++                    String urlPic = pics.attr("src");
++                    picList.add(urlPic);
+                 });
+             } catch (IOException ex) {
+                 ex.printStackTrace();
+@@ -131,6 +120,7 @@
+         @Override
+         protected void onPostExecute(String result) {
+ 
++            // Заполняем страницу
+             Picasso.get().load(picList.get(0)).into(pic0);
+             text0.setText(aticleList.get(0));
+             text0.setOnClickListener(v -> {
+@@ -216,30 +206,7 @@
+                 intent.putExtra("url", urlList.get(11));
+                 startActivity(intent);
+             });
+-            Picasso.get().load(picList.get(12)).into(pic12);
+-            text12.setText(aticleList.get(12));
+-            text12.setOnClickListener(v -> {
+-                Intent intent = new Intent(ZagolovkyNews.this, News.class);
+-                intent.putExtra("url", urlList.get(12));
+-                startActivity(intent);
+-            });
+-            Picasso.get().load(picList.get(13)).into(pic13);
+-            text13.setText(aticleList.get(13));
+-            text13.setOnClickListener(v -> {
+-                Intent intent = new Intent(ZagolovkyNews.this, News.class);
+-                intent.putExtra("url", urlList.get(13));
+-                startActivity(intent);
+-            });
+-            Picasso.get().load(picList.get(14)).into(pic14);
+-            text14.setText(aticleList.get(14));
+-            text14.setOnClickListener(v -> {
+-                Intent intent = new Intent(ZagolovkyNews.this, News.class);
+-                intent.putExtra("url", urlList.get(14));
+-                startActivity(intent);
+-            });
+-            // Убираем прогрессбар
+             progressBar.setVisibility(View.GONE);
+         }
+-
+     }
+ }
+\ No newline at end of file
+diff --git .idea/caches/build_file_checksums.ser .idea/caches/build_file_checksums.ser
+index d0044dff0f5ad87f1b5b53e6aab6e6964ff8f81d..ec7176d4b88f8b96cc1881191d6138c86d1153d7
+GIT binary patch
+literal 537
+zc${1FmVvdnh`~NNKUXg?FQq6yGexf?KR>5fFEb@IQ7^qHF(oHeub?PDD>b=9F91S2
+zm1gFoxMk*~I%lLNXBU^|7Q2L-Ts|(GuF1r}<i#MFTj`TnT;dMa8(f)}9Fm!vT3nKt
+zTj0aMpIeEdv4nx&Co8cmQNOe#Ge_SyvB0{bfPsOr*iT#i571qLAUQpdoSsKwaRyMH
+zmHpPi!(s^+nHiYe7`Srs6I0w0lS}f8JQ+AkGKx}*GxBp%Dhli!7(jrhoC8P-05Mw$
+zgFs?IK}-_J=}>Q#7BMhIJFWRF{)3Gp<N*@{1ITIyfkUQgnGX{SWA@49&Rr{Mau?{t
+z;?$Co%)Insn8reeItDh7T0g;!Z+_=|FJ8FNn_=DdX08$j4QH#E(Bjmh;+T}w-2A*4
+zsFoN+NEW0Pm1L$CBMiAB+jFy@VH3;C2F@98emK>YFz}!_6Rt4z>*4(`PiY>ByDgaI
+zU?8Cb^ixiLa$*ivQ?2hRZdx39T&bj<{kXrY=J^r^K|F5QZ^~rGBonCi`DGY?-TB0r
+F3IKOgx)uNc
+

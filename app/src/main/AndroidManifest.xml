@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
   ~ /**
-  ~  * Created by DemonApps on 14.03.20 20:01
+  ~  * Created by DemonApps on 14.07.20 20:03
   ~  * Copyright (c) 2020 . All rights reserved.
-  ~  * Last modified 14.03.20 19:53
+  ~  * Last modified 14.07.20 18:59
   ~  */
   -->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="ru.gorod_dubna.gorod_dubna">
+    package="ru.gorod.tver">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
@@ -32,30 +32,30 @@
         tools:ignore="GoogleAppIndexingWarning"
         tools:targetApi="m">
         <activity
-            android:name=".ZagolovkyNews"
+            android:name="ru.gorod.tver.ZagolovkyNews"
             android:label="Новости"
-            android:parentActivityName=".HomeActivity"
+            android:parentActivityName="ru.gorod.tver.HomeActivity"
             android:theme="@style/AppTheme"/>
         <meta-data
             android:name="android.support.PARENT_ACTIVITY"
-            android:value=".HomeActivity" />
-        <activity android:name=".Video"
+            android:value="ru.gorod.tver.HomeActivity" />
+        <activity android:name="ru.gorod.tver.Video"
             android:label="@string/video"
-            android:parentActivityName=".HomeActivity"
+            android:parentActivityName="ru.gorod.tver.HomeActivity"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".HomeActivity"
+            android:name="ru.gorod.tver.HomeActivity"
             android:label=""
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Transport"
+            android:name="ru.gorod.tver.Transport"
             android:label="Транспорт"
-            android:parentActivityName=".HomeActivity"
+            android:parentActivityName="ru.gorod.tver.HomeActivity"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".CamWeb"
+            android:name="ru.gorod.tver.CamWeb"
             android:label="@string/action_webcam1"
-            android:parentActivityName=".HomeActivity"
+            android:parentActivityName="ru.gorod.tver.HomeActivity"
             android:theme="@style/AppTheme" />
 
         <meta-data
@@ -63,7 +63,7 @@
             android:resource="@drawable/ic_stat" />
 
         <activity
-            android:name=".Zastavka"
+            android:name="ru.gorod.tver.Zastavka"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -73,54 +73,54 @@
         </activity>
 
         <activity
-            android:name=".History"
+            android:name="ru.gorod.tver.History"
             android:label="О городе"
-            android:parentActivityName=".HomeActivity"
+            android:parentActivityName="ru.gorod.tver.HomeActivity"
             android:theme="@style/AppTheme"
             tools:targetApi="jelly_bean">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="ru.gorod_dubna.gorod_dubna.HomeActivity" />
+                android:value="ru.gorod.tver.HomeActivity" />
         </activity>
         <activity
-            android:name=".News"
+            android:name="ru.gorod.tver.News"
             android:label="Новости"
-            android:parentActivityName=".ZagolovkyNews"
+            android:parentActivityName="ru.gorod.tver.ZagolovkyNews"
             android:theme="@style/AppTheme"/>
         <activity
-            android:name=".Ads"
+            android:name="ru.gorod.tver.Ads"
             android:label="Объявления"
-            android:parentActivityName=".HomeActivity"
+            android:parentActivityName="ru.gorod.tver.HomeActivity"
             android:theme="@style/AppTheme"/>
         <activity
-            android:name=".Pogoda"
+            android:name="ru.gorod.tver.Pogoda"
             android:label="Погода"
-            android:parentActivityName=".HomeActivity"
+            android:parentActivityName="ru.gorod.tver.HomeActivity"
             android:theme="@style/AppTheme"/>
         <activity
-            android:name=".Jobs"
+            android:name="ru.gorod.tver.Jobs"
             android:label="Вакансии"
-            android:parentActivityName=".HomeActivity"
+            android:parentActivityName="ru.gorod.tver.HomeActivity"
             android:theme="@style/AppTheme"/>
         <activity
-            android:name=".Telefony"
+            android:name="ru.gorod.tver.Telefony"
             android:label="Телефоны"
-            android:parentActivityName=".HomeActivity"
+            android:parentActivityName="ru.gorod.tver.HomeActivity"
             android:theme="@style/AppTheme"
             tools:targetApi="jelly_bean">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="ru.gorod_dubna.gorod_dubna.HomeActivity" />
+                android:value="ru.gorod.tver.HomeActivity" />
         </activity>
         <activity
-            android:name=".Afisha"
+            android:name="ru.gorod.tver.Afisha"
             android:label="Афиша"
-            android:parentActivityName=".HomeActivity"
+            android:parentActivityName="ru.gorod.tver.HomeActivity"
             android:theme="@style/AppTheme" />
-        <activity android:name=".Onas" />
+        <activity android:name="ru.gorod.tver.Onas" />
 
         <service
-            android:name=".MyFirebaseMessagingService"
+            android:name="ru.gorod.tver.MyFirebaseMessagingService"
             tools:ignore="ExportedService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />

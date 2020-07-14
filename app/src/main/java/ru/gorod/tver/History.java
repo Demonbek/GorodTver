@@ -1,12 +1,12 @@
 /*
  * *
- *  * Created by DemonApps on 14.03.20 20:01
+ *  * Created by DemonApps on 14.07.20 20:03
  *  * Copyright (c) 2020 . All rights reserved.
- *  * Last modified 14.03.20 19:53
+ *  * Last modified 14.07.20 18:59
  *
  */
 
-package ru.gorod_dubna.gorod_dubna;
+package ru.gorod.tver;
 
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,6 +14,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ScrollView;
 import android.widget.TextView;
+
 
 public class History extends AppCompatActivity {
 

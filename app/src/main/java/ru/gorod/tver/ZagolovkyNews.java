@@ -1,12 +1,12 @@
 /*
  * *
- *  * Created by DemonApps on 11.04.20 10:17
+ *  * Created by DemonApps on 14.07.20 20:03
  *  * Copyright (c) 2020 . All rights reserved.
- *  * Last modified 11.04.20 10:17
+ *  * Last modified 14.07.20 19:46
  *
  */
 
-package ru.gorod_dubna.gorod_dubna;
+package ru.gorod.tver;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -23,21 +23,21 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
-
 import java.io.IOException;
 import java.util.ArrayList;
-
+@SuppressLint("Registered")
 public class ZagolovkyNews extends Activity{
 
     // благодоря этому классу мы будет разбирать данные на куски
     public Elements aticle;
+    public Elements pics;
     // то в чем будем хранить данные пока не передадим адаптеру
     public ArrayList<String> aticleList = new ArrayList<>();
     public ArrayList<String> urlList = new ArrayList<>();
     public ArrayList<String> picList = new ArrayList<>();
     private ProgressBar progressBar;
-    private ImageView pic0, pic1, pic2, pic3, pic4, pic5, pic6, pic7, pic8, pic9, pic10, pic11, pic12, pic13, pic14;
-    private Button text0, text1, text2, text3, text4, text5, text6, text7, text8, text9, text10,text11, text12, text13, text14;
+    private ImageView pic0, pic1, pic2, pic3, pic4, pic5, pic6, pic7, pic8, pic9, pic10, pic11;
+    private Button text0, text1, text2, text3, text4, text5, text6, text7, text8, text9, text10, text11;
     // List view
     @SuppressLint("ResourceType")
     @Override
@@ -57,9 +57,6 @@ public class ZagolovkyNews extends Activity{
         pic9 = findViewById(R.id.pic9);
         pic10 = findViewById(R.id.pic10);
         pic11 = findViewById(R.id.pic11);
-        pic12 = findViewById(R.id.pic12);
-        pic13 = findViewById(R.id.pic13);
-        pic14 = findViewById(R.id.pic14);
         text0 = findViewById(R.id.text0);
         text1 = findViewById(R.id.text1);
         text2 = findViewById(R.id.text2);
@@ -72,9 +69,6 @@ public class ZagolovkyNews extends Activity{
         text9 = findViewById(R.id.text9);
         text10 = findViewById(R.id.text10);
         text11 = findViewById(R.id.text11);
-        text12 = findViewById(R.id.text12);
-        text13 = findViewById(R.id.text13);
-        text14 = findViewById(R.id.text14);
         // запрос к нашему отдельному поток на выборку данных
         new NewThread().execute();
     }
@@ -89,6 +83,7 @@ public class ZagolovkyNews extends Activity{
 
         // Метод выполняющий запрос в фоне, в версиях выше 4 андроида, запросы в главном потоке выполнять
         // нельзя, поэтому все что вам нужно выполнять - выносите в отдельный тред
+
         @SuppressLint("NewApi")
         @Override
         protected String doInBackground(String... arg) {
@@ -97,29 +92,23 @@ public class ZagolovkyNews extends Activity{
             Document doc;
             try {
                 // определяем откуда будем воровать данные
-                doc = Jsoup.connect("https://город-дубна.рф/all_news/all_news").get();
+                doc = Jsoup.connect("https://newssearch.yandex.ru/yandsearch?text=тверь&rpt=nnews2&rel=tm&picture=1&within=9").get();
                 aticleList.clear();
                 urlList.clear();
                 picList.clear();
                 // задаем с какого места, я выбрал заголовке статей
-                aticle = doc.getElementsByAttributeValue("class", "all_15_news");
+                aticle = doc.getElementsByAttributeValue("class", "media-document__title");
                 aticle.forEach(aticle -> {
                     Element aElement = aticle.child(0);
-                    String url = "https://город-дубна.рф" + aElement.attr("href");
-                    String title = aElement.child(0).text();
-                    Element divElement = aticle.child(1);
-                    Element noindexElement = divElement.child(0);
-                    Element picElement = noindexElement.child(0);
-                    String pic = picElement.attr("src");
-                    if (pic.equals("")) {
-                        pic = "https://lh3.googleusercontent.com/HaBi8221WCpuBqUhfRfxFw2mcL3yo5o128CGZKflxDJd1mEcp204EwOFGBHiYaQuZA4";
-                    }
-                    if (pic.indexOf("/") == 0) {
-                        pic = "https://город-дубна.рф" + pic;
-                    }
+                    String url = aElement.attr("href");
+                    String title = aElement.text();
                     aticleList.add(title);
                     urlList.add(url);
-                    picList.add(pic);
+                });
+                pics = doc.getElementsByAttributeValue("class", "image media-document__image-i");
+                pics.forEach(pics -> {
+                    String urlPic = pics.attr("src");
+                    picList.add(urlPic);
                 });
             } catch (IOException ex) {
                 ex.printStackTrace();
@@ -131,6 +120,7 @@ public class ZagolovkyNews extends Activity{
         @Override
         protected void onPostExecute(String result) {
 
+            // Заполняем страницу
             Picasso.get().load(picList.get(0)).into(pic0);
             text0.setText(aticleList.get(0));
             text0.setOnClickListener(v -> {
@@ -216,30 +206,7 @@ public class ZagolovkyNews extends Activity{
                 intent.putExtra("url", urlList.get(11));
                 startActivity(intent);
             });
-            Picasso.get().load(picList.get(12)).into(pic12);
-            text12.setText(aticleList.get(12));
-            text12.setOnClickListener(v -> {
-                Intent intent = new Intent(ZagolovkyNews.this, News.class);
-                intent.putExtra("url", urlList.get(12));
-                startActivity(intent);
-            });
-            Picasso.get().load(picList.get(13)).into(pic13);
-            text13.setText(aticleList.get(13));
-            text13.setOnClickListener(v -> {
-                Intent intent = new Intent(ZagolovkyNews.this, News.class);
-                intent.putExtra("url", urlList.get(13));
-                startActivity(intent);
-            });
-            Picasso.get().load(picList.get(14)).into(pic14);
-            text14.setText(aticleList.get(14));
-            text14.setOnClickListener(v -> {
-                Intent intent = new Intent(ZagolovkyNews.this, News.class);
-                intent.putExtra("url", urlList.get(14));
-                startActivity(intent);
-            });
-            // Убираем прогрессбар
             progressBar.setVisibility(View.GONE);
         }
-
     }
 }

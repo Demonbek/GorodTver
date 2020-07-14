@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
   ~ /**
-  ~  * Created by DemonApps on 14.03.20 20:01
+  ~  * Created by DemonApps on 14.07.20 20:03
   ~  * Copyright (c) 2020 . All rights reserved.
-  ~  * Last modified 14.03.20 19:53
+  ~  * Last modified 14.07.20 18:59
   ~  */
   -->
 
@@ -12,7 +12,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeActivity">
+    tools:context="ru.gorod.tver.HomeActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"

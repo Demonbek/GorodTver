@@ -1,12 +1,12 @@
 /*
  * *
- *  * Created by DemonApps on 14.03.20 20:01
+ *  * Created by DemonApps on 14.07.20 20:03
  *  * Copyright (c) 2020 . All rights reserved.
- *  * Last modified 14.03.20 19:53
+ *  * Last modified 14.07.20 19:53
  *
  */
 
-package ru.gorod_dubna.gorod_dubna;
+package ru.gorod.tver;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
@@ -21,11 +21,12 @@ import com.google.android.youtube.player.YouTubePlayer;
 import com.google.android.youtube.player.YouTubePlayerView;
 import com.my.target.ads.MyTargetView;
 
+
 @SuppressLint("Registered")
 public class Video extends YouTubeBaseActivity implements YouTubePlayer.OnInitializedListener {
 
     public static final String GOOGLE_API_KEY = "AIzaSyDU9sAsjm1bIHpSC0FGEmiUz76hx_7m7r8";
-    public static final String YOUTUBE_PLAYLIST_ID = "PLw5XBQ4p2VPt5mrnq_naW8H3XgxuT7QT-";
+    public static final String YOUTUBE_PLAYLIST_ID = "UU4lIAxoybU7uTAsG0MQSX3A";
     final String TAG = getClass().getSimpleName();
     private MyTargetView adViewVideo;
     @Override

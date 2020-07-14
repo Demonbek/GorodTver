@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
   ~ /**
-  ~  * Created by DemonApps on 14.03.20 20:01
+  ~  * Created by DemonApps on 14.07.20 20:03
   ~  * Copyright (c) 2020 . All rights reserved.
-  ~  * Last modified 14.03.20 19:53
+  ~  * Last modified 14.07.20 18:59
   ~  */
   -->
 
@@ -15,7 +15,7 @@
     android:layout_gravity="center"
     android:background="@drawable/dubna"
     android:orientation="vertical"
-    tools:context="ru.gorod_dubna.gorod_dubna.HomeActivity"
+    tools:context="ru.gorod.tver.ru.gorod_dubna.gorod.HomeActivity"
     tools:ignore="MissingDefaultResource"
     tools:layout_editor_absoluteY="81dp">
 

@@ -1,15 +1,15 @@
 <!--
   ~ /**
-  ~  * Created by DemonApps on 14.03.20 20:01
+  ~  * Created by DemonApps on 14.07.20 20:03
   ~  * Copyright (c) 2020 . All rights reserved.
-  ~  * Last modified 14.03.20 19:53
+  ~  * Last modified 14.07.20 18:59
   ~  */
   -->
 
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="ru.gorod_dubna.gorod_dubna.Telefony">
+    tools:context="ru.gorod.tver.ru.gorod_dubna.gorod.Telefony">
     <item
         android:id="@+id/action_tel"
         android:orderInCategory="100"

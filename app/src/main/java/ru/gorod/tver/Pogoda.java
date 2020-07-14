@@ -1,23 +1,20 @@
 /*
  * *
- *  * Created by DemonApps on 14.03.20 20:01
+ *  * Created by DemonApps on 14.07.20 20:03
  *  * Copyright (c) 2020 . All rights reserved.
- *  * Last modified 14.03.20 19:53
+ *  * Last modified 14.07.20 18:59
  *
  */
 
-package ru.gorod_dubna.gorod_dubna;
+package ru.gorod.tver;
 
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
-import android.content.Intent;
 import android.os.Build;
+import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
-import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.RelativeLayout;
@@ -25,12 +22,13 @@ import android.widget.RelativeLayout;
 import com.my.target.ads.MyTargetView;
 
 
-public class News extends AppCompatActivity {
+public class Pogoda extends AppCompatActivity {
 
     private MyTargetView adViewNews;
 
     private WebView mWebView;
-    String currentUrl;
+    String url="https://yandex.ru/pogoda/dubna";
+    String currentUrl=url;
     @TargetApi(Build.VERSION_CODES.ECLAIR_MR1)
     @RequiresApi(api = Build.VERSION_CODES.ECLAIR_MR1)
     @SuppressLint("SetJavaScriptEnabled")
@@ -38,9 +36,7 @@ public class News extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_news);
         final RelativeLayout layout = findViewById(R.id.activityLayoutNews);
-        Intent intent = getIntent();
-        String url = intent.getStringExtra("url");
-        currentUrl=url;
+
         mWebView = findViewById(R.id.webView);
         // устанавливаем Zoom control
         mWebView.getSettings().setBuiltInZoomControls(true);
@@ -112,25 +108,5 @@ public class News extends AppCompatActivity {
         } else {
             super.onBackPressed();
         }
-    }
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_news, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // получим идентификатор выбранного пункта меню
-        int id = item.getItemId();
-        // Операции для выбранного пункта меню
-        if (id == R.id.action_share) {
-            Intent sendIntent = new Intent();
-            sendIntent.setAction(Intent.ACTION_SEND);
-            sendIntent.putExtra(Intent.EXTRA_TEXT, "Прочитай интересную новость:\n " + currentUrl + "\n\nПередано из приложения 'Город Дубна'");
-            sendIntent.setType("text/plain");
-            startActivity(Intent.createChooser(sendIntent, "Поделиться"));
-        }
-        return super.onOptionsItemSelected(item);
     }
 }

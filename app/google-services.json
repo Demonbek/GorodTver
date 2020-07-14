@@ -1,52 +1,74 @@
 {
   "project_info": {
-    "project_number": "59134696861",
-    "firebase_url": "https://goroddubna-ab596.firebaseio.com",
-    "project_id": "goroddubna-ab596",
-    "storage_bucket": "goroddubna-ab596.appspot.com"
+    "project_number": "785478920162",
+    "firebase_url": "https://papakarlo.firebaseio.com",
+    "project_id": "papakarlo",
+    "storage_bucket": "papakarlo.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:59134696861:android:5ad6b06233d5fc9f",
+        "mobilesdk_app_id": "1:785478920162:android:f8f8a54794c6e5040efbbb",
         "android_client_info": {
-          "package_name": "ru.gorod_dubna.gorod_dubna"
+          "package_name": "demon.apps.papakarlo"
         }
       },
       "oauth_client": [
         {
-          "client_id": "59134696861-hfc6m15cm7n26phhnqt5vhta7ainc64r.apps.googleusercontent.com",
+          "client_id": "785478920162-p0bvg48jcn06pfjemrkfhq432h10dmvo.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "ru.gorod_dubna.gorod_dubna",
-            "certificate_hash": "eacd2b3b727e6ce9487877e3e83510097c1c9265"
+            "package_name": "demon.apps.papakarlo",
+            "certificate_hash": "4dc8dfc6db271e5f4fb13e44f68412a478705b7c"
           }
         },
         {
-          "client_id": "59134696861-hdl0btch24aujjt82mpv5gose6qr5tm4.apps.googleusercontent.com",
+          "client_id": "785478920162-vi4q2l34l99j013a6crg66sohgnnk3ut.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDr7fx7o_n_pDbNiWo20BXTStyxpusRgL0"
+          "current_key": "AIzaSyA2Ochsy-4Wjv8YxInMZ56wy-p570UJWig"
         }
       ],
       "services": {
-        "analytics_service": {
-          "status": 1
-        },
         "appinvite_service": {
-          "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "59134696861-hdl0btch24aujjt82mpv5gose6qr5tm4.apps.googleusercontent.com",
+              "client_id": "785478920162-vi4q2l34l99j013a6crg66sohgnnk3ut.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
-        },
-        "ads_service": {
-          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:785478920162:android:3383df81418843450efbbb",
+        "android_client_info": {
+          "package_name": "ru.gorod.tver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "785478920162-vi4q2l34l99j013a6crg66sohgnnk3ut.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2Ochsy-4Wjv8YxInMZ56wy-p570UJWig"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "785478920162-vi4q2l34l99j013a6crg66sohgnnk3ut.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

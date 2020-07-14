@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
   ~ /**
-  ~  * Created by DemonApps on 14.03.20 20:01
+  ~  * Created by DemonApps on 14.07.20 20:03
   ~  * Copyright (c) 2020 . All rights reserved.
-  ~  * Last modified 14.03.20 19:53
+  ~  * Last modified 14.07.20 18:59
   ~  */
   -->
 
@@ -14,7 +14,7 @@
     android:background="@drawable/dubnaland"
     android:orientation="horizontal"
     android:theme="@style/Theme.AppCompat"
-    tools:context=".CamWeb">
+    tools:context="ru.gorod.tver.CamWeb">
 
     <WebView
         android:id="@+id/camWeb"
