@@ -1,8 +1,8 @@
 <!--
   ~ /**
-  ~  * Created by DemonApps on 14.03.20 20:01
+  ~  * Created by DemonApps on 14.07.20 22:26
   ~  * Copyright (c) 2020 . All rights reserved.
-  ~  * Last modified 14.03.20 19:53
+  ~  * Last modified 14.07.20 22:14
   ~  */
   -->
 
@@ -143,10 +143,10 @@
     <string name="action_transport_onlain">Автобусы Oн-лайн</string>
 
     <string name="webcam">КАМЕРЫ ОН-ЛАЙН</string>
-    <string name="action_webcam1">Мост через Волгу</string>
-    <string name="action_webcam2">Парк семейного отдыха</string>
-    <string name="action_webcam3">Улица Большеволжская</string>
-    <string name="action_webcam4">Мост через Волгу 2</string>
+    <string name="action_webcam1">Бульвар Радищева </string>
+    <string name="action_webcam2">Танцующий фонтан</string>
+    <string name="action_webcam3">Площадь Капошвара</string>
+    <string name="action_webcam4">Площадь Гагарина</string>
 
     <string name="title_activity_home" tools:ignore="ExtraTranslation">HomeActivity</string>
     <string name="navigation_drawer_open">Открыть панель навигации</string>
