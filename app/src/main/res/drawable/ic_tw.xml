@@ -1,0 +1,17 @@
+<!--
+  ~ /**
+  ~  * Created by DemonApps on 14.07.20 20:24
+  ~  * Copyright (c) 2020 . All rights reserved.
+  ~  * Last modified 14.03.20 19:53
+  ~  */
+  -->
+
+<vector android:autoMirrored="true" android:height="50dp"
+    android:viewportHeight="50" android:viewportWidth="50"
+    android:width="50dp" xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillAlpha="0.996094" android:fillColor="#5282B7"
+        android:pathData="M48.6433,40.9012Q48.6433,43.9537 46.4564,46.1077Q44.2695,48.2617 41.1704,48.2617L8.4296,48.2617Q5.3305,48.2617 3.1436,46.1077Q0.9567,43.9537 0.9567,40.9012L0.9567,8.8988Q0.9567,5.8463 3.1436,3.6923Q5.3305,1.5383 8.4296,1.5383L41.1704,1.5383Q44.2695,1.5383 46.4564,3.6923Q48.6433,5.8463 48.6433,8.8988L48.6433,40.9012" android:strokeAlpha="0.996094"/>
+
+    <path android:fillAlpha="0.996094" android:fillColor="#FFFFFF"
+        android:pathData="M23.6443,19.7949L23.6443,34.8778Q23.6443,35.1036 23.7818,35.2391Q23.9652,35.4197 24.1486,35.4197L34.6018,35.4197L34.6018,41.2L24.1486,41.2Q22.819,41.2 21.6728,40.7033Q20.4808,40.2517 19.6097,39.3485Q18.6927,38.4905 18.2342,37.3615Q17.7299,36.1874 17.7299,34.8778L17.7299,20.382L17.7299,5.3894L23.6443,5.3894L23.6443,14.0147L34.6018,14.0147L34.6018,19.7949L23.6443,19.7949" android:strokeAlpha="0.996094"/>
+</vector>

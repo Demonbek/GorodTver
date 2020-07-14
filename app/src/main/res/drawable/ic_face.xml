@@ -1,0 +1,19 @@
+<!--
+  ~ /**
+  ~  * Created by DemonApps on 14.07.20 20:24
+  ~  * Copyright (c) 2020 . All rights reserved.
+  ~  * Last modified 14.03.20 19:53
+  ~  */
+  -->
+
+<vector xmlns:tools="http://schemas.android.com/tools"
+    android:autoMirrored="true" android:height="50dp"
+    android:viewportHeight="50" android:viewportWidth="50"
+    android:width="50dp" xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:ignore="UnusedAttribute,VectorRaster">
+    <path android:fillAlpha="0.996094" android:fillColor="#537AA6"
+        android:pathData="M48.7887,40.9907Q48.7887,44.0792 46.5673,46.2586Q44.3459,48.438 41.1979,48.438L8.7021,48.438Q5.5541,48.438 3.3327,46.2586Q1.1113,44.0792 1.1113,40.9907L1.1113,9.1093Q1.1113,6.0208 3.3327,3.8414Q5.5541,1.662 8.7021,1.662L41.1979,1.662Q44.3459,1.662 46.5673,3.8414Q48.7887,6.0208 48.7887,9.1093L48.7887,40.9907" android:strokeAlpha="0.996094"/>
+
+    <path android:fillAlpha="0.996094" android:fillColor="#FFFFFF"
+        android:pathData="M28.8298,11.3814Q27.3708,11.1769 26.4954,11.1769Q24.6612,11.1769 23.8692,11.9131Q23.0355,12.6492 23.0355,14.5305L23.0355,18.4566L28.538,18.4566L28.538,22.4236L23.0355,22.4236L23.0355,41.1136L18.2,41.1136L18.2,14.2033Q18.2,7.2917 26.9539,7.2917L28.2878,7.3326L28.8298,11.3814" android:strokeAlpha="0.996094"/>
+</vector>
