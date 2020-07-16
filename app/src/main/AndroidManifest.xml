@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
   ~ /**
-  ~  * Created by DemonApps on 14.07.20 20:03
+  ~  * Created by DemonApps on 16.07.20 23:17
   ~  * Copyright (c) 2020 . All rights reserved.
-  ~  * Last modified 14.07.20 18:59
+  ~  * Last modified 16.07.20 21:11
   ~  */
   -->
 
@@ -23,9 +23,9 @@
     <application
         android:allowBackup="true"
         android:fullBackupContent="true"
-        android:icon="@mipmap/ic_goroddubna"
+        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_goroddubna_round"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="false"
         android:theme="@style/AppTheme.NoActionBar"
         android:usesCleartextTraffic="true"

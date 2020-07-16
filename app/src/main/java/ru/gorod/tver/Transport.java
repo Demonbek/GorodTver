@@ -1,8 +1,8 @@
 /*
  * *
- *  * Created by DemonApps on 14.07.20 20:03
+ *  * Created by DemonApps on 16.07.20 23:17
  *  * Copyright (c) 2020 . All rights reserved.
- *  * Last modified 14.07.20 18:59
+ *  * Last modified 16.07.20 22:17
  *
  */
 
@@ -28,7 +28,7 @@ public class Transport extends AppCompatActivity {
 
     private MyTargetView adViewTrans;
     private WebView mWebView3;
-    String url="http://город-дубна.рф//timetable/citybus";
+    String url="https://rasp.yandex.ru/station/9603093/suburban/?direction=all";
     @TargetApi(Build.VERSION_CODES.ECLAIR_MR1)
     @RequiresApi(api = Build.VERSION_CODES.ECLAIR_MR1)
     @SuppressLint("SetJavaScriptEnabled")
@@ -88,7 +88,7 @@ public class Transport extends AppCompatActivity {
         adViewTrans.load();
     }
 
-    private class MyWebViewClient extends WebViewClient
+    private static class MyWebViewClient extends WebViewClient
     {
         @Override
         public boolean shouldOverrideUrlLoading(WebView view, String url)
@@ -112,54 +112,26 @@ public class Transport extends AppCompatActivity {
         switch (id) {
 
             case R.id.action_transport:
-                mWebView3.loadUrl("http://город-дубна.рф/timetable/citybus");
+                mWebView3.loadUrl("https://rasp.yandex.ru/station/9603093/suburban/?direction=all");
                 setTitle(R.string.action_transport);
                 return true;
 
             case R.id.action_transport1:
-                mWebView3.loadUrl("https://t.rasp.yandex.ru/city/215");
+                mWebView3.loadUrl("https://rasp.yandex.ru/station/9603093/");
                 setTitle(R.string.action_transport1);
                 return true;
 
             case R.id.action_transport2:
-                mWebView3.loadUrl("https://t.rasp.yandex.ru/station/9601639/suburban/?filter=all");
+                mWebView3.loadUrl("https://rasp.yandex.ru/station/9857316");
                 setTitle(R.string.action_transport2);
                 return true;
             case R.id.action_transport3:
-                mWebView3.loadUrl("https://t.rasp.yandex.ru/station/9601720/suburban/?direction=all");
+                mWebView3.loadUrl("https://rasp.yandex.ru/station/9623435");
                 setTitle(R.string.action_transport3);
                 return true;
             case R.id.action_transport4:
-                mWebView3.loadUrl("https://t.rasp.yandex.ru/station/9739655/");
+                mWebView3.loadUrl("https://rasp.yandex.ru/station/9845047?span=schedule");
                 setTitle(R.string.action_transport4);
-                return true;
-            case R.id.action_transport5:
-                mWebView3.loadUrl("https://t.rasp.yandex.ru/station/9748264/");
-                setTitle(R.string.action_transport5);
-                return true;
-            case R.id.action_transport6:
-                mWebView3.loadUrl("https://t.rasp.yandex.ru/station/9858021/?filter=all");
-                setTitle(R.string.action_transport6);
-                return true;
-            case R.id.action_transport7:
-                mWebView3.loadUrl("https://t.rasp.yandex.ru/station/9822157/");
-                setTitle(R.string.action_transport7);
-                return true;
-            case R.id.action_transport8:
-                mWebView3.loadUrl("https://t.rasp.yandex.ru/station/9739654/");
-                setTitle(R.string.action_transport8);
-                return true;
-            case R.id.action_transport9:
-                mWebView3.loadUrl("https://t.rasp.yandex.ru/station/9739657/");
-                setTitle(R.string.action_transport9);
-                return true;
-            case R.id.action_transport10:
-                mWebView3.loadUrl("file:///android_asset/avtobus_dubna_mos.jpg");
-                setTitle(R.string.action_transport10);
-                return true;
-            case R.id.action_transport11:
-                mWebView3.loadUrl("file:///android_asset/avtobus.html");
-                setTitle(R.string.action_transport11);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

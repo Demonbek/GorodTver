@@ -1,8 +1,8 @@
 /*
  * *
- *  * Created by DemonApps on 14.07.20 20:03
+ *  * Created by DemonApps on 16.07.20 23:17
  *  * Copyright (c) 2020 . All rights reserved.
- *  * Last modified 14.07.20 18:59
+ *  * Last modified 16.07.20 23:09
  *
  */
 
@@ -26,7 +26,7 @@ public class History extends AppCompatActivity {
 
     }
 
-    @Override
+    /*@Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_history, menu);
         return true;
@@ -43,7 +43,7 @@ public class History extends AppCompatActivity {
         // Операции для выбранного пункта меню
         switch (id) {
             case R.id.action_settings:
-                infoTextView.setText(R.string.dubna);
+                infoTextView.setText(R.string.tver);
                 setTitle(R.string.action_settings);
                 sv.scrollTo(5, 10);
                 return true;
@@ -70,5 +70,5 @@ public class History extends AppCompatActivity {
             default:
                 return super.onOptionsItemSelected(item);
         }
-    }
+    } */
 }

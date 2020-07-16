@@ -1,8 +1,8 @@
 <!--
   ~ /**
-  ~  * Created by DemonApps on 14.07.20 20:03
+  ~  * Created by DemonApps on 16.07.20 23:17
   ~  * Copyright (c) 2020 . All rights reserved.
-  ~  * Last modified 14.07.20 18:59
+  ~  * Last modified 16.07.20 22:17
   ~  */
   -->
 
@@ -14,13 +14,6 @@
         android:id="@+id/action_transport"
         android:orderInCategory="100"
         android:title="@string/action_transport"
-        app:showAsAction="never" />
-    <item
-        android:id="@+id/action_transport11"
-        android:checkable="false"
-        android:enabled="true"
-        android:orderInCategory="100"
-        android:title="@string/action_transport11"
         app:showAsAction="never" />
     <item
         android:id="@+id/action_transport2"
@@ -36,52 +29,13 @@
         android:orderInCategory="100"
         android:title="@string/action_transport3"
         app:showAsAction="never" />
-    <item
-        android:id="@+id/action_transport10"
-        android:orderInCategory="100"
-        android:title="@string/action_transport10"
-        app:showAsAction="never" />
+
     <item
         android:id="@+id/action_transport4"
         android:checkable="false"
         android:enabled="true"
         android:orderInCategory="100"
         android:title="@string/action_transport4"
-        app:showAsAction="never" />
-    <item
-        android:id="@+id/action_transport5"
-        android:checkable="false"
-        android:enabled="true"
-        android:orderInCategory="100"
-        android:title="@string/action_transport5"
-        app:showAsAction="never" />
-    <item
-        android:id="@+id/action_transport6"
-        android:checkable="false"
-        android:enabled="true"
-        android:orderInCategory="100"
-        android:title="@string/action_transport6"
-        app:showAsAction="never" />
-    <item
-        android:id="@+id/action_transport7"
-        android:checkable="false"
-        android:enabled="true"
-        android:orderInCategory="100"
-        android:title="@string/action_transport7"
-        app:showAsAction="never" />
-    <item
-        android:id="@+id/action_transport8"
-        android:checkable="false"
-        android:enabled="true"
-        android:orderInCategory="100"
-        android:title="@string/action_transport8"
-        app:showAsAction="never" />
-    <item
-        android:id="@+id/action_transport9"
-        android:checkable="false"
-        android:enabled="true"
-        android:orderInCategory="100"
-        android:title="@string/action_transport9"
         app:showAsAction="never" />
     <item
         android:id="@+id/action_transport1"

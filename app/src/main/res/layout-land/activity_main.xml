@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
   ~ /**
-  ~  * Created by DemonApps on 14.07.20 20:03
+  ~  * Created by DemonApps on 16.07.20 23:17
   ~  * Copyright (c) 2020 . All rights reserved.
-  ~  * Last modified 14.07.20 18:59
+  ~  * Last modified 16.07.20 23:13
   ~  */
   -->
 
@@ -12,7 +12,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/dubnaland"
+    android:background="@drawable/tverfonland"
     android:gravity="center"
     android:orientation="vertical"
     tools:context="ru.gorod.tver.ru.gorod_dubna.gorod.HomeActivity">
@@ -128,6 +128,7 @@
                         android:background="@android:drawable/alert_dark_frame"
                         android:text="@string/webcam"
                         android:textColor="@android:color/white"
+                        android:visibility="gone"
                         tools:ignore="InefficientWeight" />
                 </TableRow>
 

@@ -1,8 +1,8 @@
 /*
  * *
- *  * Created by DemonApps on 14.07.20 20:03
+ *  * Created by DemonApps on 16.07.20 23:17
  *  * Copyright (c) 2020 . All rights reserved.
- *  * Last modified 14.07.20 18:59
+ *  * Last modified 16.07.20 22:12
  *
  */
 
@@ -28,7 +28,7 @@ public class Ads extends AppCompatActivity {
     private MyTargetView adViewNews;
 
     private WebView mWebView;
-    String url="https://дубна.бесплатныеобъявления.рф";
+    String url="https://tver.irr.ru/";
     String currentUrl=url;
     @TargetApi(Build.VERSION_CODES.ECLAIR_MR1)
     @RequiresApi(api = Build.VERSION_CODES.ECLAIR_MR1)

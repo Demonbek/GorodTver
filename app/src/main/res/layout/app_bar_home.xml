@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
   ~ /**
-  ~  * Created by DemonApps on 14.07.20 20:03
+  ~  * Created by DemonApps on 16.07.20 23:17
   ~  * Copyright (c) 2020 . All rights reserved.
-  ~  * Last modified 14.07.20 18:59
+  ~  * Last modified 16.07.20 21:29
   ~  */
   -->
 
@@ -24,8 +24,8 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@drawable/logo"
-            app:popupTheme="@style/AppTheme.NoActionBar.PopupOverlay" />
+            app:popupTheme="@style/AppTheme.NoActionBar.PopupOverlay"
+            app:title="@string/app_name" />
 
     </com.google.android.material.appbar.AppBarLayout>
 

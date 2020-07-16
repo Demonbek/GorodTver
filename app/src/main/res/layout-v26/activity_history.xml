@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
   ~ /**
-  ~  * Created by DemonApps on 14.07.20 20:03
+  ~  * Created by DemonApps on 16.07.20 23:17
   ~  * Copyright (c) 2020 . All rights reserved.
-  ~  * Last modified 14.07.20 18:59
+  ~  * Last modified 16.07.20 23:09
   ~  */
   -->
 
@@ -13,7 +13,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="ru.gorod.tver.ru.gorod_dubna.gorod.History">
+    tools:context="ru.gorod.tver.History">
 
     <ScrollView
         android:id="@+id/sv"
@@ -33,7 +33,7 @@
                 android:contextClickable="false"
                 android:paddingHorizontal="@dimen/text_margin"
                 android:paddingVertical="@dimen/text_margin"
-                android:text="@string/dubna"
+                android:text="@string/tver"
                 android:textSize="@dimen/text_margin"
                 tools:overScrollMode="ifContentScrolls"
                 tools:ignore="SpUsage" />
