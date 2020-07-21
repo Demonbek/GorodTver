@@ -1,8 +1,8 @@
 /*
  * *
- *  * Created by DemonApps on 14.07.20 20:03
+ *  * Created by DemonApps on 21.07.20 21:59
  *  * Copyright (c) 2020 . All rights reserved.
- *  * Last modified 14.07.20 18:59
+ *  * Last modified 21.07.20 20:45
  *
  */
 
@@ -28,7 +28,7 @@ public class Afisha extends AppCompatActivity {
 
     private MyTargetView adViewAfisha;
     private WebView mWebView2;
-    String url="http://volga-volga.dubna.ru/";
+    String url="https://www.koncerttver.ru/prodazha-biletov/afisha/";
     @TargetApi(Build.VERSION_CODES.ECLAIR_MR1)
     @RequiresApi(api = Build.VERSION_CODES.ECLAIR_MR1)
     @SuppressLint("SetJavaScriptEnabled")
@@ -104,7 +104,7 @@ public class Afisha extends AppCompatActivity {
             super.onBackPressed();
         }
     }
-    @Override
+    /*@Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_afisha, menu);
         return true;
@@ -137,5 +137,5 @@ public class Afisha extends AppCompatActivity {
             default:
                 return super.onOptionsItemSelected(item);
         }
-    }
+    }*/
 }

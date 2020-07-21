@@ -1,8 +1,8 @@
 /*
  * *
- *  * Created by DemonApps on 14.07.20 20:03
+ *  * Created by DemonApps on 21.07.20 21:59
  *  * Copyright (c) 2020 . All rights reserved.
- *  * Last modified 14.07.20 18:59
+ *  * Last modified 21.07.20 20:42
  *
  */
 
@@ -147,7 +147,7 @@ public class HomeActivity extends AppCompatActivity
         } else if (id == R.id.nav_share) {
             Intent sendIntent = new Intent();
             sendIntent.setAction(Intent.ACTION_SEND);
-            sendIntent.putExtra(Intent.EXTRA_TEXT, "Советую приложение 'Город Дубна'\n https://play.google.com/store/apps/details?id=ru.gorod_dubna.gorod_dubna" );
+            sendIntent.putExtra(Intent.EXTRA_TEXT, "Советую приложение 'Город Тверь'\n https://play.google.com/store/apps/details?id=ru.gorod.tver" );
             sendIntent.setType("text/plain");
             startActivity(Intent.createChooser(sendIntent,"Поделиться приложением..."));
         } else if (id == R.id.nav_onas) {

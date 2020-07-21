@@ -1,8 +1,8 @@
 /*
  * *
- *  * Created by DemonApps on 14.07.20 20:03
+ *  * Created by DemonApps on 21.07.20 21:59
  *  * Copyright (c) 2020 . All rights reserved.
- *  * Last modified 14.07.20 18:59
+ *  * Last modified 21.07.20 20:45
  *
  */
 
@@ -128,7 +128,7 @@ public class News extends AppCompatActivity {
         if (id == R.id.action_share) {
             Intent sendIntent = new Intent();
             sendIntent.setAction(Intent.ACTION_SEND);
-            sendIntent.putExtra(Intent.EXTRA_TEXT, "Прочитай интересную новость:\n " + currentUrl + "\n\nПередано из приложения 'Город Дубна'");
+            sendIntent.putExtra(Intent.EXTRA_TEXT, "Прочитай новость:\n " + currentUrl + "\n\nПередано из приложения 'Город Тверь'");
             sendIntent.setType("text/plain");
             startActivity(Intent.createChooser(sendIntent, "Поделиться"));
         }

@@ -1,8 +1,8 @@
 /*
  * *
- *  * Created by DemonApps on 14.07.20 20:03
+ *  * Created by DemonApps on 21.07.20 21:59
  *  * Copyright (c) 2020 . All rights reserved.
- *  * Last modified 14.07.20 18:59
+ *  * Last modified 21.07.20 20:46
  *
  */
 
@@ -137,7 +137,7 @@ public class Onas extends AppCompatActivity implements View.OnClickListener {
                 startActivity(intent6);
                 break;
             case R.id.button7:
-                Intent intent7 = new Intent(Intent.ACTION_VIEW, Uri.parse("https://demonbek.github.io/privacypolicy/privacypolicydub.html"));
+                Intent intent7 = new Intent(Intent.ACTION_VIEW, Uri.parse("https://demonbek.github.io/privacypolicy/privacypolicytver.html"));
                 startActivity(intent7);
                 break;
             default:

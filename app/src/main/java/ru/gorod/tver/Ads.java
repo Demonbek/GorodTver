@@ -1,8 +1,8 @@
 /*
  * *
- *  * Created by DemonApps on 16.07.20 23:17
+ *  * Created by DemonApps on 21.07.20 21:59
  *  * Copyright (c) 2020 . All rights reserved.
- *  * Last modified 16.07.20 22:12
+ *  * Last modified 21.07.20 20:45
  *
  */
 
@@ -28,7 +28,7 @@ public class Ads extends AppCompatActivity {
     private MyTargetView adViewNews;
 
     private WebView mWebView;
-    String url="https://tver.irr.ru/";
+    String url="https://тверь.бесплатныеобъявления.рф";
     String currentUrl=url;
     @TargetApi(Build.VERSION_CODES.ECLAIR_MR1)
     @RequiresApi(api = Build.VERSION_CODES.ECLAIR_MR1)
