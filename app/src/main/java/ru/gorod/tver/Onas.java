@@ -1,8 +1,8 @@
 /*
  * *
- *  * Created by DemonApps on 21.07.20 21:59
+ *  * Created by DemonApps on 25.07.20 9:28
  *  * Copyright (c) 2020 . All rights reserved.
- *  * Last modified 21.07.20 20:46
+ *  * Last modified 25.07.20 8:57
  *
  */
 
@@ -65,7 +65,7 @@ public class Onas extends AppCompatActivity implements View.OnClickListener {
         textView4.setText("Версия: "+ BuildConfig.VERSION_NAME);
 
         // Включение режима отладки
-        //MyTargetView.setDebugMode(true);
+        MyTargetView.setDebugMode(true);
 
         // Создаем экземпляр MyTargetView, формат 320х50
         adViewOnas = new MyTargetView(this);
@@ -74,7 +74,7 @@ public class Onas extends AppCompatActivity implements View.OnClickListener {
         // adView = new MyTargetView(this, AdSize.BANNER_300x250);
 
         // Инициализируем экземпляр
-        adViewOnas.init(380167);
+        //adViewOnas.init(380167);
 
 
         // Устанавливаем слушатель событий

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
   ~ /**
-  ~  * Created by DemonApps on 14.07.20 20:03
+  ~  * Created by DemonApps on 25.07.20 9:28
   ~  * Copyright (c) 2020 . All rights reserved.
-  ~  * Last modified 14.07.20 18:59
+  ~  * Last modified 22.07.20 19:27
   ~  */
   -->
 
@@ -26,19 +26,5 @@
             android:layout_height="match_parent"
             tools:layout_editor_absoluteY="731dp" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <!-- Реклама My target-->
-    <RelativeLayout
-        android:id="@+id/activityLayoutVideo"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="-80dp"
-        android:gravity="top|center_horizontal"
-        android:orientation="vertical">
-
-        <com.my.target.ads.MyTargetView
-            android:id="@+id/adViewVideo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-    </RelativeLayout>
+    
 </LinearLayout>

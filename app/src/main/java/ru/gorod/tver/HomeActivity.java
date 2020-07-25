@@ -1,8 +1,8 @@
 /*
  * *
- *  * Created by DemonApps on 21.07.20 21:59
+ *  * Created by DemonApps on 25.07.20 9:28
  *  * Copyright (c) 2020 . All rights reserved.
- *  * Last modified 21.07.20 20:42
+ *  * Last modified 25.07.20 8:57
  *
  */
 
@@ -55,7 +55,7 @@ public class HomeActivity extends AppCompatActivity
 
 
         // Включение режима отладки
-        //MyTargetView.setDebugMode(true);
+        MyTargetView.setDebugMode(true);
 
 
         // Создаем экземпляр MyTargetView, формат 320х50
@@ -65,7 +65,7 @@ public class HomeActivity extends AppCompatActivity
         // adView = new MyTargetView(this, AdSize.BANNER_300x250);
 
         // Инициализируем экземпляр
-        adView.init(378914);
+        //adView.init(378914);
 
         button2 = findViewById(R.id.button2);
         button2.setOnClickListener(this);

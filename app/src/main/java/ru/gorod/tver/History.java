@@ -1,8 +1,8 @@
 /*
  * *
- *  * Created by DemonApps on 16.07.20 23:17
+ *  * Created by DemonApps on 25.07.20 9:28
  *  * Copyright (c) 2020 . All rights reserved.
- *  * Last modified 16.07.20 23:09
+ *  * Last modified 25.07.20 9:21
  *
  */
 
@@ -26,7 +26,7 @@ public class History extends AppCompatActivity {
 
     }
 
-    /*@Override
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_history, menu);
         return true;
@@ -48,11 +48,11 @@ public class History extends AppCompatActivity {
                 sv.scrollTo(5, 10);
                 return true;
             case R.id.action_settings2:
-                infoTextView.setText(R.string.vehi_history);
+                infoTextView.setText(R.string.etimologia);
                 setTitle(R.string.action_settings2);
                 sv.scrollTo(5, 10);
                 return true;
-            case R.id.action_settings3:
+            /*case R.id.action_settings3:
                 infoTextView.setText(R.string.sozdanie);
                 setTitle(R.string.action_settings3);
                 sv.scrollTo(5, 10);
@@ -66,9 +66,9 @@ public class History extends AppCompatActivity {
                 infoTextView.setText(R.string.lica);
                 setTitle(R.string.action_settings5);
                 sv.scrollTo(5, 10);
-                return true;
+                return true;*/
             default:
                 return super.onOptionsItemSelected(item);
         }
-    } */
+    }
 }

@@ -1,8 +1,8 @@
 /*
  * *
- *  * Created by DemonApps on 14.07.20 20:03
+ *  * Created by DemonApps on 25.07.20 9:28
  *  * Copyright (c) 2020 . All rights reserved.
- *  * Last modified 14.07.20 18:59
+ *  * Last modified 25.07.20 8:57
  *
  */
 
@@ -21,7 +21,7 @@ import com.my.target.ads.MyTargetView;
 
 
 public class CamWeb extends AppCompatActivity {
-    String url = "file:///android_asset/webCam1.html";
+    String url = "https://cam.tvhost.ru/iframe/?city=tver";
     WebView camWeb;
     private MyTargetView adViewWebcam;
     @SuppressLint("SetJavaScriptEnabled")
@@ -36,8 +36,8 @@ public class CamWeb extends AppCompatActivity {
         camWeb.getSettings().setUseWideViewPort(true);
         camWeb.getSettings().setLoadWithOverviewMode(true);
         camWeb.loadUrl(url);
-// Включение режима отладки
-        //MyTargetView.setDebugMode(true);
+        // Включение режима отладки
+        MyTargetView.setDebugMode(true);
 
         // Создаем экземпляр MyTargetView, формат 320х50
         adViewWebcam = new MyTargetView(this);
@@ -46,7 +46,7 @@ public class CamWeb extends AppCompatActivity {
         // adView = new MyTargetView(this, AdSize.BANNER_300x250);
 
         // Инициализируем экземпляр
-        adViewWebcam.init(416740);
+        //adViewWebcam.init(416740);
 
 
         // Устанавливаем слушатель событий
@@ -73,7 +73,7 @@ public class CamWeb extends AppCompatActivity {
 
     }
 
-    @Override
+   /* @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_webcam, menu);
         return true;
@@ -104,5 +104,5 @@ public class CamWeb extends AppCompatActivity {
             default:
                 return super.onOptionsItemSelected(item);
         }
-    }
+    }*/
 }

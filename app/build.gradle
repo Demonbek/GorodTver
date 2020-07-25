@@ -1,8 +1,8 @@
 /*
  * *
- *  * Created by DemonApps on 14.07.20 20:03
+ *  * Created by DemonApps on 25.07.20 9:28
  *  * Copyright (c) 2020 . All rights reserved.
- *  * Last modified 14.07.20 19:24
+ *  * Last modified 25.07.20 9:24
  *
  */
 
@@ -14,7 +14,7 @@ android {
         applicationId "ru.gorod.tver"
         minSdkVersion 16
         targetSdkVersion 30
-        versionCode 1
+        versionCode 3
         versionName '1.0.0'
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }

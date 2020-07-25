@@ -1,8 +1,8 @@
 /*
  * *
- *  * Created by DemonApps on 14.07.20 20:03
+ *  * Created by DemonApps on 25.07.20 9:28
  *  * Copyright (c) 2020 . All rights reserved.
- *  * Last modified 14.07.20 19:53
+ *  * Last modified 22.07.20 19:27
  *
  */
 
@@ -28,61 +28,16 @@ public class Video extends YouTubeBaseActivity implements YouTubePlayer.OnInitia
     public static final String GOOGLE_API_KEY = "AIzaSyDU9sAsjm1bIHpSC0FGEmiUz76hx_7m7r8";
     public static final String YOUTUBE_PLAYLIST_ID = "UU4lIAxoybU7uTAsG0MQSX3A";
     final String TAG = getClass().getSimpleName();
-    private MyTargetView adViewVideo;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_video);
-        final RelativeLayout layout = findViewById(R.id.activityLayoutVideo);
-
-
-        // Включение режима отладки
-        //MyTargetView.setDebugMode(true);
-
-
-        // Создаем экземпляр MyTargetView, формат 320х50
-        adViewVideo = new MyTargetView(this);
-
-        // Создаем экземпляр MyTargetView, формат 300х250
-        // adView = new MyTargetView(this, AdSize.BANNER_300x250);
-
-        // Инициализируем экземпляр
-        adViewVideo.init(426852);
-
-
         YouTubePlayerView youTubePlayerView = findViewById(R.id.youtubePlayerView);
         youTubePlayerView.initialize(GOOGLE_API_KEY, this);
 
-        // Устанавливаем LayoutParams
-        RelativeLayout.LayoutParams adViewLayoutParams = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        adViewLayoutParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
-        adViewVideo.setLayoutParams(adViewLayoutParams);
 
-        // Устанавливаем слушатель событий
-        adViewVideo.setListener(new MyTargetView.MyTargetViewListener()
-        {
-            @Override
-            public void onLoad(@NonNull MyTargetView myTargetView)
-            {
-                // Данные успешно загружены, запускаем показ объявлений
-                layout.addView(adViewVideo);
-            }
-
-            @Override
-            public void onNoAd(@NonNull String reason, @NonNull MyTargetView myTargetView)
-            {
-            }
-
-            @Override
-            public void onClick(@NonNull MyTargetView myTargetView)
-            {
-            }
-        });
-
-        // Запускаем загрузку данных
-        adViewVideo.load();
     }
-
 
     @Override
     public void onInitializationSuccess

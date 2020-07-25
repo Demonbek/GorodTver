@@ -1,8 +1,8 @@
 /*
  * *
- *  * Created by DemonApps on 16.07.20 23:17
+ *  * Created by DemonApps on 25.07.20 9:28
  *  * Copyright (c) 2020 . All rights reserved.
- *  * Last modified 16.07.20 22:50
+ *  * Last modified 25.07.20 8:57
  *
  */
 
@@ -66,7 +66,7 @@ public class Telefony extends AppCompatActivity {
         mWebView.loadUrl(url);
 
         // Включение режима отладки
-        //MyTargetView.setDebugMode(true);
+        MyTargetView.setDebugMode(true);
 
         // Создаем экземпляр MyTargetView, формат 320х50
         adViewNews = new MyTargetView(this);
@@ -75,7 +75,7 @@ public class Telefony extends AppCompatActivity {
         // adView = new MyTargetView(this, AdSize.BANNER_300x250);
 
         // Инициализируем экземпляр
-        adViewNews.init(380216);
+        //adViewNews.init(380216);
 
 
         // Устанавливаем слушатель событий

@@ -1,8 +1,8 @@
 <!--
   ~ /**
-  ~  * Created by DemonApps on 16.07.20 23:17
+  ~  * Created by DemonApps on 25.07.20 9:28
   ~  * Copyright (c) 2020 . All rights reserved.
-  ~  * Last modified 16.07.20 23:09
+  ~  * Last modified 25.07.20 9:24
   ~  */
   -->
 
@@ -27,13 +27,13 @@
 " Городское самоуправление представлено Тверской городской Думой (в составе 33 депутатов), Главой города, избирающегося Тверской городской Думой из числа кандидатов, представленных конкурсной комиссией, Администрацией города и контрольно-счётной палатой города Твери.\n"
     </string>
     <string name="action_settings">О городе</string>
-    <string name="action_settings2">Вехи истории</string>
+    <string name="action_settings2">"Этимология"</string>
     <string name="action_settings3">Как создавалась Дубна</string>
     <string name="action_settings4">Памятники</string>
     <string name="action_settings5">История в лицах</string>
-    <string name="monument">
-"<b> Музеи:</b>\n\nМузей археологии и краеведения\n\n"
-"<b> Памятники:</b>\n\nПамятник В.И. Ленину на гидросооружениях\nПамятник В.И. Ленину в университете\nПамятник В.И. Ленину и А.М. Горькому\nПамятник М.И. Глинке\nБюст Н.Н. Боголюбову\nБюст А.Я. Березняку\nБюст И.В. Курчатову\nПамятник Д.И. Блохинцеву\nПамятник В.С. Высоцкому\nБюст Г.Н. Флерову\nПамятник М.Г. Мещерякову\n"</string>
+    <string name="etimologia">
+"<b>Этимология.</b>\n\n"
+" Вероятно, город получил название по р. Тверь (совр. Тверца). Топоним упоминается в Суздальской летописи (по Лаврентьевскому списку, под 6717 (1209) годом и позже) в формах Тьфѣрь, Тфѣрь, Твѣрь. В Новгородской летописи и новгородских грамотах XIV в. многократно встречается в форме Тьхвѣрь. Эта форма, а также сходные названия населённых пунктов Тихверя и Тигвера (карел. Tihveri, также название реки и озера), даёт специалистам-этимологам основание сблизить слово Тверь с прибалтийско-финским, дославянским топонимом Tihvera неизвестного значения; компонент «-верь» возможно, означает «озеро» (ср. фин. järvi). Предполагается также связь с др.-рус. тихъ «тихий». Топоним сближают и с названием города Тихвин, относительно которого существуют гипотезы о славянском и финском происхождении. Высказывалось мнение о первичности названия города со значением «крепость» (ср. польск. twierdza «крепость», лит. tvirtovė «крепость», лит. tvora «ограда», лит. tverti «огораживать»).\n"</string>
     <string name="vehi_history">
 "<b>Ноябрь 1946 года</b>\n"
 " Закладка  засекреченного научного посёлка, согласно Постановлению правительства СССР от 13 августа 1946 года.\n"
@@ -82,11 +82,6 @@
     <string name="action_afisha6">Басейн Карасик</string>
     <string name="share">Поделиться</string>
     <string name="autor">DemonApps</string>
-    <string name="invitation_message">Закачай приложение Город Дубна</string>
-    <string name="invitation_title">Город Дубна</string>
-    <string name="invitation_cta">Город Дубна</string>
-    <string name="invitation_deep_link">https://dubna.page.link/y6N7</string>
-    <string name="invitation_custom_image">https://lh3.googleusercontent.com/ULWbXsEApBLUP-S66RER9zrdMdoouO_jb3MIK75oa5yjX5hp58F8HVXe00iU84gdrA=s180-rw</string>
     <string name="buildconfig_version_name">Версия+BuildConfig.VERSION_NAME</string>
     <string name="send_to">dasda</string>
     <string name="msg_token_fmt">msg_token_fmt</string>
