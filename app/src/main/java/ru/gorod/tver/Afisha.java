@@ -1,8 +1,8 @@
 /*
  * *
- *  * Created by DemonApps on 25.07.20 9:28
+ *  * Created by DemonApps on 27.07.20 20:30
  *  * Copyright (c) 2020 . All rights reserved.
- *  * Last modified 25.07.20 8:57
+ *  * Last modified 27.07.20 20:21
  *
  */
 
@@ -55,7 +55,7 @@ public class Afisha extends AppCompatActivity {
 
 
         // Включение режима отладки
-        MyTargetView.setDebugMode(true);
+        //MyTargetView.setDebugMode(true);
 
         // Создаем экземпляр MyTargetView, формат 320х50
         adViewAfisha = new MyTargetView(this);
@@ -64,7 +64,7 @@ public class Afisha extends AppCompatActivity {
         // adView = new MyTargetView(this, AdSize.BANNER_300x250);
 
         // Инициализируем экземпляр
-        //adViewAfisha.init(380252);
+        adViewAfisha.init(806297);
 
 
         // Устанавливаем слушатель событий

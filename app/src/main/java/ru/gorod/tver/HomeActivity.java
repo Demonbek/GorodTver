@@ -1,8 +1,8 @@
 /*
  * *
- *  * Created by DemonApps on 25.07.20 9:28
+ *  * Created by DemonApps on 27.07.20 20:30
  *  * Copyright (c) 2020 . All rights reserved.
- *  * Last modified 25.07.20 8:57
+ *  * Last modified 27.07.20 20:18
  *
  */
 
@@ -59,13 +59,13 @@ public class HomeActivity extends AppCompatActivity
 
 
         // Создаем экземпляр MyTargetView, формат 320х50
-        adView = new MyTargetView(this);
+        //adView = new MyTargetView(this);
 
         // Создаем экземпляр MyTargetView, формат 300х250
         // adView = new MyTargetView(this, AdSize.BANNER_300x250);
 
         // Инициализируем экземпляр
-        //adView.init(378914);
+        adView.init(806114);
 
         button2 = findViewById(R.id.button2);
         button2.setOnClickListener(this);

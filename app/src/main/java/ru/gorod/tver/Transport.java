@@ -1,8 +1,8 @@
 /*
  * *
- *  * Created by DemonApps on 25.07.20 9:28
+ *  * Created by DemonApps on 27.07.20 20:30
  *  * Copyright (c) 2020 . All rights reserved.
- *  * Last modified 25.07.20 8:57
+ *  * Last modified 27.07.20 20:26
  *
  */
 
@@ -55,7 +55,7 @@ public class Transport extends AppCompatActivity {
 
 
         // Включение режима отладки
-        MyTargetView.setDebugMode(true);
+        //MyTargetView.setDebugMode(true);
 
         // Создаем экземпляр MyTargetView, формат 320х50
         adViewTrans = new MyTargetView(this);
@@ -64,7 +64,7 @@ public class Transport extends AppCompatActivity {
         // adView = new MyTargetView(this, AdSize.BANNER_300x250);
 
         // Инициализируем экземпляр
-        //adViewTrans.init(380770);
+        adViewTrans.init(806308);
 
 
         // Устанавливаем слушатель событий

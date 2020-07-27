@@ -1,8 +1,8 @@
 /*
  * *
- *  * Created by DemonApps on 25.07.20 9:28
+ *  * Created by DemonApps on 27.07.20 20:30
  *  * Copyright (c) 2020 . All rights reserved.
- *  * Last modified 25.07.20 8:57
+ *  * Last modified 27.07.20 20:20
  *
  */
 
@@ -55,16 +55,16 @@ public class Ads extends AppCompatActivity {
         mWebView.loadUrl(url);
 
         // Включение режима отладки
-        MyTargetView.setDebugMode(true);
+        //MyTargetView.setDebugMode(true);
 
         // Создаем экземпляр MyTargetView, формат 320х50
-        adViewNews = new MyTargetView(this);
+         adViewNews = new MyTargetView(this);
 
         // Создаем экземпляр MyTargetView, формат 300х250
         // adView = new MyTargetView(this, AdSize.BANNER_300x250);
 
         // Инициализируем экземпляр
-        //adViewNews.init(380216);
+        adViewNews.init(806294);
 
 
         // Устанавливаем слушатель событий
