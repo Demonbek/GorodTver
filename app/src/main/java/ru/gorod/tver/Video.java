@@ -1,8 +1,8 @@
 /*
  * *
- *  * Created by DemonApps on 25.07.20 9:28
+ *  * Created by DemonApps on 25.09.20 21:28
  *  * Copyright (c) 2020 . All rights reserved.
- *  * Last modified 22.07.20 19:27
+ *  * Last modified 25.09.20 17:11
  *
  */
 
@@ -10,16 +10,11 @@ package ru.gorod.tver;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
-import androidx.annotation.NonNull;
 import android.util.Log;
-import android.view.ViewGroup;
-import android.widget.RelativeLayout;
-
 import com.google.android.youtube.player.YouTubeBaseActivity;
 import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
 import com.google.android.youtube.player.YouTubePlayerView;
-import com.my.target.ads.MyTargetView;
 
 
 @SuppressLint("Registered")

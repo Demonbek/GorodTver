@@ -1,8 +1,8 @@
 /*
  * *
- *  * Created by DemonApps on 14.07.20 20:03
+ *  * Created by DemonApps on 25.09.20 21:28
  *  * Copyright (c) 2020 . All rights reserved.
- *  * Last modified 14.07.20 19:46
+ *  * Last modified 25.09.20 16:59
  *
  */
 
@@ -10,13 +10,17 @@ package ru.gorod.tver;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
-import android.os.AsyncTask;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
 import org.jsoup.Jsoup;
@@ -25,6 +29,8 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Objects;
+
 @SuppressLint("Registered")
 public class ZagolovkyNews extends Activity{
 
@@ -69,25 +75,29 @@ public class ZagolovkyNews extends Activity{
         text9 = findViewById(R.id.text9);
         text10 = findViewById(R.id.text10);
         text11 = findViewById(R.id.text11);
-        // запрос к нашему отдельному поток на выборку данных
-        new NewThread().execute();
+        //Проверка подключения
+        ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        if (Objects.requireNonNull(connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE)).getState() == NetworkInfo.State.CONNECTED ||
+                Objects.requireNonNull(connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI)).getState() == NetworkInfo.State.CONNECTED) {
+            //Если есть интернет
+            // Здесь трудоемкие задачи переносятся в дочерний поток.
+            WorkingClass workingClass = new WorkingClass();
+            Thread thread = new Thread(workingClass);
+            thread.start();
+        } else {
+            //Если нет  интернета
+            Toast toast = Toast.makeText(getApplicationContext(),
+                    "Необходимо подключение к сети...", Toast.LENGTH_LONG);
+            toast.show();
+            // Закрываем
+            finish();
+        }
     }
 
-
-    /**
-     * А вот и внутрений класс который делает запросы, если вы не читали статьи у меня в блоге про отдельные
-     * потоки советую почитать
-     */
-    @SuppressLint("StaticFieldLeak")
-    public class NewThread extends AsyncTask<String, Void, String> {
-
-        // Метод выполняющий запрос в фоне, в версиях выше 4 андроида, запросы в главном потоке выполнять
-        // нельзя, поэтому все что вам нужно выполнять - выносите в отдельный тред
-
-        @SuppressLint("NewApi")
+    // Фоновый класс
+    class WorkingClass implements Runnable {
         @Override
-        protected String doInBackground(String... arg) {
-
+        public void run() {
             // класс который захватывает страницу
             Document doc;
             try {
@@ -98,115 +108,115 @@ public class ZagolovkyNews extends Activity{
                 picList.clear();
                 // задаем с какого места, я выбрал заголовке статей
                 aticle = doc.getElementsByAttributeValue("class", "media-document__title");
-                aticle.forEach(aticle -> {
-                    Element aElement = aticle.child(0);
-                    String url = aElement.attr("href");
-                    String title = aElement.text();
-                    aticleList.add(title);
-                    urlList.add(url);
-                });
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                    aticle.forEach(aticle -> {
+                        Element aElement = aticle.child(0);
+                        String url = aElement.attr("href");
+                        String title = aElement.text();
+                        aticleList.add(title);
+                        urlList.add(url);
+                    });
+                }
                 pics = doc.getElementsByAttributeValue("class", "image media-document__image-i");
-                pics.forEach(pics -> {
-                    String urlPic = pics.attr("src");
-                    picList.add(urlPic);
-                });
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                    pics.forEach(pics -> {
+                        String urlPic = pics.attr("src");
+                        picList.add(urlPic);
+                    });
+                }
             } catch (IOException ex) {
                 ex.printStackTrace();
             }
-            // ничего не возвращаем потому что я так захотел)
-            return null;
-        }
+            ZagolovkyNews.this.runOnUiThread(() -> {
+                // Заполняем страницу
+                Picasso.get().load(picList.get(0)).into(pic0);
+                text0.setText(aticleList.get(0));
+                text0.setOnClickListener(v -> {
+                    Intent intent = new Intent(ZagolovkyNews.this, News.class);
+                    intent.putExtra("url", urlList.get(0));
+                    startActivity(intent);
+                });
 
-        @Override
-        protected void onPostExecute(String result) {
-
-            // Заполняем страницу
-            Picasso.get().load(picList.get(0)).into(pic0);
-            text0.setText(aticleList.get(0));
-            text0.setOnClickListener(v -> {
-                Intent intent = new Intent(ZagolovkyNews.this, News.class);
-                intent.putExtra("url", urlList.get(0));
-                startActivity(intent);
+                Picasso.get().load(picList.get(1)).into(pic1);
+                text1.setText(aticleList.get(1));
+                text1.setOnClickListener(v -> {
+                    Intent intent = new Intent(ZagolovkyNews.this, News.class);
+                    intent.putExtra("url", urlList.get(1));
+                    startActivity(intent);
+                });
+                Picasso.get().load(picList.get(2)).into(pic2);
+                text2.setText(aticleList.get(2));
+                text2.setOnClickListener(v -> {
+                    Intent intent = new Intent(ZagolovkyNews.this, News.class);
+                    intent.putExtra("url", urlList.get(2));
+                    startActivity(intent);
+                });
+                Picasso.get().load(picList.get(3)).into(pic3);
+                text3.setText(aticleList.get(3));
+                text3.setOnClickListener(v -> {
+                    Intent intent = new Intent(ZagolovkyNews.this, News.class);
+                    intent.putExtra("url", urlList.get(3));
+                    startActivity(intent);
+                });
+                Picasso.get().load(picList.get(4)).into(pic4);
+                text4.setText(aticleList.get(4));
+                text4.setOnClickListener(v -> {
+                    Intent intent = new Intent(ZagolovkyNews.this, News.class);
+                    intent.putExtra("url", urlList.get(4));
+                    startActivity(intent);
+                });
+                Picasso.get().load(picList.get(5)).into(pic5);
+                text5.setText(aticleList.get(5));
+                text5.setOnClickListener(v -> {
+                    Intent intent = new Intent(ZagolovkyNews.this, News.class);
+                    intent.putExtra("url", urlList.get(5));
+                    startActivity(intent);
+                });
+                Picasso.get().load(picList.get(6)).into(pic6);
+                text6.setText(aticleList.get(6));
+                text6.setOnClickListener(v -> {
+                    Intent intent = new Intent(ZagolovkyNews.this, News.class);
+                    intent.putExtra("url", urlList.get(6));
+                    startActivity(intent);
+                });
+                Picasso.get().load(picList.get(7)).into(pic7);
+                text7.setText(aticleList.get(7));
+                text7.setOnClickListener(v -> {
+                    Intent intent = new Intent(ZagolovkyNews.this, News.class);
+                    intent.putExtra("url", urlList.get(7));
+                    startActivity(intent);
+                });
+                Picasso.get().load(picList.get(8)).into(pic8);
+                text8.setText(aticleList.get(8));
+                text8.setOnClickListener(v -> {
+                    Intent intent = new Intent(ZagolovkyNews.this, News.class);
+                    intent.putExtra("url", urlList.get(8));
+                    startActivity(intent);
+                });
+                Picasso.get().load(picList.get(9)).into(pic9);
+                text9.setText(aticleList.get(9));
+                text9.setOnClickListener(v -> {
+                    Intent intent = new Intent(ZagolovkyNews.this, News.class);
+                    intent.putExtra("url", urlList.get(9));
+                    startActivity(intent);
+                });
+                Picasso.get().load(picList.get(10)).into(pic10);
+                text10.setText(aticleList.get(10));
+                text10.setOnClickListener(v -> {
+                    Intent intent = new Intent(ZagolovkyNews.this, News.class);
+                    intent.putExtra("url", urlList.get(10));
+                    startActivity(intent);
+                });
+                Picasso.get().load(picList.get(11)).into(pic11);
+                text11.setText(aticleList.get(11));
+                text11.setOnClickListener(v -> {
+                    Intent intent = new Intent(ZagolovkyNews.this, News.class);
+                    intent.putExtra("url", urlList.get(11));
+                    startActivity(intent);
+                });
+                // Сворачиваем прогрессбар
+                progressBar.setVisibility(View.GONE);
             });
-
-            Picasso.get().load(picList.get(1)).into(pic1);
-            text1.setText(aticleList.get(1));
-            text1.setOnClickListener(v -> {
-                Intent intent = new Intent(ZagolovkyNews.this, News.class);
-                intent.putExtra("url", urlList.get(1));
-                startActivity(intent);
-            });
-            Picasso.get().load(picList.get(2)).into(pic2);
-            text2.setText(aticleList.get(2));
-            text2.setOnClickListener(v -> {
-                Intent intent = new Intent(ZagolovkyNews.this, News.class);
-                intent.putExtra("url", urlList.get(2));
-                startActivity(intent);
-            });
-            Picasso.get().load(picList.get(3)).into(pic3);
-            text3.setText(aticleList.get(3));
-            text3.setOnClickListener(v -> {
-                Intent intent = new Intent(ZagolovkyNews.this, News.class);
-                intent.putExtra("url", urlList.get(3));
-                startActivity(intent);
-            });
-            Picasso.get().load(picList.get(4)).into(pic4);
-            text4.setText(aticleList.get(4));
-            text4.setOnClickListener(v -> {
-                Intent intent = new Intent(ZagolovkyNews.this, News.class);
-                intent.putExtra("url", urlList.get(4));
-                startActivity(intent);
-            });
-            Picasso.get().load(picList.get(5)).into(pic5);
-            text5.setText(aticleList.get(5));
-            text5.setOnClickListener(v -> {
-                Intent intent = new Intent(ZagolovkyNews.this, News.class);
-                intent.putExtra("url", urlList.get(5));
-                startActivity(intent);
-            });
-            Picasso.get().load(picList.get(6)).into(pic6);
-            text6.setText(aticleList.get(6));
-            text6.setOnClickListener(v -> {
-                Intent intent = new Intent(ZagolovkyNews.this, News.class);
-                intent.putExtra("url", urlList.get(6));
-                startActivity(intent);
-            });
-            Picasso.get().load(picList.get(7)).into(pic7);
-            text7.setText(aticleList.get(7));
-            text7.setOnClickListener(v -> {
-                Intent intent = new Intent(ZagolovkyNews.this, News.class);
-                intent.putExtra("url", urlList.get(7));
-                startActivity(intent);
-            });
-            Picasso.get().load(picList.get(8)).into(pic8);
-            text8.setText(aticleList.get(8));
-            text8.setOnClickListener(v -> {
-                Intent intent = new Intent(ZagolovkyNews.this, News.class);
-                intent.putExtra("url", urlList.get(8));
-                startActivity(intent);
-            });
-            Picasso.get().load(picList.get(9)).into(pic9);
-            text9.setText(aticleList.get(9));
-            text9.setOnClickListener(v -> {
-                Intent intent = new Intent(ZagolovkyNews.this, News.class);
-                intent.putExtra("url", urlList.get(9));
-                startActivity(intent);
-            });
-            Picasso.get().load(picList.get(10)).into(pic10);
-            text10.setText(aticleList.get(10));
-            text10.setOnClickListener(v -> {
-                Intent intent = new Intent(ZagolovkyNews.this, News.class);
-                intent.putExtra("url", urlList.get(10));
-                startActivity(intent);
-            });
-            Picasso.get().load(picList.get(11)).into(pic11);
-            text11.setText(aticleList.get(11));
-            text11.setOnClickListener(v -> {
-                Intent intent = new Intent(ZagolovkyNews.this, News.class);
-                intent.putExtra("url", urlList.get(11));
-                startActivity(intent);
-            });
-            progressBar.setVisibility(View.GONE);
         }
     }
 }

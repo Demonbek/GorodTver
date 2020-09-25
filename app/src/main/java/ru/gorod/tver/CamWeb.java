@@ -1,14 +1,17 @@
 /*
  * *
- *  * Created by DemonApps on 27.07.20 20:30
+ *  * Created by DemonApps on 25.09.20 21:28
  *  * Copyright (c) 2020 . All rights reserved.
- *  * Last modified 27.07.20 20:22
+ *  * Last modified 25.09.20 17:06
  *
  */
 
 package ru.gorod.tver;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,8 +19,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.webkit.WebView;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 import com.my.target.ads.MyTargetView;
+
+import java.util.Objects;
 
 
 public class CamWeb extends AppCompatActivity {
@@ -35,7 +41,21 @@ public class CamWeb extends AppCompatActivity {
         camWeb.getSettings().setJavaScriptEnabled(true);
         camWeb.getSettings().setUseWideViewPort(true);
         camWeb.getSettings().setLoadWithOverviewMode(true);
-        camWeb.loadUrl(url);
+        //Проверка подключения
+        ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        if (Objects.requireNonNull(connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE)).getState() == NetworkInfo.State.CONNECTED ||
+                Objects.requireNonNull(connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI)).getState() == NetworkInfo.State.CONNECTED) {
+            //Если есть интернет
+            // указываем страницу загрузки
+            camWeb.loadUrl(url);
+        } else {
+            //Если нет  интернета
+            Toast toast = Toast.makeText(getApplicationContext(),
+                    "Необходимо подключение к сети...", Toast.LENGTH_LONG);
+            toast.show();
+            // Закрываем
+            finish();
+        }
         // Включение режима отладки
         //MyTargetView.setDebugMode(true);
 
@@ -70,39 +90,5 @@ public class CamWeb extends AppCompatActivity {
         adViewWebcam.load();
 
 
-
     }
-
-   /* @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_webcam, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // получим идентификатор выбранного пункта меню
-        int id = item.getItemId();
-        // Операции для выбранного пункта меню
-        switch (id) {
-            case R.id.action_webcan1:
-                camWeb.loadUrl("file:///android_asset/webCam1.html");
-                setTitle(R.string.action_webcam1);
-                return true;
-            case R.id.action_webcan2:
-                camWeb.loadUrl("file:///android_asset/webCam2.html");
-                setTitle(R.string.action_webcam2);
-                return true;
-            case R.id.action_webcan3:
-                camWeb.loadUrl("file:///android_asset/webCam3.html");
-                setTitle(R.string.action_webcam3);
-                return true;
-            case R.id.action_webcan4:
-                camWeb.loadUrl("file:///android_asset/webCam4.html");
-                setTitle(R.string.action_webcam4);
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
-    }*/
 }

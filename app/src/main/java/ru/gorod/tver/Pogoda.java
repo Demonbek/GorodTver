@@ -1,8 +1,8 @@
 /*
  * *
- *  * Created by DemonApps on 27.07.20 20:30
+ *  * Created by DemonApps on 25.09.20 21:28
  *  * Copyright (c) 2020 . All rights reserved.
- *  * Last modified 27.07.20 20:25
+ *  * Last modified 25.09.20 17:06
  *
  */
 
@@ -10,6 +10,9 @@ package ru.gorod.tver;
 
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Build;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
@@ -18,8 +21,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 import com.my.target.ads.MyTargetView;
+
+import java.util.Objects;
 
 
 public class Pogoda extends AppCompatActivity {
@@ -27,7 +33,7 @@ public class Pogoda extends AppCompatActivity {
     private MyTargetView adViewNews;
 
     private WebView mWebView;
-    String url="https://yandex.ru/pogoda/tver";
+    String url="https://demonbek.github.io/weather/weathertver.html";
     String currentUrl=url;
     @TargetApi(Build.VERSION_CODES.ECLAIR_MR1)
     @RequiresApi(api = Build.VERSION_CODES.ECLAIR_MR1)
@@ -50,9 +56,21 @@ public class Pogoda extends AppCompatActivity {
         mWebView.getSettings().setUseWideViewPort(true) ;
         //Чистим кэш
         mWebView.clearCache(true);
-        // указываем страницу загрузки
-        mWebView.loadUrl(url);
-
+        //Проверка подключения
+        ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        if (Objects.requireNonNull(connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE)).getState() == NetworkInfo.State.CONNECTED ||
+                Objects.requireNonNull(connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI)).getState() == NetworkInfo.State.CONNECTED) {
+            //Если есть интернет
+            // указываем страницу загрузки
+            mWebView.loadUrl(url);
+        } else {
+            //Если нет  интернета
+            Toast toast = Toast.makeText(getApplicationContext(),
+                    "Необходимо подключение к сети...", Toast.LENGTH_LONG);
+            toast.show();
+            // Закрываем
+            finish();
+        }
         // Включение режима отладки
         //MyTargetView.setDebugMode(true);
 
