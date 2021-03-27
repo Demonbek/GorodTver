@@ -1,8 +1,8 @@
 /*
  * *
- *  * Created by DemonApps on 25.09.20 21:28
- *  * Copyright (c) 2020 . All rights reserved.
- *  * Last modified 25.09.20 17:06
+ *  * Created by DemonApps on 27.03.21 8:42
+ *  * Copyright (c) 2021 . All rights reserved.
+ *  * Last modified 27.03.21 8:12
  *
  */
 
@@ -18,8 +18,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.RelativeLayout;
@@ -34,7 +32,7 @@ public class Afisha extends AppCompatActivity {
 
     private MyTargetView adViewAfisha;
     private WebView mWebView2;
-    String url="https://www.koncerttver.ru/prodazha-biletov/afisha/";
+    String url="https://www.koncerttver.ru/";
     @TargetApi(Build.VERSION_CODES.ECLAIR_MR1)
     @RequiresApi(api = Build.VERSION_CODES.ECLAIR_MR1)
     @SuppressLint("SetJavaScriptEnabled")
