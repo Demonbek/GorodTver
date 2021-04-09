@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
   ~ /**
-  ~  * Created by DemonApps on 21.07.20 21:59
-  ~  * Copyright (c) 2020 . All rights reserved.
-  ~  * Last modified 21.07.20 20:42
+  ~  * Created by DemonApps on 09.04.21 23:52
+  ~  * Copyright (c) 2021 . All rights reserved.
+  ~  * Last modified 09.04.21 20:53
   ~  */
   -->
 
@@ -31,11 +31,6 @@
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning"
         tools:targetApi="m">
-        <activity
-            android:name="ru.gorod.tver.ZagolovkyNews"
-            android:label="Новости"
-            android:parentActivityName="ru.gorod.tver.HomeActivity"
-            android:theme="@style/AppTheme"/>
         <meta-data
             android:name="android.support.PARENT_ACTIVITY"
             android:value="ru.gorod.tver.HomeActivity" />
@@ -83,11 +78,6 @@
                 android:value="ru.gorod.tver.HomeActivity" />
         </activity>
         <activity
-            android:name="ru.gorod.tver.News"
-            android:label="Новости"
-            android:parentActivityName="ru.gorod.tver.ZagolovkyNews"
-            android:theme="@style/AppTheme"/>
-        <activity
             android:name="ru.gorod.tver.Ads"
             android:label="Объявления"
             android:parentActivityName="ru.gorod.tver.HomeActivity"
@@ -126,10 +116,22 @@
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-
+        <service
+            android:name=".news_tver.NewsService"
+            android:enabled="true"
+            android:exported="false" />
         <activity
             android:name="com.my.target.common.MyTargetActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
+
+        <activity android:name=".news_tver.ShowActivity"
+            android:label="Новости"
+            android:parentActivityName=".news_tver.ReadActivity"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".news_tver.ReadActivity"
+            android:label="Новости"
+            android:parentActivityName=".HomeActivity"
+            android:theme="@style/AppTheme" />
     </application>
 
 </manifest>

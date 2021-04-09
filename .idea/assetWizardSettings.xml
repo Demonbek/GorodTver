@@ -206,6 +206,10 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
+                                                <entry key="fontFamily" value="Arial Black" />
+                                                <entry key="paddingPercent" value="5" />
+                                                <entry key="text" value="TBEPb" />
+                                                <entry key="trimmed" value="true" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -217,11 +221,20 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
+                                                <entry key="fontFamily" value="Arial Black" />
+                                                <entry key="paddingPercent" value="5" />
+                                                <entry key="text" value="TBEPb" />
+                                                <entry key="trimmed" value="true" />
                                               </map>
                                             </option>
                                           </PersistentState>
                                         </value>
                                       </entry>
+                                    </map>
+                                  </option>
+                                  <option name="values">
+                                    <map>
+                                      <entry key="assetType" value="TEXT" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -306,7 +319,7 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="outputIconType" value="LAUNCHER_LEGACY" />
+                            <entry key="outputIconType" value="NOTIFICATION" />
                           </map>
                         </option>
                       </PersistentState>

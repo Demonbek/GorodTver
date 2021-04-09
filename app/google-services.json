@@ -79,6 +79,22 @@
       },
       "oauth_client": [
         {
+          "client_id": "70556698214-cmi6v9em319qvgq2f6c8vmkffrb0bbkb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ru.gorod_dmitrov",
+            "certificate_hash": "1b766480caa53404167588bcb20568cce4f2efcc"
+          }
+        },
+        {
+          "client_id": "70556698214-qcim17k27gihr304b2vu2jrf8ofp5v62.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ru.gorod_dmitrov",
+            "certificate_hash": "c94a0190f521f1d7dbca252d3f78fdbff82002d2"
+          }
+        },
+        {
           "client_id": "70556698214-pld78hpragflbpfn8m585gg0u2akivtn.apps.googleusercontent.com",
           "client_type": 3
         }

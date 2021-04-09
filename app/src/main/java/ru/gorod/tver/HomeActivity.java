@@ -1,16 +1,21 @@
 /*
  * *
- *  * Created by DemonApps on 28.07.20 20:32
- *  * Copyright (c) 2020 . All rights reserved.
- *  * Last modified 28.07.20 20:25
+ *  * Created by DemonApps on 09.04.21 23:52
+ *  * Copyright (c) 2021 . All rights reserved.
+ *  * Last modified 09.04.21 20:48
  *
  */
 
 package ru.gorod.tver;
 
+import android.annotation.SuppressLint;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.content.Intent;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.RelativeLayout;
@@ -24,6 +29,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.my.target.ads.MyTargetView;
+
+import ru.gorod.tver.news_tver.Constant;
+import ru.gorod.tver.news_tver.ReadActivity;
 
 
 public class HomeActivity extends AppCompatActivity
@@ -50,6 +58,8 @@ public class HomeActivity extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
+
+        createNotificationChannel();
 
         final RelativeLayout layout = findViewById(R.id.activityLayout);
 
@@ -166,12 +176,13 @@ public class HomeActivity extends AppCompatActivity
         super.onDestroy();
     }
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
 
             case R.id.button:
-                Intent intent = new Intent(this, ZagolovkyNews.class);
+                Intent intent = new Intent(this, ReadActivity.class);
                 startActivity(intent);
                 break;
             case R.id.button2:
@@ -196,6 +207,21 @@ public class HomeActivity extends AppCompatActivity
                 break;
             default:
                 break;
+        }
+    }
+    private void createNotificationChannel() {
+        // Create the NotificationChannel, but only on API 26+ because
+        // the NotificationChannel class is new and not in the support library
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            CharSequence name = getString(R.string.channel_name);
+            String description = getString(R.string.channel_description);
+            int importance = NotificationManager.IMPORTANCE_HIGH;
+            NotificationChannel channel = new NotificationChannel(Constant.CHANNEL_ID, name, importance);
+            channel.setDescription(description);
+            // Register the channel with the system; you can't change the importance
+            // or other notification behaviors after this
+            NotificationManager notificationManager = getSystemService(NotificationManager.class);
+            notificationManager.createNotificationChannel(channel);
         }
     }
 }

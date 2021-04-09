@@ -1,8 +1,8 @@
 <!--
   ~ /**
-  ~  * Created by DemonApps on 25.07.20 9:28
-  ~  * Copyright (c) 2020 . All rights reserved.
-  ~  * Last modified 25.07.20 9:24
+  ~  * Created by DemonApps on 09.04.21 23:52
+  ~  * Copyright (c) 2021 . All rights reserved.
+  ~  * Last modified 09.04.21 23:36
   ~  */
   -->
 
@@ -119,5 +119,18 @@
     <string name="insta"> В Instagram</string>
     <string name="facebook">В Facebook</string>
     <string name="photo">Фото</string>
-
+    <string name="channel_description">Новости Твери</string>
+    <string name="channel_name">Новости</string>
+    <!---Новости-->
+    <string name="date">Дата</string>
+    <string name="title">Заголовок</string>
+    <string name="pic">Ссылка на картинку</string>
+    <string name="description">Анотация</string>
+    <string name="text">Текст</string>
+    <string name="save">Сохранить новость</string>
+    <string name="read">Читать</string>
+    <string name="saveUp">Обновить</string>
+    <string name="foto_error">Фото новости</string>
+    <string name="buttonGP">Другие приложения</string>
+    <string name="buttonSite">Сайт</string>
 </resources>
