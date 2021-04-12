@@ -104,7 +104,7 @@ public class Afisha extends AppCompatActivity {
         // Запускаем загрузку данных
         adViewAfisha.load();
     }
-    private class MyWebViewClient extends WebViewClient
+    private static class MyWebViewClient extends WebViewClient
     {
         @Override
         public boolean shouldOverrideUrlLoading(WebView view, String url)

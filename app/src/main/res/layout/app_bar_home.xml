@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
   ~ /**
-  ~  * Created by DemonApps on 09.04.21 23:52
+  ~  * Created by DemonApps on 10.04.21 1:33
   ~  * Copyright (c) 2021 . All rights reserved.
-  ~  * Last modified 16.07.20 23:17
+  ~  * Last modified 27.06.19 17:36
   ~  */
   -->
 
@@ -12,7 +12,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="ru.gorod.tver.HomeActivity">
+    tools:context=".HomeActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -24,6 +24,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
+            android:background="@color/ic_launcher_background"
             app:popupTheme="@style/AppTheme.NoActionBar.PopupOverlay"
             app:title="@string/app_name" />
 
