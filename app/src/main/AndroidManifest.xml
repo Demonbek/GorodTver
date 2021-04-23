@@ -51,6 +51,7 @@
             android:name="ru.gorod.tver.CamWeb"
             android:label="@string/webcam"
             android:parentActivityName="ru.gorod.tver.HomeActivity"
+            android:screenOrientation="landscape"
             android:theme="@style/AppTheme" />
 
         <meta-data

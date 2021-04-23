@@ -18,10 +18,11 @@
 
     <WebView
         android:id="@+id/camWeb"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
         android:layout_centerInParent="true"
-        android:orientation="vertical" />
+        android:orientation="vertical"
+        android:rotation="90" />
     <!-- Реклама My target-->
     <RelativeLayout
         android:id="@+id/activityLayoutWebcam"

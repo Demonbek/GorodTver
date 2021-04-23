@@ -74,12 +74,6 @@
     <string name="action_news">Новости</string>
     <string name="action_news1">Погода</string>
     <string name="action_news2">Вакансии</string>
-    <string name="action_afisha1">К/т "Волга-Волга"</string>
-    <string name="action_afisha2">ДК Октябрь</string>
-    <string name="action_afisha3">ДК Мир</string>
-    <string name="action_afisha4">ДС Радуга</string>
-    <string name="action_afisha5">Басейн Архимед</string>
-    <string name="action_afisha6">Басейн Карасик</string>
     <string name="share">Поделиться</string>
     <string name="autor">DemonApps</string>
     <string name="buildconfig_version_name">Версия+BuildConfig.VERSION_NAME</string>
@@ -100,7 +94,7 @@
     <string name="title_activity_home" tools:ignore="ExtraTranslation">HomeActivity</string>
     <string name="navigation_drawer_open">Открыть панель навигации</string>
     <string name="navigation_drawer_close">Закрыть панель навигации</string>
-    <string name="nav_header_subtitle">город-дубна.рф</string>
+    <string name="nav_header_subtitle">DemonApps</string>
     <string name="nav_header_desc">Navigation header</string>
 
     <string name="menu_home">О городе</string>

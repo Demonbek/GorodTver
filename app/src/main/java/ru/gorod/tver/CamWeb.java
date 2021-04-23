@@ -15,8 +15,6 @@ import android.net.NetworkInfo;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.webkit.WebView;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
@@ -30,6 +28,7 @@ public class CamWeb extends AppCompatActivity {
     String url = "https://cam.tvhost.ru/iframe/?city=tver";
     WebView camWeb;
     private MyTargetView adViewWebcam;
+
     @SuppressLint("SetJavaScriptEnabled")
     @Override
     public void onCreate(Bundle savedInstanceState) {
