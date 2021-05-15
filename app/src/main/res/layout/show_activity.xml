@@ -77,10 +77,19 @@
                 android:ems="10"
                 android:gravity="start|top"
                 android:paddingTop="18dp"
-                android:paddingBottom="150dp"
+                android:paddingBottom="10dp"
                 android:text="@string/text"
                 android:textSize="18sp"
                 tools:ignore="MissingConstraints" />
+
+            <Button
+                android:id="@+id/btnUrl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="150dp"
+                android:background="#EFEDED"
+                android:onClick="onClickUrl"
+                android:text="@string/istochnik" />
         </LinearLayout>
     </ScrollView>
     <!-- Реклама My target-->

@@ -66,7 +66,7 @@ public class Telefony extends AppCompatActivity {
         mWebView.loadUrl(url);
 
         // Включение режима отладки
-        MyTargetView.setDebugMode(true);
+        //MyTargetView.setDebugMode(true);
 
         // Создаем экземпляр MyTargetView, формат 320х50
         adViewNews = new MyTargetView(this);
@@ -89,7 +89,10 @@ public class Telefony extends AppCompatActivity {
             @Override
             public void onNoAd(@NonNull String reason, @NonNull MyTargetView myTargetView) {
             }
+            @Override
+            public void onShow(@NonNull MyTargetView myTargetView) {
 
+            }
             @Override
             public void onClick(@NonNull MyTargetView myTargetView) {
             }

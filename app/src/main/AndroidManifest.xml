@@ -111,13 +111,6 @@
         <activity android:name="ru.gorod.tver.Onas" />
 
         <service
-            android:name="ru.gorod.tver.MyFirebaseMessagingService"
-            tools:ignore="ExportedService">
-            <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-            </intent-filter>
-        </service>
-        <service
             android:name=".news_tver.NewsService"
             android:enabled="true"
             android:exported="false" />

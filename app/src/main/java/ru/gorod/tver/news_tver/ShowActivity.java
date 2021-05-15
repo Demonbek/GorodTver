@@ -9,9 +9,12 @@
 package ru.gorod.tver.news_tver;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -27,10 +30,10 @@ import ru.gorod.tver.R;
 public class ShowActivity extends AppCompatActivity {
     private TextView showDate, showTitle, showDescription, showText;
     private ImageView picNews;
-    private String NEWS_KEY = "NewsTver";
-    public String url;
+    public String url, url_news;
     private MyTargetView adViewNews;
     String news;
+    Button btnUrl;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,7 +67,10 @@ public class ShowActivity extends AppCompatActivity {
             @Override
             public void onNoAd(@NonNull String reason, @NonNull MyTargetView myTargetView) {
             }
+            @Override
+            public void onShow(@NonNull MyTargetView myTargetView) {
 
+            }
             @Override
             public void onClick(@NonNull MyTargetView myTargetView) {
             }
@@ -80,6 +86,7 @@ public class ShowActivity extends AppCompatActivity {
         picNews = findViewById(R.id.picNews);
         showDescription = findViewById(R.id.showDescription);
         showText = findViewById(R.id.showText);
+        btnUrl = findViewById(R.id.btnUrl);
     }
 
     private void getIntentMain() {
@@ -92,7 +99,18 @@ public class ShowActivity extends AppCompatActivity {
             showDescription.setText(i.getStringExtra(Constant.NEWS_DESCRIPTION));
             showText.setText(i.getStringExtra(Constant.NEWS_TEXT));
             news = i.getStringExtra(Constant.NEWS_TITLE);
+            url_news = i.getStringExtra(Constant.NEWS_URL);
+            if (url_news == null){
+                btnUrl.setVisibility(View.GONE);
+                showText.setPadding(0, 0, 0, 200);
+            }
         }
+    }
+
+    public void onClickUrl(View view) {
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url_news));
+        startActivity(intent);
+
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -107,7 +125,7 @@ public class ShowActivity extends AppCompatActivity {
         if (id == R.id.action_share) {
             Intent sendIntent = new Intent();
             sendIntent.setAction(Intent.ACTION_SEND);
-            sendIntent.putExtra(Intent.EXTRA_TEXT, "Прочитай новость:\n" +news+ "\n\nПередано из приложения 'Город Тверь' https://play.google.com/store/apps/details?id=ru.gorod.tver");
+            sendIntent.putExtra(Intent.EXTRA_TEXT, news+"\n"+url_news+"\n#городтверь #новости\nПередано из приложения 'Город Тверь'");
             sendIntent.setType("text/plain");
             startActivity(Intent.createChooser(sendIntent, "Поделиться новостью..."));
         }

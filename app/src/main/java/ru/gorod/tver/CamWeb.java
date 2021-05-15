@@ -79,7 +79,10 @@ public class CamWeb extends AppCompatActivity {
             @Override
             public void onNoAd(@NonNull String reason, @NonNull MyTargetView myTargetView) {
             }
+            @Override
+            public void onShow(@NonNull MyTargetView myTargetView) {
 
+            }
             @Override
             public void onClick(@NonNull MyTargetView myTargetView) {
             }

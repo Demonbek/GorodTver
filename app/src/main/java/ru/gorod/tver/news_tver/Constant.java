@@ -14,6 +14,7 @@ public class Constant {
     public final static String NEWS_PIC = "pic";
     public final static String NEWS_DESCRIPTION = "description";
     public final static String NEWS_TEXT = "text";
+    public final static String NEWS_URL = "url_news";
 
     //Уведомления
     public static final String CHANNEL_ID = "4242";

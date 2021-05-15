@@ -115,6 +115,7 @@ public class ReadActivity extends AppCompatActivity {
             i.putExtra(Constant.NEWS_PIC, news.pic);
             i.putExtra(Constant.NEWS_DESCRIPTION, news.description);
             i.putExtra(Constant.NEWS_TEXT, news.text);
+            i.putExtra(Constant.NEWS_URL, news.url_news);
             startActivity(i);
         });
     }
