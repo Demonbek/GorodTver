@@ -15,7 +15,6 @@ import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import android.os.Build;
 import android.os.IBinder;
 import android.util.Log;
 
@@ -146,39 +145,37 @@ public class NewsService extends Service {
                         Log.i(TAG, "OldNews - в onDataChange " + oldNews);
 
                         //Отправка сообщения...
-                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-                            Log.i(TAG, "lastTask  перед сообщением-" + lastNews);
-                            if (lastNews != null) {
-                                if (Objects.equals(oldNews, lastNews)) {
-                                    Log.i(TAG, "Нет Новостей");
-                                } else {
-                                    Log.i(TAG, "oldNews - " + oldNews);
-                                    Log.i(TAG, "Сообщение отправка");
-                                    // Create an explicit intent for an Activity in your app
-                                    Intent intent = new Intent(getApplicationContext(), ru.gorod.tver.news_tver.ReadActivity.class);
-                                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                                    PendingIntent pendingIntent = PendingIntent.getActivity(getApplicationContext(), 0, intent, 0);
-                                    Log.d(TAG, lastNews + "(сообщение)");
-                                    NotificationCompat.Builder builder = new NotificationCompat.Builder(getApplicationContext(), Constant.CHANNEL_ID)
-                                            .setSmallIcon(R.drawable.ic_stat_name)
-                                            .setTicker("Новость")
-                                            .setContentTitle("Новость")
-                                            .setContentText(lastNews)
-                                            .setStyle(new NotificationCompat.BigTextStyle()
-                                                    .bigText(lastNews))
-                                            .setLargeIcon(BitmapFactory.decodeResource(getResources(),
-                                                    R.drawable.tver))
-                                            .setPriority(NotificationCompat.PRIORITY_MAX)
-                                            // Set the intent that will fire when the user taps the notification
-                                            .setContentIntent(pendingIntent)
-                                            .setAutoCancel(true);
-                                    NotificationManagerCompat notificationManager = NotificationManagerCompat.from(getApplicationContext());
+                        Log.i(TAG, "lastTask  перед сообщением-" + lastNews);
+                        if (lastNews != null) {
+                            if (Objects.equals(oldNews, lastNews)) {
+                                Log.i(TAG, "Нет Новостей");
+                            } else {
+                                Log.i(TAG, "oldNews - " + oldNews);
+                                Log.i(TAG, "Сообщение отправка");
+                                // Create an explicit intent for an Activity in your app
+                                Intent intent = new Intent(getApplicationContext(), ReadActivity.class);
+                                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                                PendingIntent pendingIntent = PendingIntent.getActivity(getApplicationContext(), 0, intent, 0);
+                                Log.d(TAG, lastNews + "(сообщение)");
+                                NotificationCompat.Builder builder = new NotificationCompat.Builder(getApplicationContext(), Constant.CHANNEL_ID)
+                                        .setSmallIcon(R.drawable.ic_stat_news)
+                                        .setTicker("Новость")
+                                        .setContentTitle("Новость")
+                                        .setContentText(lastNews)
+                                        .setStyle(new NotificationCompat.BigTextStyle()
+                                                .bigText(lastNews))
+                                        .setLargeIcon(BitmapFactory.decodeResource(getResources(),
+                                                R.drawable.tver))
+                                        .setPriority(NotificationCompat.PRIORITY_MAX)
+                                        // Set the intent that will fire when the user taps the notification
+                                        .setContentIntent(pendingIntent)
+                                        .setAutoCancel(true);
+                                NotificationManagerCompat notificationManager = NotificationManagerCompat.from(getApplicationContext());
 
-                                    // notificationId is a unique int for each notification that you must define
-                                    int notificationId = 4455;
-                                    notificationManager.notify(notificationId, builder.build());
-                                    writeFile(lastNews);
-                                }
+                                // notificationId is a unique int for each notification that you must define
+                                int notificationId = 4455;
+                                notificationManager.notify(notificationId, builder.build());
+                                writeFile(lastNews);
                             }
                         }
                     }
@@ -202,8 +199,6 @@ public class NewsService extends Service {
                 // закрываем поток
                 bw.close();
                 Log.d(TAG, "Файл записан");
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
             } catch (IOException e) {
                 e.printStackTrace();
             }

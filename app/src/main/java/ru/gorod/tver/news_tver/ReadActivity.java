@@ -27,7 +27,6 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.io.BufferedWriter;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.util.ArrayList;
@@ -56,9 +55,10 @@ public class ReadActivity extends AppCompatActivity {
             //Если есть интернет
             // указываем страницу загрузки
             init();
+            startService(new Intent(this, NewsService.class));
             getDataFromDB();
             setOnClickItem();
-            startService(new Intent(this, NewsService.class));
+
         } else {
             //Если нет  интернета
             Toast toast = Toast.makeText(getApplicationContext(),
@@ -129,8 +129,6 @@ public class ReadActivity extends AppCompatActivity {
             // закрываем поток
             bw.close();
             Log.d(TAG, "Файл записан На главной" + lastNews);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }

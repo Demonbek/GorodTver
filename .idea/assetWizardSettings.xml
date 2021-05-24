@@ -25,6 +25,7 @@
                                               <map>
                                                 <entry key="color" value="000000" />
                                                 <entry key="imagePath" value="C:\Users\demon\AppData\Local\Temp\ic_android_black_24dp.xml" />
+                                                <entry key="opacityPercent" value="80" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -206,9 +207,9 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="fontFamily" value="Arial Black" />
+                                                <entry key="fontFamily" value="Sitka Banner" />
                                                 <entry key="paddingPercent" value="5" />
-                                                <entry key="text" value="TBEPb" />
+                                                <entry key="text" value="Tв" />
                                                 <entry key="trimmed" value="true" />
                                               </map>
                                             </option>
@@ -221,9 +222,9 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="fontFamily" value="Arial Black" />
+                                                <entry key="fontFamily" value="Sitka Banner" />
                                                 <entry key="paddingPercent" value="5" />
-                                                <entry key="text" value="TBEPb" />
+                                                <entry key="text" value="Tв" />
                                                 <entry key="trimmed" value="true" />
                                               </map>
                                             </option>
@@ -235,6 +236,7 @@
                                   <option name="values">
                                     <map>
                                       <entry key="assetType" value="TEXT" />
+                                      <entry key="outputName" value="ic_stat_news" />
                                     </map>
                                   </option>
                                 </PersistentState>
