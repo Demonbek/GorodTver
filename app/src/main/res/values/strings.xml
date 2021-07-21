@@ -84,6 +84,7 @@
     <string name="action_transport2">Автобусы от вокзала</string>
     <string name="action_transport3">Автовокзал</string>
     <string name="action_transport4">Речной вокзал</string>
+    <string name="action_transport5">Автобусы</string>
 
     <string name="webcam">КАМЕРЫ ОН-ЛАЙН</string>
     <string name="action_webcam1">Бульвар Радищева </string>

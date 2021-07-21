@@ -24,9 +24,7 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
-
 import com.my.target.ads.MyTargetView;
-
 import java.util.Objects;
 
 
@@ -34,7 +32,7 @@ public class Transport extends AppCompatActivity {
 
     private MyTargetView adViewTrans;
     private WebView mWebView3;
-    String url="https://rasp.yandex.ru/station/9603093/suburban/?direction=all";
+    String url="https://map.merlin.tvercard.ru/#/56.85962499999254,35.91185999999998";
     @TargetApi(Build.VERSION_CODES.ECLAIR_MR1)
     @RequiresApi(api = Build.VERSION_CODES.ECLAIR_MR1)
     @SuppressLint("SetJavaScriptEnabled")
@@ -126,6 +124,7 @@ public class Transport extends AppCompatActivity {
         return true;
     }
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // получим идентификатор выбранного пункта меню
@@ -154,6 +153,10 @@ public class Transport extends AppCompatActivity {
             case R.id.action_transport4:
                 mWebView3.loadUrl("https://rasp.yandex.ru/station/9845047?span=schedule");
                 setTitle(R.string.action_transport4);
+                return true;
+            case R.id.action_transport5:
+                mWebView3.loadUrl("https://map.merlin.tvercard.ru/#/56.85962499999254,35.91185999999998");
+                setTitle(R.string.action_transport5);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

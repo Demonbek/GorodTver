@@ -125,7 +125,7 @@ public class ShowActivity extends AppCompatActivity {
         if (id == R.id.action_share) {
             Intent sendIntent = new Intent();
             sendIntent.setAction(Intent.ACTION_SEND);
-            sendIntent.putExtra(Intent.EXTRA_TEXT, news+"\n"+url_news+"\n#городтверь #новости\nПередано из приложения 'Город Тверь'");
+            sendIntent.putExtra(Intent.EXTRA_TEXT, news+"\n#городТверь #новости\nЧитайте в приложении 'Город Тверь'\nhttps://play.google.com/store/apps/details?id=ru.gorod.tver");
             sendIntent.setType("text/plain");
             startActivity(Intent.createChooser(sendIntent, "Поделиться новостью..."));
         }

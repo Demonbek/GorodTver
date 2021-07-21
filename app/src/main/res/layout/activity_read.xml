@@ -12,7 +12,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ReadActivity">
+    tools:context=".news_tver.ReadActivity">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@android:style/Widget.ProgressBar.Large.Inverse"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/tverfon"
+        android:theme="@style/AppTheme" />
 
     <ListView
         android:id="@+id/listView"

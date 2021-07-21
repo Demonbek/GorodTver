@@ -14,7 +14,9 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -44,6 +46,7 @@ public class ReadActivity extends AppCompatActivity {
     final String FILENAME = "lastnews";
     ArrayList<News> news = new ArrayList<>();
     MyNewsAdapter myNewsAdapter;
+    private ProgressBar progressBar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -76,6 +79,7 @@ public class ReadActivity extends AppCompatActivity {
         listView = findViewById(R.id.listView);
         listTemp = new ArrayList<>();
         mDataBase = FirebaseDatabase.getInstance().getReference(NEWS_KEY);
+        progressBar = findViewById(R.id.progressBar);
     }
     public void onBackPressed() {
         super.onBackPressed();
@@ -97,6 +101,8 @@ public class ReadActivity extends AppCompatActivity {
                 writeFile(news.get(0).title);
                 // Заполнение ListView
                 listView.setAdapter(myNewsAdapter);
+                // Закрываем ProgressBar
+                progressBar.setVisibility(View.GONE);
             }
             @Override
             public void onCancelled(@NonNull DatabaseError error) {

@@ -42,4 +42,10 @@
         android:orderInCategory="100"
         android:title="@string/action_transport1"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/action_transport5"
+        android:orderInCategory="100"
+        android:title="@string/action_transport5"
+        android:icon="@drawable/bus"
+        app:showAsAction="never|ifRoom" />
 </menu>
